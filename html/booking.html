@@ -26,7 +26,7 @@
       <span class="bg-gradient"></span>
       <div class="booking-container">
         <div class="booking-details">
-          <div style="padding: 20px;" class="border">
+          <div>
             <div class="flight-details">
               <div class="fgt-padding">
                 <div class="flight-details-top">
@@ -87,29 +87,131 @@
                     <img class="flight-img" src="/images/akasaair.png" alt="AkasaAir">
                     <p class="blackFont">BLR-VTZ</p>
                   </div>
-                  <div class="flex">
+                  <div class="cancel-policy">
                     <div class="cancel-penalty">
                       <p>Cancellation Penalty :</p>
                       <p>Cancel Between (IST) :</p>
                     </div>
                     <div class="cancel-pricebar">
                       <div class="flex">
-                        <span>₹2,685</span>
-                        <span>₹3,260</span>
+                        <span>₹3,800</span>
+                        <span>₹5,325</span>
                       </div>
                       <p class="color-bar"></p>
                       <div class="date-cancel">
                         <p>Now</p>
-                        <div>18 Dec</div>
-                        <div>18 Dec</div>
+                        <div><p>18 Dec</p><p>03:25</p></div>
+                        <div><p>18 Dec</p><p>05:25</p></div>
                       </div>
                     </div>
                   </div>
-            
+                  <div class="flex refund-policy">
+                    <img class="iconS24" src="/images/fare-upgrade.png" alt="">
+                    <p>
+                      More fares with flexible refund & date change policy available!</p>
+                    <p>UPGRADE</p>
+                  </div>
+                </div>
+              </section>
+              <section class="unsure-travel">
+                <div>
+                  <h3 style="font-size: 16px;">Unsure of your travel plans?</h3>
+                  <div class="zero-cancel">
+                    <div class="flex">
+                        <input type="checkbox" id="zero-cancellation" name="zero cancellatiom">
+                        <label for="zero-cancellation">Add Zero Cancellation</label>
+                      <img class="travel-plan" src="/images/travel-plan-zc.png" alt="">
+                    </div>
+                    <div class="flexJ refund-terms">
+                      <p><b>Get refund of up to ₹ 5,325</b>  in case of a cancellation up to 24hrs before departure <a href="https://promos.makemytrip.com/zerocancel-mob-24032017.html" target="_blank">View T&C</a></p>
+                      <b>₹ 699</b>
+                    </div>
+                  </div>
                 </div>
               </section>
             </div>
-            
+            <div class="trip-money">
+              <div>
+                <h3>TripMoney</h3>
+                <div class="tripmoney-div">
+                  <div class="booknow-container">
+                    <div class="flex" style="margin-top: 8px;">
+                      <img class="paylater-img" src="/images/pay-later-black.png" alt="">
+                     <div class="booknow-text">
+                      <h3>Book Now Pay Later</h3>
+                      <p>Book your flight today and pay back later!</p>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="paylater-use">
+                    <p>You must log in to your account to use this feature</p>
+                    <button class="tripmoney-login">LOG IN</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cancel--refund">
+              <h3>100% refund on flight cancellations guaranteed.</h3>
+              <p>On Covid + cases. No questions asked . #MMTPromise <a href="https://www.makemytrip.com/promos/full-refund-on-flight-cancellation.html?cta=noShow" target="_blank">Know More</a></p>
+            </div>
+
+            <!-- Important Information section -->
+            <div class="imp-info">
+              <h3>Important Information</h3>
+              <div class="flex imp-info-div">
+                <img class="icon20 imp-info-img" src="/images/bookingImg/imp-info.png" alt="imp-info">
+                <h3>Check travel guidelines and baggage information below:</h3>
+              </div>
+              <ul>
+                <li>Wearing masks/face covers is no longer mandatory. However, all travellers are advised to wear them, in view of the threat posed by COVID-19.</li>
+                <li>For the complete list of travel guidelines issued by Indian States and UTs, click here
+                </li>
+                <li>Carry no more than 1 check-in baggage and 1 hand baggage per passenger. If violated, airline may levy extra charges
+                </li>
+              </ul>
+            </div>
+
+            <!-- Traveller Details -->
+
+            <section class="traveller-details">
+              <div class="traveller-details-div">
+                <h2>Traveller Details</h2>
+                <div class="traveller-login flex">
+                  <img src="/images/bookingImg/loginUser.png" alt="loginUser">
+                  <p>Log in to view your <b>saved traveller list, unlock amazing deals</b> & much more!</p>
+                  <button>LOGIN NOW</button>
+                </div>
+                <div class="traveller-age flex">
+                  <img class="iconS24" src="/images/bookingImg/adultimg.png" alt="adultimg">
+                  <p><b>ADULT(12 yrs+)</b></p>
+                  <p class="traveller-added">0/1 added</p>
+                </div>
+                <div class="added-status">
+                    <p>You have not added any adults to the list</p>
+                    <button id="addnew-adult">+ADD NEW ADULT</button>
+                </div>
+              </div>
+
+              <!-- Booking details will be sent to -->
+
+              <div class="booking-send">
+                <p>Booking details will be sent to</p>
+                <div>
+                  <form action="">
+                    <label for="countrycode">Country Code</label>
+                    <input type="text" placeholder="India(91)">
+                    <label for="mobile">Mobile No</label>
+                    <input type="tel" placeholder="Mobile No">
+                    <label for="email">Email</label>
+                    <input type="email">
+                  </form>
+                </div>
+              </div>
+              <div class="flex">
+                <input type="checkbox" id="zero-cancellation" name="zero cancellatiom">
+                <label for="zero-cancellation">Add Zero Cancellation</label>
+            </section>
+        
           </div>
          
           <div class="fare-details border"></div>

@@ -6,6 +6,17 @@
   font-family: 'Lato', sans-serif;
   font-size: 14px;
 }
+body{
+  background-color: #e5eef4;
+}
+.iconS24{
+  width: 24px;
+  height: 24px;
+}
+.icon20{
+height: 20px;
+width: 20px;
+}
 h2{
   font-size: 1.4rem;
 }
@@ -16,9 +27,19 @@ h2{
 .marginTopBtm{
   margin: 15px 0;
 }
+input[type="checkbox"], input[type="radio"]{
+  box-sizing: border-box;
+  padding: 0;
+  cursor: pointer;
+}
 .flex {
   display: flex;
   align-items: center;
+}
+.flexJ{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .booking-container{
   width: 1200px;
@@ -66,14 +87,16 @@ h2{
 .booking-details{
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  /* background-color: white; */
 }
 .border {
   border: 1px solid red;
 }
 .booking-details .flight-details{
-  width: 800px;
-  height: 1500px;
+  width: 882px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 3px;
 }
 .fgt-padding {
   padding: 12px 0;
@@ -82,7 +105,7 @@ h2{
   border: 1px solid #e9e9e9;
 }
 .booking-details .fare-details{
-  width: 300px;
+  width: 296px;
 }
 .flight-details-top{
   display: flex;
@@ -217,10 +240,14 @@ h2{
   flex-direction: column;
   justify-content: space-between;
   min-width: 140px;
-  /* padding-bottom: 15px; */
+  padding-bottom: 16px;
 }
-.cancel-penalty>p:first-child{
-  margin-bottom: 20px;
+.cancel-policy{
+  display: flex;
+  margin-bottom: 18px; 
+}
+.cancel-penalty>p{
+  font-size: 12px;
 }
 .cancel-refund .cancel-pricebar{
   flex: 1;
@@ -228,7 +255,6 @@ h2{
 .cancel-pricebar>div{
   display: flex;
   text-align: center;
-  
 }
 .cancel-pricebar div:first-child span{
   font-weight: 900;
@@ -245,6 +271,213 @@ h2{
   font-weight: 900;
   display: flex;
   justify-content: space-between;
-  /* flex: 1; */
-  /* text-align: center; */
+}
+/* .date-cancel div:nth-child(even){
+  color: red;
+} */
+.refund-policy{
+  background-color: rgb(221, 255, 254);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+  padding: 8px 10px;
+  border-radius: 2px;
+  margin-bottom: 6px;
+}
+.refund-policy img{
+  margin-right: 10px;
+}
+.refund-policy p:nth-child(3){
+  color: #0091ff;
+  margin-left: auto;
+}
+.unsure-travel{
+  padding: 16px 15px 24px;
+  background-color: #f5f5ff;
+  margin-top: 20px;
+}
+.unsure-travel .zero-cancel{
+background-color: white;
+box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+padding: 10px 10px 14px 10px;
+border-radius: 2px;
+margin: 20px 0 0 0;
+}
+.zero-cancel .travel-plan{
+  width: 16px;
+  margin-left: auto;
+}
+#zero-cancellation{
+  width: 18px;
+  height: 18px;
+}
+.zero-cancel>div>label{
+  color: rgb(36, 153, 149);
+  font-weight: 600;
+  margin-left: 10px;
+}
+.refund-terms{
+  margin-top: 6px;
+}
+.refund-terms p b{
+  font-size: 12px;
+  margin-left: 28px;
+}
+.refund-terms p{
+  font-size: 12px;
+}
+.refund-terms a{
+  text-decoration: none;
+  color: #0091ff;
+  font-size: 12px;
+}
+.trip-money{
+  position: relative;
+  background-color: rgb(1, 33, 56);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+.tripmoney-div{
+  display: flex;
+  justify-content: space-between;
+}
+.paylater-img{
+  width: 30px;
+  margin-right: 8px;
+}
+div.booknow-text p{
+  font-size: 12px;
+  margin-top: 5px;
+}
+.paylater-use{
+  width: 350px;
+  position: relative;
+  background-color: white;
+  padding: 12px;
+  border-radius: 16px;
+  height: 100px;
+}
+.paylater-use p{
+  color: black;
+  padding: 2px 4px 4px 0;
+  border-bottom: 0.5px solid rgb(87, 86, 86);
+}
+.paylater-use .tripmoney-login{
+  background-color: rgb(1, 33, 56);
+  width: 140px;
+  padding: 8px 0;
+  border-radius: 4px;
+  font-size: 10px;
+  color: #ffffff;
+  font-weight: 700;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.cancel--refund{
+  display: flex;
+  flex-direction: column;
+  padding: 12px 24px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+.cancel--refund p{
+  margin-top: 5px;
+}
+.cancel--refund h3{
+  font-size: 16px;
+}
+.cancel--refund p a{
+  text-decoration: none;
+  color: #0091ff;
+}
+.imp-info{
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 2px;
+  box-shadow: 0 3px 30px 0 rgb(0 0 0 / 10%);
+}
+.imp-info ul {
+  margin-left: 14px;
+  padding-top: 8px;
+}
+.imp-info ul li{
+  font-size: 11px;
+  padding: 2px 0;
+}
+.imp-info ul li:first-child{
+  text-decoration: underline;
+  font-weight: bold;
+}
+.imp-info-div{
+  margin-top: 5px;
+}
+.imp-info-img{
+  margin-right: 10px;
+}
+.traveller-details{
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 2px;
+  box-shadow: 0 3px 30px 0 rgb(0 0 0 / 10%);
+}
+.traveller-details-div{
+  padding: 20px;
+}
+.traveller-details .traveller-login{
+  background-color: #ecf5fa;
+  padding: 10px;
+  border-radius: 2px;
+  margin-top: 18px;
+}
+.traveller-details .traveller-login button{
+  margin-left: auto;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-weight: 700;
+  color: #008cff;
+  cursor: pointer;
+}
+.traveller-details .traveller-login img{
+  width: 20px;
+  margin-right: 10px;
+}
+.traveller-age{
+  margin: 18px 0 8px;
+}
+.traveller-age img {
+  margin-right: 10px;
+}
+.traveller-age .traveller-added{
+  margin-left: auto;
+}
+.added-status {
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 3px 30px 0 rgb(0 0 0 / 10%);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.added-status p{
+  border-bottom: 1px solid rgb(245, 245, 245);
+  padding: 12px 0 12px 12px;
+}
+#addnew-adult{
+  border: 0;
+  background: transparent;
+  font-weight: 700;
+  color: #008cff;
+  padding: 12px 0 12px 12px;
+  cursor: pointer;
+}
+.booking-send{
+  padding: 20px;
+  border-top: 1px solid rgb(194, 194, 194);
+  border-bottom: 1px solid rgb(194, 194, 194);
+}
+.booking-send p {
+  padding-bottom: 20px;
 }
