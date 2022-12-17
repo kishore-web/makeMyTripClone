@@ -7,7 +7,7 @@
     <title>
       MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp; Holiday
     </title>
-    
+
     <link rel="stylesheet" href="./css/mainpagestyle.css" />
     <link
       rel="icon"
@@ -27,7 +27,7 @@
   </head>
   <body>
     <!-- =============NAV BAR PORTION STARTS FROM HERE====================== -->
-    <header>
+    <header id="huyu">
       <nav class="flex">
         <div class="logommt rin">
           <img src="./images/homepageallimages/logo@2x.png" alt="" />
@@ -121,7 +121,7 @@
     </header>
     <!-- =============NAV BAR PORTION ENDS FROM HERE====================== -->
     <!-- ==============PARTS BELOW NAV BLUE BACKGROUND  STARTS FROM HERE========================= -->
-    <main>
+    <main id="main_bar_tag">
       <section id="bgcolor">
         <!-- ==================TOP FOUR ADS AND LOGIN BTN STARTS FROM HERE====================== -->
         <div class="top_element flex rin">
@@ -130,7 +130,9 @@
           </div>
 
           <div class="flex rin">
-            <div class="smalllogo rin flex"><img src="./images/homepageallimages/Top_three.png" alt=""></div>
+            <div class="smalllogo rin flex">
+              <img src="./images/homepageallimages/Top_three.png" alt="" />
+            </div>
             <ul class="letters_size">
               <li>Super Offers</li>
               <li>Explore great deals & offers</li>
@@ -138,7 +140,9 @@
           </div>
 
           <div class="flex rin">
-            <div class="smalllogo rin flex"><img src="./images/homepageallimages/Top_one.png" alt=""></div>
+            <div class="smalllogo rin flex">
+              <img src="./images/homepageallimages/Top_one.png" alt="" />
+            </div>
             <ul class="letters_size">
               <li>Introducing myBiz</li>
               <li>Business Travel Solution</li>
@@ -146,7 +150,9 @@
           </div>
 
           <div class="flex rin">
-            <div class="smalllogo rin flex"><img src="./images/homepageallimages/Top_two.png" alt=""></div>
+            <div class="smalllogo rin flex">
+              <img src="./images/homepageallimages/Top_two.png" alt="" />
+            </div>
             <ul class="letters_size">
               <li>My Trips</li>
               <li>Manage your bookings</li>
@@ -155,7 +161,7 @@
 
           <div class="login_btn rin">
             <button>
-             <a href="./html/sign-in.html">Login or Create Account</a> 
+              <a href="./html/sign-in.html">Login or Create Account</a>
               <i
                 class="fa fa-angle-down"
                 style="font-size: 15px; color: white"
@@ -178,7 +184,7 @@
         <!-- ==================TOP BOX DETAILS STARTS FROM HERE====================== -->
         <!-- ===========================1ST PORTION STARTS============================ -->
 
-        <div class="mid_portion">
+        <div class="mid_portion fle">
           <div class="allicon rin flex">
             <ul>
               <li>
@@ -254,7 +260,6 @@
                   <input name="oneway" type="radio" />MULTICITY
                 </li>
               </ul>
-              
             </div>
             <div>Book International and Domestic Flights</div>
           </div>
@@ -299,7 +304,7 @@
               <li>SelectA Fare Type</li>
               <li>
                 <label for="oneway"></label>
-                <input name="oneway" type="radio" />Regular   Fares
+                <input name="oneway" type="radio" />Regular Fares
               </li>
 
               <li>
@@ -329,7 +334,9 @@
             </ul>
           </div>
 
-          <div class="search_button flex"><button><a href="./html/searchPage.html">SEARCH</a></button></div>
+          <div class="search_button flex">
+            <button><a href="./html/searchPage.html">SEARCH</a></button>
+          </div>
         </div>
         <!-- ===========================3RD PORTION STARTS============================ -->
         <!-- ==================TOP BOX DETAILS ENDS FROM HERE====================== -->
@@ -350,15 +357,15 @@
             </div>
           </div>
 
-          <div id="mid_part"> 
-          <div class="sep_box flex" >
-            <img src="./images/homepageallimages/mid1.jpeg" alt="" />
-            <div>
-              <h4>Explore International Flights</h4>
-              <p>Cheapest, Flights to Paris</p>
+          <div id="mid_part">
+            <div class="sep_box flex">
+              <img src="./images/homepageallimages/mid1.jpeg" alt="" />
+              <div>
+                <h4>Explore International Flights</h4>
+                <p>Cheapest, Flights to Paris</p>
+              </div>
             </div>
           </div>
-        </div>
 
           <div class="sep_box flex">
             <img src="./images/homepageallimages/mid4.jpeg" alt="" />
@@ -375,8 +382,6 @@
             </div>
           </div>
         </div>
-
-        
       </section>
 
       <div class="Advertisement flex">
@@ -405,7 +410,6 @@
             <div class="slider-container">
               <div class="slider">
                 <div class="slides">
-
                   <div id="slides__1" class="slide">
                     <div class="flex rin ads_box">
                       <div class="image_cont">
@@ -422,7 +426,12 @@
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum dolor sit amet.</h2>
                         <p>Lorem ipsum dolor sit.</p>
-                        <a href="./html/suhana-safar-sale.html" target="_blank" class="font_color">View Details</a>
+                        <a
+                          href="./html/suhana-safar-sale.html"
+                          target="_blank"
+                          class="font_color"
+                          >View Details</a
+                        >
                       </div>
                     </div>
 
@@ -441,12 +450,27 @@
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum dolor sit amet.</h2>
                         <p>Lorem ipsum dolor sit.</p>
-                        <p><a href="./html/malaysia-airlines-offer.html" target="_blank" class="font_color">View Details</a></p>
+                        <p>
+                          <a
+                            href="./html/malaysia-airlines-offer.html"
+                            target="_blank"
+                            class="font_color"
+                            >View Details</a
+                          >
+                        </p>
                       </div>
                     </div>
 
-                    <a class="slide__prev arrow_new" href="#slides__4" title="Prev" ></a>
-                    <a class="slide__next arrow_new" href="#slides__2" title="Next"  ></a>
+                    <a
+                      class="slide__prev arrow_new"
+                      href="#slides__4"
+                      title="Prev"
+                    ></a>
+                    <a
+                      class="slide__next arrow_new"
+                      href="#slides__2"
+                      title="Next"
+                    ></a>
 
                     <div class="flex rin ads_box">
                       <div class="image_cont">
@@ -487,8 +511,6 @@
                     </div>
                   </div>
 
-
-
                   <div id="slides__2" class="slide">
                     <div class="flex rin ads_box">
                       <div class="image_cont">
@@ -528,8 +550,17 @@
                       </div>
                     </div>
 
-                    <a class="slide__prev arrow_new" href="#slides__1" title="Prev" id="slider_id"  ></a>
-                    <a class="slide__next arrow_new" href="#slides__3" title="Next"  ></a>
+                    <a
+                      class="slide__prev arrow_new"
+                      href="#slides__1"
+                      title="Prev"
+                      id="slider_id"
+                    ></a>
+                    <a
+                      class="slide__next arrow_new"
+                      href="#slides__3"
+                      title="Next"
+                    ></a>
 
                     <div class="flex rin ads_box">
                       <div class="image_cont">
@@ -610,8 +641,16 @@
                     </div>
 
                     <!-- <span class="slide__text">33</span> -->
-                    <a class="slide__prev arrow_new" href="#slides__2" title="Prev"></a>
-                    <a class="slide__next arrow_new" href="#slides__4" title="Next"></a>
+                    <a
+                      class="slide__prev arrow_new"
+                      href="#slides__2"
+                      title="Prev"
+                    ></a>
+                    <a
+                      class="slide__next arrow_new"
+                      href="#slides__4"
+                      title="Next"
+                    ></a>
 
                     <div class="flex rin ads_box">
                       <div class="image_cont">
@@ -689,8 +728,16 @@
                         <p>View Details</p>
                       </div>
                     </div>
-                    <a class="slide__prev arrow_new" href="#slides__3" title="Prev" ></a>
-                    <a class="slide__next arrow_new" href="#slides__1" title="Prev"></a>
+                    <a
+                      class="slide__prev arrow_new"
+                      href="#slides__3"
+                      title="Prev"
+                    ></a>
+                    <a
+                      class="slide__next arrow_new"
+                      href="#slides__1"
+                      title="Prev"
+                    ></a>
                     <div class="flex rin ads_box">
                       <div class="image_cont">
                         <div>
@@ -746,7 +793,7 @@
             totam!
           </h6>
         </div>
-        <hr>
+        <hr />
         <div class="flex rin space_around">
           <div>
             <img src="./icons/allnavicon/scanportion.png" alt="" />
@@ -768,201 +815,266 @@
       <!-- ===============STRIP STARTS FROM HERE========================= -->
 
       <div class="stripp rin">
-            <div class="flex space_between ">
-                <div class="small_images">
-                    <img src="./images/homepageallimages/strip1.png" alt="koko">
-                </div>
-                <div class="fle space_betwee">
-                    <h2>Lorem ipsum dolor sit amet.</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, amet.</p>
-                    <a href="">BOOK NOW</a>
-                </div>
-            </div>
+        <div class="flex space_between">
+          <div class="small_images">
+            <img src="./images/homepageallimages/strip1.png" alt="koko" />
+          </div>
+          <div class="fle space_betwee">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
+              amet.
+            </p>
+            <a href="">BOOK NOW</a>
+          </div>
+        </div>
       </div>
       <!-- ===============STRIP ENDS FROM HERE========================= -->
       <div class="last_block rin">
         <div class="flex three_wrapper space_around rin">
-            <div class="flex rin">
-                <div class="rin">
-                    <img src="./images/homepageallimages/bottomw.webp" alt="">
-                </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span>Lorem, ipsum.</span>
-                </div>
+          <div class="flex rin">
+            <div class="rin">
+              <img src="./images/homepageallimages/bottomw.webp" alt="" />
             </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <span>Lorem, ipsum.</span>
+            </div>
+          </div>
 
-            <div class="flex">
-                <div>
-                    <img src="./images/homepageallimages/bottomw.webp" alt="">
-                </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span>Lorem, ipsum.</span>
-                </div>
+          <div class="flex">
+            <div>
+              <img src="./images/homepageallimages/bottomw.webp" alt="" />
             </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <span>Lorem, ipsum.</span>
+            </div>
+          </div>
 
-            <div class="flex">
-                <div>
-                    <img src="./images/homepageallimages/bottomw.webp" alt="">
-                </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span>Lorem, ipsum.</span>
-                </div>
+          <div class="flex">
+            <div>
+              <img src="./images/homepageallimages/bottomw.webp" alt="" />
             </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <span>Lorem, ipsum.</span>
+            </div>
+          </div>
         </div>
 
         <div class="flex three_wrapper space_around rin">
-            <div class="flex">
-                <div>
-                    <img src="./images/homepageallimages/bottomw.webp" alt="">
-                </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span>Lorem, ipsum.</span>
-                </div>
+          <div class="flex">
+            <div>
+              <img src="./images/homepageallimages/bottomw.webp" alt="" />
             </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <span>Lorem, ipsum.</span>
+            </div>
+          </div>
 
-            <div class="flex">
-                <div>
-                    <img src="./images/homepageallimages/bottomw.webp" alt="">
-                </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span>Lorem, ipsum.</span>
-                </div>
+          <div class="flex">
+            <div>
+              <img src="./images/homepageallimages/bottomw.webp" alt="" />
             </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <span>Lorem, ipsum.</span>
+            </div>
+          </div>
 
-            <div class="flex">
-                <div>
-                    <img src="./images/homepageallimages/bottomw.webp" alt="">
-                </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span>Lorem, ipsum.</span>
-                </div>
+          <div class="flex">
+            <div>
+              <img src="./images/homepageallimages/bottomw.webp" alt="" />
             </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <span>Lorem, ipsum.</span>
+            </div>
+          </div>
         </div>
 
         <div class="flex three_wrapper space_around rin">
-            <div class="flex">
-                <div>
-                    <img src="./images/homepageallimages/bottomw.webp" alt="">
-                </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span>Lorem, ipsum.</span>
-                </div>
+          <div class="flex">
+            <div>
+              <img src="./images/homepageallimages/bottomw.webp" alt="" />
             </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <span>Lorem, ipsum.</span>
+            </div>
+          </div>
 
-            <div class="flex">
-                <div>
-                    <img src="./images/homepageallimages/bottomw.webp" alt="">
-                </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span>Lorem, ipsum.</span>
-                </div>
+          <div class="flex">
+            <div>
+              <img src="./images/homepageallimages/bottomw.webp" alt="" />
             </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <span>Lorem, ipsum.</span>
+            </div>
+          </div>
 
-            <div class="flex">
-                <div>
-                    <img src="./images/homepageallimages/bottomw.webp" alt="">
-                </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span>Lorem, ipsum.</span>
-                </div>
+          <div class="flex">
+            <div>
+              <img src="./images/homepageallimages/bottomw.webp" alt="" />
             </div>
+            <div>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <span>Lorem, ipsum.</span>
+            </div>
+          </div>
         </div>
+      </div>
+    </main>
+    <!-- ================================ FOOTER=================================== -->
+    <!-- =================================FOOTER PART ONE STARTS HERE=================================== -->
+    <footer>
+      <div class="footer_part_one rin flex">
+        <ul>
+          <li>
+            <h3>PRODUCT OFFERING</h3>
+            <p>
+              Flights, International Flights, Charter Flights, Hotels,
+              International Hotels, Homestays and Villas, Activities, Holidays
+              In India, International Holidays, Book Hotels From UAE, myBiz for
+              Corporate Travel, Book Online Cabs, Book Bus Tickets, Book Train
+              Tickets, Cheap Tickets to India, Book Flights From US, Book
+              Flights From UAE, Trip Planner, Gift Cards, Trip Money, Trip
+              Ideas, Travel Blog, PNR Status, MakeMyTrip Advertising Solutions,
+              One Way Cab
+            </p>
+          </li>
 
+          <li>
+            <h3>MAKEMYTRIP</h3>
+            <p>
+              About Us, Investor Relations, Careers, MMT Foundation, CSR Policy,
+              myPartner - Travel Agent Portal, Foreign Exchange, List your
+              hotel, Partners- Redbus, Partners- Goibibo, Advertise with Us
+            </p>
+          </li>
 
+          <li>
+            <h3>ABOUT THE SITE</h3>
+            <p>
+              Customer Support, Payment Security, Privacy Policy, User
+              Agreement, Terms of Service, More Offices, Make A Payment, Work
+              From Home
+            </p>
+          </li>
 
+          <li>
+            <h3>QUICK LINKS</h3>
+            <p>
+              Delhi Chennai Flights, Delhi Mumbai Flights, Delhi Goa Flights,
+              Chennai Mumbai flights, Mumbai Hyderabad flights, Kolkata to Rupsi
+              Flights, Rupsi to Guwahati Flights, Pasighat to Guwahati Flights,
+              Delhi to Khajuraho Flights, Cochin to Agatti Island Flights,
+              Hotels in Delhi, Hotels in Mumbai, Hotels In Goa, Hotels In
+              Jaipur, Hotels In Ooty, Hotels In Udaipur, Hotels in Puri, Hotels
+              In North Goa, Hotels In Rishikesh, Honeymoon Packages, Kerala
+              Packages, Kashmir Packages, Ladakh Packages, Goa Packages,
+              Thailand Packages, Sri Lanka Visa, Thailand Visa, Explore Goa,
+              Explore Manali, Explore Shimla, Explore Jaipur, Explore Srinagar
+            </p>
+          </li>
+
+          <li>
+            <h3>IMPORTANT LINKS</h3>
+            <p>
+              Cheap Flights, Flight Status, Kumbh Mela, Domestic Airlines,
+              International Airlines, Indigo, Spicejet, GoAir, Air Asia, Air
+              India, Indian Railways, Trip Ideas, Beaches, Honeymoon
+              Destinations, Romantic Destinations, Popular Destinations, Resorts
+              In Udaipur, Resorts In Munnar, Villas In Lonavala, Hotels in
+              Thailand, Villas In Goa, Domestic Flight Offers, International
+              Flight Offers, UAE Flight Offers, USA, UAE, Saudi Arabia, UK, Oman
+            </p>
+          </li>
+
+          <li>
+            <h3>CORPORATE TRAVEL</h3>
+            <p>
+              Corporate Travel, Corporate Hotel Booking, Corporate Flight
+              Booking, Business Travel for SME, GST Invoice for International
+              flights, Business Travel Solutions, GST Invoice for Bus, Corporate
+              Bus booking, myBiz - Best Business Travel Platform, GST Invoice
+              for Flights, GST Invoice for Corporate Travel, GST Invoice for
+              Hotels, myBiz for Small Business, Free cancellation on
+              International Flights
+            </p>
+          </li>
+        </ul>
       </div>
 
-    </main>
-   <!-- ================================ FOOTER=================================== -->
-<!-- =================================FOOTER PART ONE STARTS HERE=================================== -->
-<footer> 
-<div class="footer_part_one rin flex">
-  <ul>
-    <li>
-      <h3>PRODUCT OFFERING</h3>
-      <p>Flights, International Flights, Charter Flights, Hotels, International Hotels, Homestays and Villas, Activities, Holidays In India, International Holidays, Book Hotels From UAE, myBiz for Corporate Travel, Book Online Cabs, Book Bus Tickets, Book Train Tickets, Cheap Tickets to India, Book Flights From US, Book Flights From UAE, Trip Planner, Gift Cards, Trip Money, Trip Ideas, Travel Blog, PNR Status, MakeMyTrip Advertising Solutions, One Way Cab</p>
-    </li>
+      <!-- =================================FOOTER PART ONE ENDS HERE=================================== -->
 
-    <li>
-      <h3>MAKEMYTRIP</h3>
-      <p>About Us, Investor Relations, Careers, MMT Foundation, CSR Policy, myPartner - Travel Agent Portal, Foreign Exchange, List your hotel, Partners- Redbus, Partners- Goibibo, Advertise with Us</p>
-    </li>
+      <div class="second_footer_part flex rin">
+        <div>
+          <h3>Why MakeMyTrip?</h3>
+          <p>
+            Established in 2000, MakeMyTrip has since positioned itself as one
+            of the leading companies, providing great offers, competitive
+            airfares, exclusive discounts, and a seamless online booking
+            experience to many of its customers. The experience of booking your
+            flight tickets, hotel stay, and holiday package through our desktop
+            site or mobile app can be done with complete ease and no hassles at
+            all. We also deliver amazing offers, such as Instant Discounts, Fare
+            Calendar, MyRewardsProgram, MyWallet, and many more while updating
+            them from time to time to better suit our customers’ evolving needs
+            and demands.
+          </p>
+        </div>
 
-    <li>
-      <h3>ABOUT THE SITE</h3>
-      <p>Customer Support, Payment Security, Privacy Policy, User Agreement, Terms of Service, More Offices, Make A Payment, Work From Home</p>
-    </li>
+        <div>
+          <h3>Why MakeMyTrip?</h3>
+          <p>
+            Established in 2000, MakeMyTrip has since positioned itself as one
+            of the leading companies, providing great offers, competitive
+            airfares, exclusive discounts, and a seamless online booking
+            experience to many of its customers. The experience of booking your
+            flight tickets, hotel stay, and holiday package through our desktop
+            site or mobile app can be done with complete ease and no hassles at
+            all. We also deliver amazing offers, such as Instant Discounts, Fare
+            Calendar, MyRewardsProgram, MyWallet, and many more while updating
+            them from time to time to better suit our customers’ evolving needs
+            and demands.
+          </p>
+        </div>
 
-    <li>
-      <h3>QUICK LINKS</h3>
-      <p>Delhi Chennai Flights, Delhi Mumbai Flights, Delhi Goa Flights, Chennai Mumbai flights, Mumbai Hyderabad flights, Kolkata to Rupsi Flights, Rupsi to Guwahati Flights, Pasighat to Guwahati Flights, Delhi to Khajuraho Flights, Cochin to Agatti Island Flights, Hotels in Delhi, Hotels in Mumbai, Hotels In Goa, Hotels In Jaipur, Hotels In Ooty, Hotels In Udaipur, Hotels in Puri, Hotels In North Goa, Hotels In Rishikesh, Honeymoon Packages, Kerala Packages, Kashmir Packages, Ladakh Packages, Goa Packages, Thailand Packages, Sri Lanka Visa, Thailand Visa, Explore Goa, Explore Manali, Explore Shimla, Explore Jaipur, Explore Srinagar</p>
-    </li>
+        <div>
+          <h3>Why MakeMyTrip?</h3>
+          <p>
+            Established in 2000, MakeMyTrip has since positioned itself as one
+            of the leading companies, providing great offers, competitive
+            airfares, exclusive discounts, and a seamless online booking
+            experience to many of its customers. The experience of booking your
+            flight tickets, hotel stay, and holiday package through our desktop
+            site or mobile app can be done with complete ease and no hassles at
+            all. We also deliver amazing offers, such as Instant Discounts, Fare
+            Calendar, MyRewardsProgram, MyWallet, and many more while updating
+            them from time to time to better suit our customers’ evolving needs
+            and demands.
+          </p>
+        </div>
+      </div>
 
-    <li>
-      <h3>IMPORTANT LINKS</h3>
-      <p>Cheap Flights, Flight Status, Kumbh Mela, Domestic Airlines, International Airlines, Indigo, Spicejet, GoAir, Air Asia, Air India, Indian Railways, Trip Ideas, Beaches, Honeymoon Destinations, Romantic Destinations, Popular Destinations, Resorts In Udaipur, Resorts In Munnar, Villas In Lonavala, Hotels in Thailand, Villas In Goa, Domestic Flight Offers, International Flight Offers, UAE Flight Offers, USA, UAE, Saudi Arabia, UK, Oman</p>
-    </li>
+      <div class="Last_social_icon flex space_around">
+        <div class="all_icon">
+          <i class="fa fa-twitter" style="font-size: 48px; color: white"></i>
+          <i class="fa fa-facebook-f" style="font-size: 48px; color: white"></i>
+        </div>
 
-    <li>
-      <h3>CORPORATE TRAVEL</h3>
-      <p>Corporate Travel, Corporate Hotel Booking, Corporate Flight Booking, Business Travel for SME, GST Invoice for International flights, Business Travel Solutions, GST Invoice for Bus, Corporate Bus booking, myBiz - Best Business Travel Platform, GST Invoice for Flights, GST Invoice for Corporate Travel, GST Invoice for Hotels, myBiz for Small Business, Free cancellation on International Flights</p>
-    </li>
-
-  </ul>
-</div>
-
-<!-- =================================FOOTER PART ONE ENDS HERE=================================== -->
- 
-
-
-  <div class="second_footer_part flex rin">
-    <div>
-      <h3>Why MakeMyTrip?</h3>
-      <p>Established in 2000, MakeMyTrip has since positioned itself as one of the leading companies, providing great offers, competitive airfares, exclusive discounts, and a seamless online booking experience to many of its customers. The experience of booking your flight tickets, hotel stay, and holiday package through our desktop site or mobile app can be done with complete ease and no hassles at all. We also deliver amazing offers, such as Instant Discounts, Fare Calendar, MyRewardsProgram, MyWallet, and many more while updating them from time to time to better suit our customers’ evolving needs and demands.</p>
-    </div>
-  
-    <div>
-      <h3>Why MakeMyTrip?</h3>
-      <p>Established in 2000, MakeMyTrip has since positioned itself as one of the leading companies, providing great offers, competitive airfares, exclusive discounts, and a seamless online booking experience to many of its customers. The experience of booking your flight tickets, hotel stay, and holiday package through our desktop site or mobile app can be done with complete ease and no hassles at all. We also deliver amazing offers, such as Instant Discounts, Fare Calendar, MyRewardsProgram, MyWallet, and many more while updating them from time to time to better suit our customers’ evolving needs and demands.</p>
-    </div>
-  
-    <div>
-      <h3>Why MakeMyTrip?</h3>
-      <p>Established in 2000, MakeMyTrip has since positioned itself as one of the leading companies, providing great offers, competitive airfares, exclusive discounts, and a seamless online booking experience to many of its customers. The experience of booking your flight tickets, hotel stay, and holiday package through our desktop site or mobile app can be done with complete ease and no hassles at all. We also deliver amazing offers, such as Instant Discounts, Fare Calendar, MyRewardsProgram, MyWallet, and many more while updating them from time to time to better suit our customers’ evolving needs and demands.</p>
-    </div>
-  </div>
-
-
-  <div class="Last_social_icon flex space_around">
-    <div class="all_icon">
-      <i class="fa fa-twitter" style="font-size:48px;color:white"></i>
-      <i class="fa fa-facebook-f" style="font-size:48px;color:white"></i>
-    </div>
-
-    <div>
-      <h3>© 2022 MAKEMYTRIP PVT. LTD.</h3>
-      <span> Country </span> <span> India </span> <span> USA </span> <span> UK </span>
-      
-    </div>
-  </div>
-
-
-  
- 
-
-</footer>
-<!-- ================================ FOOTER=================================== -->
-
-
+        <div>
+          <h3>© 2022 MAKEMYTRIP PVT. LTD.</h3>
+          <span> Country </span> <span> India </span> <span> USA </span>
+          <span> UK </span>
+        </div>
+      </div>
+    </footer>
+    <!-- ================================ FOOTER=================================== -->
 
     <script src="./js/index.js"></script>
   </body>
