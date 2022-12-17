@@ -7,12 +7,13 @@
     font-family: sans-serif;
 }
 
-body{
+/* body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 5%;
-}
+} */
 
 .popup-box {
     border-radius: 15px;
@@ -21,6 +22,13 @@ body{
     width: 410px;
     height: 480px;
     box-shadow: 0px 0px 3px gray;
+     /* css written by taher from down  */
+     position:absolute;
+     top:60%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     display: none;
+     background-color: white;
 
 } 
 
@@ -37,6 +45,10 @@ body{
     margin: 25px 0;
     background-color: white;
     border-radius: 15px;
+
+    /* css added by taher down  */
+
+    margin-top: 50px;
 } 
 
 .accounts .btn {
@@ -47,7 +59,7 @@ body{
     margin: 1px;
 }
 
-.personal-account, .mybiz-accopunt  {
+.personal-account, .mybiz-account  {
     padding: 4px;
     border-radius: 15px;
     width: 50%;
@@ -61,7 +73,7 @@ body{
     background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(183, 0, 255));
 }
 
-.mybiz-accopunt {
+.mybiz-account {
     background-color: white;
     color: rgba(0, 0, 0, 0.596);
 }
@@ -97,7 +109,7 @@ body{
     border-radius: 5px;  
 }
 
-.continue {
+.continue, .otp-button {
     font-size: 14px;
     font-weight: bold;
     background-color: aqua;
@@ -274,12 +286,30 @@ body{
 
 /*  -----css of display-none-part---- */
 
-.personal-account-section{
+/* /* .personal-account-section{
     display: none;
+} */
+
+/* .mybizz-section{
+    display: none;
+}  */
+
+/* css written by taher  */
+
+.cross_btn{
+    color:white;
+    position: absolute;
+    top:2%;
+    right:3%;
+    background-color: red;
+    font-size: 1.2rem;
+    padding: 2px 5px;
+    cursor:pointer;
+   
 }
 
-.mybizz-section{
-    /* display: none; */
+.hidden{
+    display: none;
 }
 
 

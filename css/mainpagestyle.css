@@ -54,8 +54,8 @@ header {
   height: max-content;
   border: 1px solid red;
   padding: 5px;
-  position: relative;
-    top: -100px;
+  /* position: relative;
+    top: -100px; */
 }
 
 .allicon li {
