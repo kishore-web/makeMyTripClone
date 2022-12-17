@@ -11,8 +11,19 @@
   --justify_Content: justify-content;
   --font_size: 12px;
   --SMALL_font_size: 10px;
+
+  --font_size14: 12px;
+  --Box_shadow_0_0_grey:0px 0px 5px grey;
+
+
   --margin_top: 10px;
   --font_color: rgb(61, 61, 61);
+  --width_80per:80%
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }
 
 .ring {
@@ -43,8 +54,8 @@ header {
   height: max-content;
   border: 1px solid red;
   padding: 5px;
-  /* position: relative;
-    top: -100px; */
+  position: relative;
+    top: -100px;
 }
 
 .allicon li {
@@ -118,14 +129,26 @@ nav .allicon img {
 
 /* ============NAV BAR PORTION STARTS FROM HERE====================== */
 /* <!-- ==============PARTS BELOW NAV BLUE BACKGROUND  STARTS FROM HERE========================= --> */
+main{
+  position: relative;
+  bottom: 72px;
+}
+
+
 #bgcolor {
   /* z-index: 10; */
   background-image: linear-gradient(0deg,#15457b,#051423);
+  padding-bottom: 40px;
 }
 
 .top_element {
-  margin-top: 10px;
+  padding-top: 10px;
   margin-bottom: 50px;
+}
+
+.smalllogo img{
+  width: 30px;
+   
 }
 
 .top_element li {
@@ -148,6 +171,10 @@ nav .allicon img {
 section .logommt img {
   width: 120px;
   margin-right: 50px;
+}
+
+.letters_size li{
+  color: white;
 }
 
 .letters_size :first-child {
@@ -197,15 +224,27 @@ section .logommt img {
   padding: 8px 30px;
   width: max-content;
   margin: 0px auto;
-  box-shadow: 0px 0px 5px gray;
+  box-shadow: var(--Box_shadow_0_0_grey);
   border-radius: 10px;
   background-color: white;
-  /* z-index: 1; */
+  position: absolute;
+  left: 380px;
+  top: 70px;
+  z-index: 2;
 }
 
 .all_radio_btn {
   padding: 0px 40px;
   padding-bottom: 3px;
+  
+}
+
+.all_radio_btn li{
+  list-style: none;
+  display: inline-block;
+  margin-right: 40px;
+  font-weight: bold;
+
 }
 
 .mid_portion ul img {
@@ -219,12 +258,13 @@ section .logommt img {
 
 .wrapper {
   padding-top: 80px;
-  box-shadow: 0px 0px 5px gray;
-  width: 80%;
+  
+  box-shadow: var(--Box_shadow_0_0_grey);
+  width: var(--width_80per);
   margin: 0px auto;
   border-radius: 10px;
-  position: relative;
-  bottom: 50px;
+  /* position: relative; */
+  /* bottom: 50px; */
   /* z-index: 1; */
   background-color: white;
 }
@@ -264,8 +304,9 @@ section .logommt img {
   display: inline-block;
   font-size: var(--font_size);
   background-color: rgb(212, 212, 212);
-  height: 40px;
-  padding: 5px;
+  text-align: justify;
+   
+  padding: 10px;
 }
 
 .search_button {
@@ -298,14 +339,23 @@ section .logommt img {
   border-radius: 50px;
   width: max-content;
   margin: 0px auto;
+   
   padding: 5px 8px;
   position: relative;
-  top: 18px;
+  top: 70px;
 }
 
 .five_elements img {
   margin-right: 10px;
   width: 40px;
+}
+
+#mid_part{
+  background-color: antiquewhite;
+}
+
+#mid_part img{
+  border-radius: 50%;
 }
 
 .five_elements h4 {
@@ -323,7 +373,9 @@ section .logommt img {
 /* <!-- ===============FIVE ELEMENTS ENDS FROM HERE========================= --> */
 /* <!-- ===============Advertisement STARTS FROM HERE========================= --> */
 .Advertisement {
-    margin: 40px auto;
+    margin: 0px auto;
+    margin-top: 70px;
+    margin-bottom: 40px;
   }
 
 .Advertisement img {
@@ -334,7 +386,7 @@ section .logommt img {
 
 .slider_main{
     margin: 0px auto;
-    width: 80%;
+    width: var(--width_80per);
     border: 1px solid gray;
     border-radius: 10px;
 
@@ -344,6 +396,7 @@ section .logommt img {
     list-style: none;
     display: inline-block;
     margin-top: 10px;
+    color: var(--font_color);
 }
 
 .slider_main h1{
@@ -354,7 +407,7 @@ section .logommt img {
 }
 
 .slider_main h6{
-    margin-left: 20px;
+    margin-left: 9px;
     font-size: 20px;
 }
 
@@ -371,7 +424,7 @@ section .logommt img {
 }
 
 /* <!-- ===============SLIDER ENDS FROM HERE========================= --> */
-.huhu{
+.div_text_content{
     text-align: left;
     margin-left: 10px;
 }
@@ -419,9 +472,7 @@ section .logommt img {
     background-color: rgb(250, 246, 212);
 }
 
-.koko{
-    background-color: rgb(144, 77, 51);
-}
+
 
 .slide {
     display: flex;
@@ -445,7 +496,11 @@ section .logommt img {
     font-family: sans-serif;
 }
 
-.slide a {
+.font_color{
+  color: black;
+}
+
+.slide .arrow_new{
     position: absolute;
     top: 48%;
     width: 25px;
@@ -453,6 +508,7 @@ section .logommt img {
     border: solid black;
     border-width: 0 4px 4px 0;
     padding: 3px;
+    
   
 }
 
@@ -473,38 +529,62 @@ a.slide__next{
     position: relative;
     top: 50px;
     border-radius: 10px;
-    width: 80%;
+    width: var(--width_80per);
     margin: 0px auto;
+    box-shadow: var(--Box_shadow_0_0_grey);
+}
+
+.scanned_text_top{
+  margin: 20px 40px;
 }
 
 .qrscan img{
-    width: 80px;
+  width: 80px;
 }
 
 .stripp{
-   border: 1px solid red;
-    width: 80%;
+    
+   width: var(--width_80per);
     margin: 0px auto;
     position: relative;
     top: 80px;
+    padding: 10px 50px;
+    border-radius: 10px;
+    box-shadow: var(--Box_shadow_0_0_grey);
+  
 }
 
 .stripp img{
-    width: 80px;
+  width: 80px;
+}
+
+.stripp h2{
+  vertical-align: top;
+}
+
+.stripp p{
+  vertical-align: top;
 }
 
 .last_block{
+  width: var(--width_80per);
+  margin: 0px auto;
+  padding: 20px 0px;
+  box-shadow: var(--Box_shadow_0_0_grey);
+  border-radius: 10px;
     position: relative;
     top: 100px;
 }
 
 .last_block img{
+  width: 50px;
     border-radius: 50%;
+    margin: 5px;
 }
 
 .three_wrapper{
-    padding-top: 20px;
-    width: 80%;
+    padding: 10px 0px;
+    width: var(--width_80per);
     margin: 0px auto;
 }
 
@@ -512,11 +592,12 @@ a.slide__next{
 /* <!-- ================================ FOOTER=================================== -->
 <!-- =======================FOOTER PART ONE STARTS HERE=========================== --> */
 footer{
-  margin-top: 150px;
+  margin-top: 80px;
+  /* background-color: rgb(218, 218, 218); */
 }
 
 .footer_part_one{
-  width: 80%;
+  width: var(--width_80per);
   margin: 0px auto;
   padding: 5px 30px;
 }
@@ -527,11 +608,11 @@ footer{
 }
 
 .footer_part_one h3{
-  font-size: var(--font_size);
+  font-size: var(--font_size14);
 }
 
 .footer_part_one p{
-  font-size: var(--SMALL_font_size);
+  font-size: var(--font_size);
 }
 
 
@@ -539,7 +620,43 @@ footer{
 
 
 /* <!-- ===========================FOOTER PART ONE ENDS HERE=========================== -->
-<!-- ================================ FOOTER================================== --> */
+
+/* ===========================FOOTER PART TWO STARTS HERE=========================== */
+
+
+.second_footer_part{
+  padding: 25px 30px;
+  width: var(--width_80per);
+  margin: 0px auto;
+}
+
+.second_footer_part h3{
+  margin: 25px 0px;
+  /* padding: 5px 30px; */
+  font-size: var(--font_size);
+}
+
+.second_footer_part p{
+  padding-right: 45px;
+  /* padding: 5px 30px; */
+  font-size: var(--font_size14);
+}
+
+/* ===========================FOOTER PART TWO ENDS HERE=========================== */
+.Last_social_icon{
+  width: 100%;
+  height: 100px;
+  margin: 0px auto;
+  background-color: black;
+  color: white;
+}
+
+.all_icon i{
+  margin: 0px 20px;
+}
+
+
+/* <!-- ================================ FOOTER================================== --> */ 
 
 
 
