@@ -7,6 +7,7 @@
     <title>
       MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp; Holiday
     </title>
+    
     <link rel="stylesheet" href="./css/mainpagestyle.css" />
     <link
       rel="icon"
@@ -129,7 +130,7 @@
           </div>
 
           <div class="flex rin">
-            <div class="smalllogo rin">%</div>
+            <div class="smalllogo rin flex"><img src="./images/homepageallimages/Top_three.png" alt=""></div>
             <ul class="letters_size">
               <li>Super Offers</li>
               <li>Explore great deals & offers</li>
@@ -137,7 +138,7 @@
           </div>
 
           <div class="flex rin">
-            <div class="smalllogo rin">Biz</div>
+            <div class="smalllogo rin flex"><img src="./images/homepageallimages/Top_one.png" alt=""></div>
             <ul class="letters_size">
               <li>Introducing myBiz</li>
               <li>Business Travel Solution</li>
@@ -145,7 +146,7 @@
           </div>
 
           <div class="flex rin">
-            <div class="smalllogo rin">Logo</div>
+            <div class="smalllogo rin flex"><img src="./images/homepageallimages/Top_two.png" alt=""></div>
             <ul class="letters_size">
               <li>My Trips</li>
               <li>Manage your bookings</li>
@@ -237,14 +238,23 @@
         <div class="wrapper rin">
           <div class="all_radio_btn flex space_between">
             <div class="all_radio_btn">
-              <label for="oneway"></label>
-              <input name="oneway" type="radio" />ONE WAY
+              <ul>
+                <li>
+                  <label for="oneway"></label>
+                  <input name="oneway" type="radio" />ONE WAY
+                </li>
 
-              <label for="oneway"></label>
-              <input name="oneway" type="radio" />ONE WAY
+                <li>
+                  <label for="oneway"></label>
+                  <input name="oneway" type="radio" />ROUND TRIP
+                </li>
 
-              <label for="oneway"></label>
-              <input name="oneway" type="radio" />ONE WAY
+                <li>
+                  <label for="oneway"></label>
+                  <input name="oneway" type="radio" />MULTICITY
+                </li>
+              </ul>
+              
             </div>
             <div>Book International and Domestic Flights</div>
           </div>
@@ -289,7 +299,7 @@
               <li>SelectA Fare Type</li>
               <li>
                 <label for="oneway"></label>
-                <input name="oneway" type="radio" />Regular Fares
+                <input name="oneway" type="radio" />Regular   Fares
               </li>
 
               <li>
@@ -339,13 +349,17 @@
               <p>Cheapest, Flights to Paris</p>
             </div>
           </div>
-          <div class="sep_box flex">
+
+          <div id="mid_part"> 
+          <div class="sep_box flex" >
             <img src="./images/homepageallimages/mid1.jpeg" alt="" />
             <div>
               <h4>Explore International Flights</h4>
               <p>Cheapest, Flights to Paris</p>
             </div>
           </div>
+        </div>
+
           <div class="sep_box flex">
             <img src="./images/homepageallimages/mid4.jpeg" alt="" />
             <div>
@@ -361,7 +375,10 @@
             </div>
           </div>
         </div>
+
+        
       </section>
+
       <div class="Advertisement flex">
         <img src="./images/homepageallimages/ads.webp" alt="" />
       </div>
@@ -372,14 +389,14 @@
         <ul>
           <li><h1>Offers</h1></li>
 
-          <li><h6>Offers</h6></li>
-          <li><h6>Offers</h6></li>
-          <li><h6>Offers</h6></li>
-          <li><h6>Offers</h6></li>
-          <li><h6>Offers</h6></li>
-          <li><h6>Offers</h6></li>
-          <li><h6>Offers</h6></li>
-          <li><h6>Offers</h6></li>
+          <li><h6>ALL OFFERS</h6></li>
+          <li><h6>FLIGHTS</h6></li>
+          <li><h6>HOTELS</h6></li>
+          <li><h6>HOLIDAYS</h6></li>
+          <li><h6>TRAINS</h6></li>
+          <li><h6>CABS</h6></li>
+          <li><h6>BANK OFFERS</h6></li>
+          <li><h6>OTHERS</h6></li>
         </ul>
         <hr />
 
@@ -388,6 +405,7 @@
             <div class="slider-container">
               <div class="slider">
                 <div class="slides">
+
                   <div id="slides__1" class="slide">
                     <div class="flex rin ads_box">
                       <div class="image_cont">
@@ -400,11 +418,11 @@
                         <p>T&C Apply</p>
                       </div>
 
-                      <div class="huhu">
+                      <div class="div_text_content">
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum dolor sit amet.</h2>
                         <p>Lorem ipsum dolor sit.</p>
-                        <p>View Details</p>
+                        <a href="./html/suhana-safar-sale.html" target="_blank" class="font_color">View Details</a>
                       </div>
                     </div>
 
@@ -419,16 +437,16 @@
                         <p>T&C Apply</p>
                       </div>
 
-                      <div class="huhu">
+                      <div class="div_text_content">
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum dolor sit amet.</h2>
                         <p>Lorem ipsum dolor sit.</p>
-                        <p>View Details</p>
+                        <p><a href="./html/malaysia-airlines-offer.html" target="_blank" class="font_color">View Details</a></p>
                       </div>
                     </div>
 
-                    <a class="slide__prev" href="#slides__4" title="Prev"></a>
-                    <a class="slide__next" href="#slides__2" title="Next"></a>
+                    <a class="slide__prev arrow_new" href="#slides__4" title="Prev" ></a>
+                    <a class="slide__next arrow_new" href="#slides__2" title="Next"  ></a>
 
                     <div class="flex rin ads_box">
                       <div class="image_cont">
@@ -441,7 +459,7 @@
                         <p>T&C Apply</p>
                       </div>
 
-                      <div class="huhu">
+                      <div class="div_text_content">
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum dolor sit amet.</h2>
                         <p>Lorem ipsum dolor sit.</p>
@@ -460,7 +478,7 @@
                         <p>T&C Apply</p>
                       </div>
 
-                      <div class="huhu">
+                      <div class="div_text_content">
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum dolor sit amet.</h2>
                         <p>Lorem ipsum dolor sit.</p>
@@ -468,6 +486,8 @@
                       </div>
                     </div>
                   </div>
+
+
 
                   <div id="slides__2" class="slide">
                     <div class="flex rin ads_box">
@@ -481,7 +501,7 @@
                         <p>T&C Apply</p>
                       </div>
 
-                      <div class="huhu">
+                      <div class="div_text_content">
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum dolor sit amet.</h2>
                         <p>Lorem ipsum dolor sit.</p>
@@ -500,7 +520,7 @@
                         <p>T&C Apply</p>
                       </div>
 
-                      <div class="huhu">
+                      <div class="div_text_content">
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum dolor sit amet.</h2>
                         <p>Lorem ipsum dolor sit.</p>
@@ -508,8 +528,8 @@
                       </div>
                     </div>
 
-                    <a class="slide__prev" href="#slides__1" title="Prev"></a>
-                    <a class="slide__next" href="#slides__3" title="Next"></a>
+                    <a class="slide__prev arrow_new" href="#slides__1" title="Prev" id="slider_id"  ></a>
+                    <a class="slide__next arrow_new" href="#slides__3" title="Next"  ></a>
 
                     <div class="flex rin ads_box">
                       <div class="image_cont">
@@ -522,7 +542,7 @@
                         <p>T&C Apply</p>
                       </div>
 
-                      <div class="huhu">
+                      <div class="div_text_content">
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum dolor sit amet.</h2>
                         <p>Lorem ipsum dolor sit.</p>
@@ -541,7 +561,7 @@
                         <p>T&C Apply</p>
                       </div>
 
-                      <div class="huhu">
+                      <div class="div_text_content">
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum dolor sit amet.</h2>
                         <p>Lorem ipsum dolor sit.</p>
@@ -562,7 +582,7 @@
                         <p>T&C Apply</p>
                       </div>
 
-                      <div class="huhu">
+                      <div class="div_text_content">
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum.</h2>
                         <p>Lorem ipsum dolor sit.</p>
@@ -581,7 +601,7 @@
                         <p>T&C Apply</p>
                       </div>
 
-                      <div class="huhu">
+                      <div class="div_text_content">
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum dolor sit amet.</h2>
                         <p>Lorem ipsum dolor sit.</p>
@@ -590,8 +610,8 @@
                     </div>
 
                     <!-- <span class="slide__text">33</span> -->
-                    <a class="slide__prev" href="#slides__2" title="Prev"></a>
-                    <a class="slide__next" href="#slides__4" title="Next"></a>
+                    <a class="slide__prev arrow_new" href="#slides__2" title="Prev"></a>
+                    <a class="slide__next arrow_new" href="#slides__4" title="Next"></a>
 
                     <div class="flex rin ads_box">
                       <div class="image_cont">
@@ -604,7 +624,7 @@
                         <p>T&C Apply</p>
                       </div>
 
-                      <div class="huhu">
+                      <div class="div_text_content">
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum dolor sit amet.</h2>
                         <p>Lorem ipsum dolor sit.</p>
@@ -622,7 +642,7 @@
                         </div>
                         <p>T&C Apply</p>
                       </div>
-                      <div class="huhu">
+                      <div class="div_text_content">
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum dolor sit amet.</h2>
                         <p>Lorem ipsum dolor sit.</p>
@@ -643,7 +663,7 @@
                         <p>T&C Apply</p>
                       </div>
 
-                      <div class="huhu">
+                      <div class="div_text_content">
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum.</h2>
                         <p>Lorem ipsum dolor sit.</p>
@@ -662,15 +682,15 @@
                         <p>T&C Apply</p>
                       </div>
 
-                      <div class="huhu">
+                      <div class="div_text_content">
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum dolor sit amet.</h2>
                         <p>Lorem ipsum dolor sit.</p>
                         <p>View Details</p>
                       </div>
                     </div>
-                    <a class="slide__prev" href="#slides__3" title="Prev"></a>
-                    <a class="slide__next" href="#slides__1" title="Prev"></a>
+                    <a class="slide__prev arrow_new" href="#slides__3" title="Prev" ></a>
+                    <a class="slide__next arrow_new" href="#slides__1" title="Prev"></a>
                     <div class="flex rin ads_box">
                       <div class="image_cont">
                         <div>
@@ -682,7 +702,7 @@
                         <p>T&C Apply</p>
                       </div>
 
-                      <div class="huhu">
+                      <div class="div_text_content">
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum.</h2>
                         <p>Lorem ipsum dolor sit.</p>
@@ -701,7 +721,7 @@
                         <p>T&C Apply</p>
                       </div>
 
-                      <div class="huhu">
+                      <div class="div_text_content">
                         <p>Lorem ipsum dolor sit.</p>
                         <h2>Lorem ipsum dolor sit amet.</h2>
                         <p>Lorem ipsum dolor sit.</p>
@@ -718,16 +738,16 @@
       <!-- ===============SLIDER ENDS FROM HERE========================= -->
       <!-- ===============SCANNED PORTION START FROM HERE========================= -->
 
-      <div class="Scanned_portion fle ring">
-        <div class="fle">
+      <div class="Scanned_portion fle rin">
+        <div class="scanned_text_top fle">
           <h1>Lorem ipsum dolor sit amet.</h1>
           <h6>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
             totam!
           </h6>
         </div>
-
-        <div class="flex ring space_around">
+        <hr>
+        <div class="flex rin space_around">
           <div>
             <img src="./icons/allnavicon/scanportion.png" alt="" />
           </div>
@@ -748,8 +768,8 @@
       <!-- ===============STRIP STARTS FROM HERE========================= -->
 
       <div class="stripp rin">
-            <div class="flex space_around">
-                <div>
+            <div class="flex space_between ">
+                <div class="small_images">
                     <img src="./images/homepageallimages/strip1.png" alt="koko">
                 </div>
                 <div class="fle space_betwee">
@@ -761,7 +781,39 @@
       </div>
       <!-- ===============STRIP ENDS FROM HERE========================= -->
       <div class="last_block rin">
-        <div class="flex three_wrapper space_around ring">
+        <div class="flex three_wrapper space_around rin">
+            <div class="flex rin">
+                <div class="rin">
+                    <img src="./images/homepageallimages/bottomw.webp" alt="">
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <span>Lorem, ipsum.</span>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div>
+                    <img src="./images/homepageallimages/bottomw.webp" alt="">
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <span>Lorem, ipsum.</span>
+                </div>
+            </div>
+
+            <div class="flex">
+                <div>
+                    <img src="./images/homepageallimages/bottomw.webp" alt="">
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <span>Lorem, ipsum.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex three_wrapper space_around rin">
             <div class="flex">
                 <div>
                     <img src="./images/homepageallimages/bottomw.webp" alt="">
@@ -793,39 +845,7 @@
             </div>
         </div>
 
-        <div class="flex three_wrapper space_around ring">
-            <div class="flex">
-                <div>
-                    <img src="./images/homepageallimages/bottomw.webp" alt="">
-                </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span>Lorem, ipsum.</span>
-                </div>
-            </div>
-
-            <div class="flex">
-                <div>
-                    <img src="./images/homepageallimages/bottomw.webp" alt="">
-                </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span>Lorem, ipsum.</span>
-                </div>
-            </div>
-
-            <div class="flex">
-                <div>
-                    <img src="./images/homepageallimages/bottomw.webp" alt="">
-                </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <span>Lorem, ipsum.</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="flex three_wrapper space_around ring">
+        <div class="flex three_wrapper space_around rin">
             <div class="flex">
                 <div>
                     <img src="./images/homepageallimages/bottomw.webp" alt="">
@@ -865,7 +885,7 @@
    <!-- ================================ FOOTER=================================== -->
 <!-- =================================FOOTER PART ONE STARTS HERE=================================== -->
 <footer> 
-<div class="footer_part_one ring flex">
+<div class="footer_part_one rin flex">
   <ul>
     <li>
       <h3>PRODUCT OFFERING</h3>
@@ -901,15 +921,49 @@
 </div>
 
 <!-- =================================FOOTER PART ONE ENDS HERE=================================== -->
-<div>
+ 
+
+
+  <div class="second_footer_part flex rin">
+    <div>
+      <h3>Why MakeMyTrip?</h3>
+      <p>Established in 2000, MakeMyTrip has since positioned itself as one of the leading companies, providing great offers, competitive airfares, exclusive discounts, and a seamless online booking experience to many of its customers. The experience of booking your flight tickets, hotel stay, and holiday package through our desktop site or mobile app can be done with complete ease and no hassles at all. We also deliver amazing offers, such as Instant Discounts, Fare Calendar, MyRewardsProgram, MyWallet, and many more while updating them from time to time to better suit our customers’ evolving needs and demands.</p>
+    </div>
   
-</div>
+    <div>
+      <h3>Why MakeMyTrip?</h3>
+      <p>Established in 2000, MakeMyTrip has since positioned itself as one of the leading companies, providing great offers, competitive airfares, exclusive discounts, and a seamless online booking experience to many of its customers. The experience of booking your flight tickets, hotel stay, and holiday package through our desktop site or mobile app can be done with complete ease and no hassles at all. We also deliver amazing offers, such as Instant Discounts, Fare Calendar, MyRewardsProgram, MyWallet, and many more while updating them from time to time to better suit our customers’ evolving needs and demands.</p>
+    </div>
+  
+    <div>
+      <h3>Why MakeMyTrip?</h3>
+      <p>Established in 2000, MakeMyTrip has since positioned itself as one of the leading companies, providing great offers, competitive airfares, exclusive discounts, and a seamless online booking experience to many of its customers. The experience of booking your flight tickets, hotel stay, and holiday package through our desktop site or mobile app can be done with complete ease and no hassles at all. We also deliver amazing offers, such as Instant Discounts, Fare Calendar, MyRewardsProgram, MyWallet, and many more while updating them from time to time to better suit our customers’ evolving needs and demands.</p>
+    </div>
+  </div>
+
+
+  <div class="Last_social_icon flex space_around">
+    <div class="all_icon">
+      <i class="fa fa-twitter" style="font-size:48px;color:white"></i>
+      <i class="fa fa-facebook-f" style="font-size:48px;color:white"></i>
+    </div>
+
+    <div>
+      <h3>© 2022 MAKEMYTRIP PVT. LTD.</h3>
+      <span> Country </span> <span> India </span> <span> USA </span> <span> UK </span>
+      
+    </div>
+  </div>
+
+
+  
+ 
 
 </footer>
 <!-- ================================ FOOTER=================================== -->
 
 
 
-    <script src="index.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
