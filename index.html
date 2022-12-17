@@ -9,6 +9,7 @@
     </title>
 
     <link rel="stylesheet" href="./css/mainpagestyle.css" />
+    <link rel="stylesheet" href="./css/sign-in.css">
     <link
       rel="icon"
       type="image/x-icon"
@@ -160,8 +161,8 @@
           </div>
 
           <div class="login_btn rin">
-            <button>
-              <a href="./html/sign-in.html">Login or Create Account</a>
+            <button class="click_login_btn">
+              Login or Create Account
               <i
                 class="fa fa-angle-down"
                 style="font-size: 15px; color: white"
@@ -1076,6 +1077,120 @@
     </footer>
     <!-- ================================ FOOTER=================================== -->
 
-    <script src="./js/index.js"></script>
+
+    <article class="popup-box">
+       
+      <section class="personal-account-section">
+    
+        <!-- ***** personal account login-signup content *****-->
+        
+        <!-- this is top-section of personal account -->
+        <div class="top-section"> 
+          <div class="accounts"> 
+            <div class="btn">
+              <button class="personal-account">PERSONAL ACCOUNT</button>
+              <button class="mybiz-account">MYBIZ ACCOUNT</button>
+            </div>
+          </div>
+    
+          <!-- this is floating msgs in top-section -->
+          <div class="para">
+            <p>Book your 1st International Trip</p>
+            <p>Join the club of 10 crore+ happy travellers</p>
+          </div>
+        </div>
+    
+        <!-- login-credentials of personal-account -->
+        <div class="login-credentials">
+          <p>Email or Mobile Number</p>
+          <input class="login-credentials-btn" placeholder="Enter email or mobile number"></input>
+          <button class="continue">CONTINUE</button>
+          <div class="google-login">
+            <div class="left-line"></div>
+            <div class="text">Or login/Sign-up with</div>
+            <div class="right-line"></div>
+          </div>
+          <div class="login-img">
+            <img src="../images/google.jpg" alt="" />
+          </div> 
+          <div class="terms-conditions">
+            <p class="para">
+              By procedding, you agree to MakeMyTrip's 
+              <a href="">Privacy Policy</a>
+              <a href="">User Agreement</a>
+              <span>and</span>
+              <a href="">T&Cs</a>
+            </p>
+          </div>
+        </div>
+    
+      </section> 
+        
+    <!-- this is mybiz account login-signup section --> 
+    <section class="mybizz-section hidden">     
+        <div class="mybiz-top-section"> 
+              <div class="btn">
+                <button class="my-biz-personal-account">PERSONAL ACCOUNT</button>
+                <button class="my-biz-mybiz-account">MYBIZ ACCOUNT</button>
+              </div>
+        </div>
+    
+         <!-- this is login or sign-up section  --> 
+    
+         <div class="login-signup-mybiz-account">
+            <h1>Login/Sign up</h1>
+    
+            <div class= "work-mail-login-box">
+                <div>WorkEmail</div>
+                <div class="forget-id-recovery">Forgot Login Id?</div>
+            </div> 
+    
+            <div class="input-continue-box">
+                <input type="text" placeholder="Enter your work email id">
+                <button>CONTINUE</button>
+            </div>
+    
+            <div class="google-login">OR USE YOUR BUSINESS ACCOUNT WITH</div>
+           
+            <div class="image-box">
+                <img src="../images/google.jpg" alt="">
+            </div>
+            
+            <div class="terms">
+                <p>By proceding, you agree to MakeMy Trip's <a href="">T&CsandPrivacy</a></p>
+            </div>
+            
+        </div>
+    </section> 
+    
+    <!-- this is otp section  -->
+    
+    <section class="otp-section hidden">
+    
+    
+    
+        <!-- this is floating msgs in top-section -->
+        <div class="para">
+          <p>Back</p>
+          <h2>Enter OTP</h2>
+          <p>OTP has been sent</p>
+        </div>
+      </div>
+    
+      <!-- login-credentials of personal-account -->
+      <div class="login-credentials">
+        <p>Enter OTP</p>
+        <input class="login-credentials-btn" placeholder="Enter email or mobile number"></input>
+        <button class="otp-button">VERIFY & CREATE ACCOUNT</button>
+      </div>
+    
+    </section> 
+    
+     <div class="cross_btn">X</div>
+    </article>
+      
+        <script src="js/login_page.js"></script>
+
+
   </body>
 </html>
