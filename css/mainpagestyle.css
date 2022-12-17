@@ -13,15 +13,14 @@
   --SMALL_font_size: 10px;
 
   --font_size14: 12px;
-  --Box_shadow_0_0_grey:0px 0px 5px grey;
-
+  --Box_shadow_0_0_grey: 0px 0px 5px grey;
 
   --margin_top: 10px;
   --font_color: rgb(61, 61, 61);
-  --width_80per:80%
+  --width_80per: 80%;
 }
 
-a{
+a {
   text-decoration: none;
   color: white;
 }
@@ -50,12 +49,16 @@ a{
 
 /* ==============ALL GENERAL CSS END HERE========= */
 /* ============NAV BAR PORTION STARTS FROM HERE====================== */
-header {
+#huyu {
+  /* position: absolute;
+  top: 0; */
+  /* width: 100%; */
   height: max-content;
-  border: 1px solid red;
+
   padding: 5px;
-  /* position: relative;
-    top: -100px; */
+
+  /* /* position: relative;
+    top: -100px; */ 
 }
 
 .allicon li {
@@ -129,26 +132,24 @@ nav .allicon img {
 
 /* ============NAV BAR PORTION STARTS FROM HERE====================== */
 /* <!-- ==============PARTS BELOW NAV BLUE BACKGROUND  STARTS FROM HERE========================= --> */
-main{
+#main_bar_tag {
   position: relative;
-  bottom: 72px;
+  /* bottom: 72px; */
 }
-
 
 #bgcolor {
   /* z-index: 10; */
-  background-image: linear-gradient(0deg,#15457b,#051423);
-  padding-bottom: 40px;
+  background-image: linear-gradient(0deg, #15457b, #051423);
+  padding-bottom: 20px;
 }
 
 .top_element {
   padding-top: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
-.smalllogo img{
+.smalllogo img {
   width: 30px;
-   
 }
 
 .top_element li {
@@ -173,7 +174,7 @@ section .logommt img {
   margin-right: 50px;
 }
 
-.letters_size li{
+.letters_size li {
   color: white;
 }
 
@@ -227,24 +228,22 @@ section .logommt img {
   box-shadow: var(--Box_shadow_0_0_grey);
   border-radius: 10px;
   background-color: white;
-  position: absolute;
-  left: 380px;
-  top: 70px;
+  position: relative;
+
+  top: 50px;
   z-index: 2;
 }
 
 .all_radio_btn {
   padding: 0px 40px;
   padding-bottom: 3px;
-  
 }
 
-.all_radio_btn li{
+.all_radio_btn li {
   list-style: none;
   display: inline-block;
   margin-right: 40px;
   font-weight: bold;
-
 }
 
 .mid_portion ul img {
@@ -258,7 +257,7 @@ section .logommt img {
 
 .wrapper {
   padding-top: 80px;
-  
+
   box-shadow: var(--Box_shadow_0_0_grey);
   width: var(--width_80per);
   margin: 0px auto;
@@ -305,7 +304,6 @@ section .logommt img {
   font-size: var(--font_size);
   background-color: rgb(212, 212, 212);
   text-align: justify;
-   
   padding: 10px;
 }
 
@@ -339,10 +337,10 @@ section .logommt img {
   border-radius: 50px;
   width: max-content;
   margin: 0px auto;
-   
+
   padding: 5px 8px;
   position: relative;
-  top: 70px;
+  top: 50px;
 }
 
 .five_elements img {
@@ -350,11 +348,11 @@ section .logommt img {
   width: 40px;
 }
 
-#mid_part{
+#mid_part {
   background-color: antiquewhite;
 }
 
-#mid_part img{
+#mid_part img {
   border-radius: 50%;
 }
 
@@ -373,10 +371,10 @@ section .logommt img {
 /* <!-- ===============FIVE ELEMENTS ENDS FROM HERE========================= --> */
 /* <!-- ===============Advertisement STARTS FROM HERE========================= --> */
 .Advertisement {
-    margin: 0px auto;
-    margin-top: 70px;
-    margin-bottom: 40px;
-  }
+  margin: 0px auto;
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
 
 .Advertisement img {
   width: 75%;
@@ -384,266 +382,249 @@ section .logommt img {
 /* <!-- ===============Advertisement ENDS FROM HERE========================= --> */
 /* <!-- ===============SLIDER STARTS FROM HERE========================= --> */
 
-.slider_main{
-    margin: 0px auto;
-    width: var(--width_80per);
-    border: 1px solid gray;
-    border-radius: 10px;
-
+.slider_main {
+  margin: 0px auto;
+  width: var(--width_80per);
+  border: 1px solid gray;
+  border-radius: 10px;
 }
 
-.slider_main ul li{
-    list-style: none;
-    display: inline-block;
-    margin-top: 10px;
-    color: var(--font_color);
+.slider_main ul li {
+  list-style: none;
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--font_color);
 }
 
-.slider_main h1{
-    margin-left: 40px;
-    margin-right: 40px;
-    font-size: 50px;
-    font-weight: bold;
+.slider_main h1 {
+  margin-left: 40px;
+  margin-right: 40px;
+  font-size: 50px;
+  font-weight: bold;
 }
 
-.slider_main h6{
-    margin-left: 9px;
-    font-size: 20px;
+.slider_main h6 {
+  margin-left: 9px;
+  font-size: 20px;
 }
 
-.image_cont{
-    margin: 5px;
+.image_cont {
+  margin: 5px;
 }
 
-
-.ads_box{
-    margin: 20px;
-    width: 40%;
-    border: 1px solid grey;
-    border-radius: 10px;
+.ads_box {
+  margin: 20px;
+  width: 40%;
+  border: 1px solid grey;
+  border-radius: 10px;
 }
 
 /* <!-- ===============SLIDER ENDS FROM HERE========================= --> */
-.div_text_content{
-    text-align: left;
-    margin-left: 10px;
+.div_text_content {
+  text-align: left;
+  margin-left: 10px;
 }
 
-.two_div img{
-    width: 125px;
-    height: 125px;
-    border-radius: 5px;
+.two_div img {
+  width: 125px;
+  height: 125px;
+  border-radius: 5px;
 }
-
-
- 
-
 
 .slider-container {
-    background: linear-gradient(149deg, rgb(247, 0, 255) 0%, rgb(255, 145, 0) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+  background: linear-gradient(
+    149deg,
+    rgb(247, 0, 255) 0%,
+    rgb(255, 145, 0) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .slider {
-    width: 100%;
-    max-width: 1100px;
-    height: 420px;
-    margin: 20px;
-    text-align: center;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 420px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
 }
 
 .slides {
-    display: flex;
-    overflow-x: scroll;
-    position: relative;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
+  display: flex;
+  overflow-x: scroll;
+  position: relative;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 }
-
-
 
 .slide:nth-of-type(even) {
-    background-color: rgb(250, 246, 212);
+  background-color: rgb(250, 246, 212);
 }
 
-
-
 .slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 420px;
-    margin-right: 0px;
-    box-sizing: border-box;
-    background: white;
-    transform-origin: center center;
-    transform: scale(1);
-    scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 420px;
+  margin-right: 0px;
+  box-sizing: border-box;
+  background: white;
+  transform-origin: center center;
+  transform: scale(1);
+  scroll-snap-align: center;
 }
 
 .slide__text {
-    font-size: 40px;
-    font-weight: bold;
-    font-family: sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: sans-serif;
 }
 
-.font_color{
+.font_color {
   color: black;
 }
 
-.slide .arrow_new{
-    position: absolute;
-    top: 48%;
-    width: 25px;
-    height: 25px;
-    border: solid black;
-    border-width: 0 4px 4px 0;
-    padding: 3px;
-    
-  
+.slide .arrow_new {
+  position: absolute;
+  top: 48%;
+  width: 25px;
+  height: 25px;
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  padding: 3px;
 }
 
 a.slide__prev {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    left: 5%;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  left: 5%;
 }
 
-a.slide__next{
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    right: 5%;
+a.slide__next {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  right: 5%;
 }
 
-
-.Scanned_portion{
-    position: relative;
-    top: 50px;
-    border-radius: 10px;
-    width: var(--width_80per);
-    margin: 0px auto;
-    box-shadow: var(--Box_shadow_0_0_grey);
+.Scanned_portion {
+  position: relative;
+  top: 50px;
+  border-radius: 10px;
+  width: var(--width_80per);
+  margin: 0px auto;
+  box-shadow: var(--Box_shadow_0_0_grey);
 }
 
-.scanned_text_top{
+.scanned_text_top {
   margin: 20px 40px;
 }
 
-.qrscan img{
+.qrscan img {
   width: 80px;
 }
 
-.stripp{
-    
-   width: var(--width_80per);
-    margin: 0px auto;
-    position: relative;
-    top: 80px;
-    padding: 10px 50px;
-    border-radius: 10px;
-    box-shadow: var(--Box_shadow_0_0_grey);
-  
+.stripp {
+  width: var(--width_80per);
+  margin: 0px auto;
+  position: relative;
+  top: 80px;
+  padding: 10px 50px;
+  border-radius: 10px;
+  box-shadow: var(--Box_shadow_0_0_grey);
 }
 
-.stripp img{
+.stripp img {
   width: 80px;
 }
 
-.stripp h2{
+.stripp h2 {
   vertical-align: top;
 }
 
-.stripp p{
+.stripp p {
   vertical-align: top;
 }
 
-.last_block{
+.last_block {
   width: var(--width_80per);
   margin: 0px auto;
   padding: 20px 0px;
   box-shadow: var(--Box_shadow_0_0_grey);
   border-radius: 10px;
-    position: relative;
-    top: 100px;
+  position: relative;
+  top: 100px;
 }
 
-.last_block img{
+.last_block img {
   width: 50px;
-    border-radius: 50%;
-    margin: 5px;
+  border-radius: 50%;
+  margin: 5px;
 }
 
-.three_wrapper{
-    padding: 10px 0px;
-    width: var(--width_80per);
-    margin: 0px auto;
+.three_wrapper {
+  padding: 10px 0px;
+  width: var(--width_80per);
+  margin: 0px auto;
 }
-
 
 /* <!-- ================================ FOOTER=================================== -->
 <!-- =======================FOOTER PART ONE STARTS HERE=========================== --> */
-footer{
+footer {
   margin-top: 80px;
   /* background-color: rgb(218, 218, 218); */
 }
 
-.footer_part_one{
+.footer_part_one {
   width: var(--width_80per);
   margin: 0px auto;
   padding: 5px 30px;
 }
 
-.footer_part_one ul li{
+.footer_part_one ul li {
   list-style: none;
   margin: 25px 0px;
 }
 
-.footer_part_one h3{
+.footer_part_one h3 {
   font-size: var(--font_size14);
 }
 
-.footer_part_one p{
+.footer_part_one p {
   font-size: var(--font_size);
 }
-
-
-
-
 
 /* <!-- ===========================FOOTER PART ONE ENDS HERE=========================== -->
 
 /* ===========================FOOTER PART TWO STARTS HERE=========================== */
 
-
-.second_footer_part{
+.second_footer_part {
   padding: 25px 30px;
   width: var(--width_80per);
   margin: 0px auto;
 }
 
-.second_footer_part h3{
+.second_footer_part h3 {
   margin: 25px 0px;
   /* padding: 5px 30px; */
   font-size: var(--font_size);
 }
 
-.second_footer_part p{
+.second_footer_part p {
   padding-right: 45px;
   /* padding: 5px 30px; */
   font-size: var(--font_size14);
 }
 
 /* ===========================FOOTER PART TWO ENDS HERE=========================== */
-.Last_social_icon{
+.Last_social_icon {
   width: 100%;
   height: 100px;
   margin: 0px auto;
@@ -651,30 +632,8 @@ footer{
   color: white;
 }
 
-.all_icon i{
+.all_icon i {
   margin: 0px 20px;
 }
 
-
-/* <!-- ================================ FOOTER================================== --> */ 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* <!-- ================================ FOOTER================================== --> */
