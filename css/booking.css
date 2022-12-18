@@ -32,7 +32,7 @@ input[type="checkbox"], input[type="radio"]{
   padding: 0;
   cursor: pointer;
 }
-.flex {
+.flex-div {
   display: flex;
   align-items: center;
 }
