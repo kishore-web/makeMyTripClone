@@ -180,6 +180,9 @@
               ></i>
             </button>
           </div>
+          <div>
+            <p class="user-name-display"></p>
+          </div>
         </div>
         <!-- ==================TOP FOUR ADS AND LOGIN BTN ENDS FROM HERE====================== -->
         <!-- ==================TOP BOX DETAILS STARTS FROM HERE====================== -->
@@ -1102,14 +1105,16 @@
     
         <!-- login-credentials of personal-account -->
         <div class="login-credentials">
-          <p>Email or Mobile Number</p>
+          <p>Email or Mobile number</p>
           <input class="login-credentials-btn" placeholder="Enter email or mobile number"></input>
+          <div id="error-signin"></div>
           <button class="continue">CONTINUE</button>
           <div class="google-login">
             <div class="left-line"></div>
             <div class="text">Or login/Sign-up with</div>
             <div class="right-line"></div>
           </div>
+          <button class="sign-up-button">Sign-up</button>
           <div class="login-img">
             <img src="../images/google.jpg" alt="" />
           </div> 
@@ -1146,7 +1151,7 @@
             </div> 
     
             <div class="input-continue-box">
-                <input type="text" placeholder="Enter your work email id">
+                <input type="text"  placeholder="Enter your work email id">
                 <button>CONTINUE</button>
             </div>
     
@@ -1170,9 +1175,9 @@
     
     
         <!-- this is floating msgs in top-section -->
-        <div class="para">
-          <p>Back</p>
-          <h2>Enter OTP</h2>
+        <div class="para new-para">
+          <p id="back-click">Back</p>
+    
           <p>OTP has been sent</p>
         </div>
       </div>
@@ -1180,11 +1185,37 @@
       <!-- login-credentials of personal-account -->
       <div class="login-credentials">
         <p>Enter OTP</p>
-        <input class="login-credentials-btn" placeholder="Enter email or mobile number"></input>
-        <button class="otp-button">VERIFY & CREATE ACCOUNT</button>
+        <input class="otp-input" placeholder="Enter email or mobile number"></input>
+        <div id="error-otp"></div>
+        <button class="otp-button">VERIFY & LOGIN</button>
       </div>
     
     </section> 
+
+    <section class="sign-up-section hidden">
+    
+
+      <div class="message-display"></div>
+       
+  
+  
+
+    <div class="login-credentials">
+      <div id="error-signup"></div>
+      <form action="" id="sign-up-form">
+      <label for="">Enter your name</label>
+      <input id="name-signup" placeholder="Enter your name" type="text"></input>
+      <label for="">Enter your Email</label>
+      <input id="email-signup" placeholder="Enter your email" type="email"></input>
+      <label for="">Enter your Mobile</label>
+      <input id="mobile-signup" placeholder="Enter your mobile" type="tel"></input>
+      <label for="">Enter your Password</label>
+      <input id="password-signup" placeholder="Enter your password" type="password"></input>
+      <button class="create-account-button">CREATE ACCOUNT</button>
+    </form>
+    </div>
+  
+  </section> 
     
      <div class="cross_btn">X</div>
     </article>
