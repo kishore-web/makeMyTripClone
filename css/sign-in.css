@@ -17,7 +17,6 @@
 
 .popup-box {
     border-radius: 15px;
-    width: 100;
     background-color: rgba(245, 240, 240, 0.322);
     width: 410px;
     height: 480px;
@@ -29,6 +28,7 @@
      transform: translate(-50%,-50%);
      display: none;
      background-color: white;
+     z-index: 1000;
 
 } 
 
@@ -98,6 +98,7 @@
     padding: 5px 25px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .login-credentials input {
@@ -109,7 +110,7 @@
     border-radius: 5px;  
 }
 
-.continue, .otp-button {
+.continue, .otp-button, .sign-up-button, .create-account-button {
     font-size: 14px;
     font-weight: bold;
     background-color: aqua;
@@ -117,6 +118,9 @@
     padding: 7px;
     border-radius: 7px;
     border: none;   
+}
+.continue{
+    margin-top: 15px;
 }
 
 .google-login {
@@ -308,9 +312,93 @@
    
 }
 
+.user-name-display{
+    color:white;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
 .hidden{
     display: none;
 }
+
+/* css for sign up form  */
+
+#error-signup, #error-signin, #error-otp{
+    color:red;
+    position: absolute;
+    top:5px;
+}
+
+#error-signin{
+    top:75px;
+}
+
+#error-otp{
+    top:80px;
+}
+
+.red-background{
+    background-color: rgba(255, 0, 0, 0.438);
+}
+
+.green-background{
+    background-color: rgba(123, 233, 123, 0.536);
+}
+
+.message-display{
+
+font-size: 1.2rem;
+font-weight: bold;
+padding:10px;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+display: flex;
+align-items: center;
+}
+
+#sign-up-form{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+input{
+    outline: none;
+}
+
+/* otp section css  */
+
+.new-para p:first-child{
+  margin-left:25px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  color:black;
+  cursor: pointer;
+}
+
+.new-para p:last-child{
+    margin-left:25px;
+    margin-bottom: 20px; 
+    
+}
+
+.login-credentials p{
+    margin-bottom: 15px;
+}
+
+button{
+    cursor:pointer;
+}
+
+.otp-button{
+    margin-top: 20px;
+}
+
+
 
 
 
