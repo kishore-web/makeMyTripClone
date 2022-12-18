@@ -578,7 +578,7 @@ a.slide__next {
 /* <!-- ================================ FOOTER=================================== -->
 <!-- =======================FOOTER PART ONE STARTS HERE=========================== --> */
 footer {
-  margin-top: 80px;
+  margin-top: 130px;
   /* background-color: rgb(218, 218, 218); */
 }
 
@@ -594,6 +594,7 @@ footer {
 }
 
 .footer_part_one h3 {
+  margin-bottom: 5px;
   font-size: var(--font_size14);
 }
 
