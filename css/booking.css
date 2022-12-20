@@ -499,15 +499,24 @@ div.booknow-text p{
   padding-top: 10px;
   border-bottom: 1px solid rgb(194, 194, 194);
 }
+
 .fare--summary .base--fare img{
   width: 16px;
   height: 16px;
   margin-right: 10px;
 }
+.fare--summary .base--fare .basefare-section{
+  cursor: pointer;
+}
 .fare--summary .fare--div{
   padding-left: 25px;
   margin-top: 12px;
 }
+.fare--div2{
+  padding-left: 25px;
+  margin-top: 12px;
+}
+
 
 .fare--summary .fee--surcharge{
   padding-bottom: 15px;
@@ -601,4 +610,7 @@ div.promo-card img{
 .mmtpromo-terms{
   color: #0091ff;
   cursor: pointer;
+}
+.displayn{
+  display: none;
 }

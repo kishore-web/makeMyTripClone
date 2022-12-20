@@ -220,28 +220,32 @@
             <div class="fare--summary">
               <h2>Fare Summary</h2>
               <div class="base--fare">
-                <div class="flexJ">
-                  <div style="display: flex; flex:1">
-                    <img src="../images/bookingImg/minus.png" alt="">
+                  <div class="flexJ">
+                   <div class="flex-div basefare-section">
+                    <img class="bfs-img" src="../images/bookingImg/plus.png" alt="">
                     <p>Base Fare</p>
+                   </div>
+                    <p class="basefare-price">₹ 4,352</p>
                   </div>
-                </div>
-                <div class="fare--div flexJ">
+                
+                <div class="fare--div flexJ displayn">
                     <p>Adult(s) (1 X ₹ 4,352)</p>
                     <p> ₹ 4,352</p>
                 </div>
               </div>
               <div class="fee--surcharge">
                 <div class="flexJ">
-                  <div style="display: flex; flex:1">
-                    <img src="../images/bookingImg/minus.png" alt="">
-                    <p>Fee & Surcharges</p>
+                  <div class="flex-div surcharge-section">
+                   <img class="bfs-img" src="../images/bookingImg/plus.png" alt="">
+                   <p>Fee & Surcharges</p>
                   </div>
-                </div>
-                <div class="fare--div flexJ">
-                    <p>Total fee & surcharges</p>
-                    <p> ₹ 973</p>
-                </div>
+                   <p class="surcharge-price">₹ 973</p>
+                 </div>
+               
+               <div class="fare--div2 flexJ displayn">
+                   <p>Total fee & surcharges:</p>
+                   <p> ₹ 973</p>
+               </div>
               </div>
               <div class="flexJ total--amount">
                 <h2>Total Amount</h2>
@@ -320,5 +324,7 @@
       </div>
    </div>
   </div>
+
+  <script src="../js/booking.js"></script>
 </body>
 </html>
