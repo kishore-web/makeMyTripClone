@@ -127,18 +127,43 @@
             <i class="fa fa-angle-down" aria-hidden="true"></i>
          </div>
 
-         <div class="trip_type trip_type_from">
+         <div class="trip_type trip_type_from trip_depart">
             <p>From</p>
-            <p>New Delhi,India</p>
+            <p class="depart_city_display">Indore</p>
+            <div class="depart_city_container">
+               <select id="depart_city" class="hidden">
+                  <option class="depart_option" value="Ahmedabad">Ahmedabad</option>
+                  <option class="depart_option" value="Bangalore">Bangalore</option>
+                  <option class="depart_option" value="Goa">Goa</option>
+                  <option class="depart_option" value="Indore">Indore</option>
+                  <option class="depart_option" value="New Delhi">New Delhi</option>
+                  <option class="depart_option" value="Mumbai">Mumbai</option>
+  
+              </select>
+           </div>
          </div>
 
          <i class="fa fa-exchange" aria-hidden="true"></i>
 
 
-         <div class="trip_type trip_type_from trip_type_to trip_type_margin">
+         <div class="trip_type trip_type_from   trip_arrive">
             <p>To</p>
-            <p>Mumbai,India</p>
+            <p class="arrive_city_display">New Delhi</p>
+            <div class="arrive_city_container">
+        
+               <select id="arrive_city" class="hidden">
+                   <option class="arrive_option" value="Ahmedabad">Ahmedabad</option>
+                   <option class="arrive_option" value="Bangalore">Bangalore</option>
+                   <option class="arrive_option" value="Goa">Goa</option>
+                   <option class="arrive_option" value="Indore">Indore</option>
+                   <option class="arrive_option" value="New Delhi">New Delhi</option>
+                   <option class="arrive_option" value="Mumbai">Mumbai</option>
+   
+               </select>
+           </div>
+   
          </div>
+
          <div class="trip_type trip_type_from trip_type_margin ">
             <p>Depart</p>
             <p>Sat,Jan 14,2023</p>
@@ -231,52 +256,45 @@
             </div>
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">Air India (11)</label>
+                  <input type="checkbox" name="air_india" id="air_india" value="air india">
+                  <label for="air_india">Air India (5)</label>
                </div>
                <span>₹ 6,255</span>
             </div>
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">Air Asia (2)</label>
+                  <input type="checkbox" name="akasa" id="akasa_air" value="akasa">
+                  <label for="akasa_air">Akasa Air (1)</label>
                </div>
                <span>₹ 5,890</span>
             </div>
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">Akasa Air (1)</label>
+                  <input type="checkbox" name="emirates" id="emirates" value="emirates">
+                  <label for="emirates">Emirates (2)</label>
                </div>
                <span>₹ 5,023</span>
             </div>
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">Go First (15)</label>
+                  <input type="checkbox" name="indigo" id="indigo" value="indigo">
+                  <label for="indigo">Indigo (34)</label>
                </div>
                <span>₹ 4,955</span>
             </div>
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">IndiGo (34)</label>
+                  <input type="checkbox" name="spice_jet" id="spice_jet" value="spice jet">
+                  <label for="spice_jet">Spice jet (34)</label>
                </div>
                <span>₹ 5,145</span>
             </div>
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">Spice Jet (4)</label>
+                  <input type="checkbox" name="vistara" id="vistara" value="vistara">
+                  <label for="vistara">Vistara (34)</label>
                </div>
                <span>₹ 6,890</span>
-            </div>
-            <div class="filter_val">
-               <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">Vistara (18)</label>
-               </div>
-               <span>₹ 4,880</span>
             </div>
             <div class="filter_val">
                <div>
@@ -537,376 +555,13 @@
             </div>
 
 
-            <div class="flight_info_display">
-               <div class="blue_lock_box">
-                  <img
-                     src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/farelock/fl_small_blue_plain_lock.png" />
-                  <p>Lock this Price <span>i</span></p>
-               </div>
 
-               <div class="go_first">
-                  <div class="go_first_logo">
-                     <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/G8.png?v=14" )" alt=""
-                        srcset="">
-                     <div class="go_first_para">
-                        <p>Go First</p>
-                        <p>G8 713, G8 392</p>
-                     </div>
-                  </div>
-                  <div class="flight_time">
-                     <p>20:25</p>
-                     <p>New Delhi</p>
-                  </div>
-                  <div class="one_stop">
-                     <p>10 h 30 m</p>
-                     <div class="blue_line"></div>
-                     <p>1 stop via Ahmedabad</p>
-                  </div>
-
-                  <div class>
-                     <div class="arrival_info">
-                        <p>06:55 </p>
-                        <div class="plus_one_day">
-                           <p>+1</p>
-                           <p>Day</p>
-                        </div>
-                     </div>
-                     <p class="destination">Mumbai</p>
-                  </div>
-                  <div class="price_details">
-                     <p>
-                        ₹ 5,023</p>
-                  </div>
-
-                  <button class="info_btn">View All <i class="fa fa-angle-down" aria-hidden="true"></i></button>
-               </div>
-
-
-
-            </div>
-
-            <div class="flight_info_display">
-               <div class="blue_lock_box">
-                  <img
-                     src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/farelock/fl_small_blue_plain_lock.png" />
-                  <p>Lock this Price <span>i</span></p>
-               </div>
-
-               <div class="go_first">
-                  <div class="go_first_logo">
-                     <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/G8.png?v=14" )" alt=""
-                        srcset="">
-                     <div class="go_first_para">
-                        <p>Go First</p>
-                        <p>G8 713, G8 392</p>
-                     </div>
-                  </div>
-                  <div class="flight_time">
-                     <p>20:25</p>
-                     <p>New Delhi</p>
-                  </div>
-                  <div class="one_stop">
-                     <p>10 h 30 m</p>
-                     <div class="blue_line"></div>
-                     <p>1 stop via Ahmedabad</p>
-                  </div>
-
-                  <div class>
-                     <div class="arrival_info">
-                        <p>06:55 </p>
-                        <div class="plus_one_day">
-                           <p>+1</p>
-                           <p>Day</p>
-                        </div>
-                     </div>
-                     <p class="destination">Mumbai</p>
-                  </div>
-                  <div class="price_details">
-                     <p>
-                        ₹ 5,023</p>
-                  </div>
-
-                  <button class="info_btn">View Prices <i class="fa fa-angle-down" aria-hidden="true"></i></button>
-               </div>
-
-               <div class="mmt_super">
-                  <p> <i class="fa fa-circle"></i> Get Rs 249 off using MMTSUPER</p>
-               </div>
-
-               <div class="view_files_details">
-                  <p><a href="">View files details</a></p>
-               </div>
-            </div>
-
-            <div class="book_flight">
-               <div class="book_flight_table">
-                  <p>FARES</p>
-               </div>
-               <div class="book_flight_table">
-                  <p>CABIN BAG</p>
-               </div>
-               <div class="book_flight_table">
-                  <p>CHECK IN</p>
-               </div>
-               <div class="book_flight_table">
-                  <p>CANCELLATION</p>
-               </div>
-               <div class="book_flight_table">
-                  <p>DATE CHANGE</p>
-               </div>
-               <div class="book_flight_table">
-                  <p>SEAT</p>
-               </div>
-               <div class="book_flight_table">
-                  <p>MEAL</p>
-               </div>
-               <div class="book_flight_table"></div>
-               <div class="book_flight_table_data border_display">
-                  <p class="saver">Saver</p>
-                  <p class="fare">Fare offered by airline.</p>
-               </div>
-               <div class="book_flight_table_data border_display">
-                  <p class="fare">7 Kgs</p>
-               </div>
-               <div class="book_flight_table_data border_display">
-                  <p class="check_in fare">15 Kgs</p>
-               </div>
-               <div class="book_flight_table_data border_display">
-                  <p class="fare line_height">Cancellation Fee Starting ₹ 3,000</p>
-               </div>
-               <div class="book_flight_table_data border_display">
-                  <p class="fare line_height">Date Change fee starting ₹ 2,500</p>
-               </div>
-               <div class="book_flight_table_data border_display">
-                  <p class="fare">Chargeable</p>
-               </div>
-               <div class="book_flight_table_data border_display">
-                  <p class="fare">Chargeable</p>
-               </div>
-               <div class="book_flight_table_data border_display lock_price">
-                  <p>₹ 5,135</p>
-                  <button>Lock Price</button>
-                  <button> <a href="./booking.html">Book Now</a></button>
-               </div>
-               <div class="book_flight_table_data">
-                  <p class="saver">Saver</p>
-                  <p class="fare">Fare offered by airline.</p>
-               </div>
-               <div class="book_flight_table_data">
-                  <p class="fare">7 Kgs</p>
-               </div>
-               <div class="book_flight_table_data">
-                  <p class="check_in fare">15 Kgs</p>
-               </div>
-               <div class="book_flight_table_data">
-                  <p class="fare line_height">Cancellation Fee Starting ₹ 3,000</p>
-               </div>
-               <div class="book_flight_table_data">
-                  <p class="fare line_height">Date Change fee starting ₹ 2,500</p>
-               </div>
-               <div class="book_flight_table_data">
-                  <p class="fare">Chargeable</p>
-               </div>
-               <div class="book_flight_table_data">
-                  <p class="fare">Chargeable</p>
-               </div>
-               <div class="book_flight_table_data lock_price">
-                  <p>₹ 5,135</p>
-                  <button>Lock Price</button>
-                  <button> <a href="./booking.html">Book Now</a></button>
-               </div>
-            </div>
          </section>
 
-         <section class="cheapest_flight_option">
-            <div class="seven_options">
-               <p>Some More Options <span>(₹ 5,023 - ₹ 5,667)</span> </p>
-               <p>7 options available</p>
-            </div>
 
-
-            <div class="flight_info_display">
-               <div class="blue_lock_box">
-                  <img
-                     src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/farelock/fl_small_blue_plain_lock.png" />
-                  <p>Lock this Price <span>i</span></p>
-               </div>
-
-               <div class="go_first">
-                  <div class="go_first_logo">
-                     <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/G8.png?v=14" )" alt=""
-                        srcset="">
-                     <div class="go_first_para">
-                        <p>Go First</p>
-                        <p>G8 713, G8 392</p>
-                     </div>
-                  </div>
-                  <div class="flight_time">
-                     <p>20:25</p>
-                     <p>New Delhi</p>
-                  </div>
-                  <div class="one_stop">
-                     <p>10 h 30 m</p>
-                     <div class="blue_line"></div>
-                     <p>1 stop via Ahmedabad</p>
-                  </div>
-
-                  <div class>
-                     <div class="arrival_info">
-                        <p>06:55 </p>
-                        <div class="plus_one_day">
-                           <p>+1</p>
-                           <p>Day</p>
-                        </div>
-                     </div>
-                     <p class="destination">Mumbai</p>
-                  </div>
-                  <div class="price_details">
-                     <p>
-                        ₹ 5,023</p>
-                  </div>
-
-                  <button class="info_btn">View All <i class="fa fa-angle-down" aria-hidden="true"></i></button>
-               </div>
-
-
-
-            </div>
-
-            <div class="flight_info_display">
-               <div class="blue_lock_box">
-                  <img
-                     src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/farelock/fl_small_blue_plain_lock.png" />
-                  <p>Lock this Price <span>i</span></p>
-               </div>
-
-               <div class="go_first">
-                  <div class="go_first_logo">
-                     <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/G8.png?v=14" )" alt=""
-                        srcset="">
-                     <div class="go_first_para">
-                        <p>Go First</p>
-                        <p>G8 713, G8 392</p>
-                     </div>
-                  </div>
-                  <div class="flight_time">
-                     <p>20:25</p>
-                     <p>New Delhi</p>
-                  </div>
-                  <div class="one_stop">
-                     <p>10 h 30 m</p>
-                     <div class="blue_line"></div>
-                     <p>1 stop via Ahmedabad</p>
-                  </div>
-
-                  <div class>
-                     <div class="arrival_info">
-                        <p>06:55 </p>
-                        <div class="plus_one_day">
-                           <p>+1</p>
-                           <p>Day</p>
-                        </div>
-                     </div>
-                     <p class="destination">Mumbai</p>
-                  </div>
-                  <div class="price_details">
-                     <p>
-                        ₹ 5,023</p>
-                  </div>
-
-                  <button class="info_btn">View Prices <i class="fa fa-angle-down" aria-hidden="true"></i></button>
-               </div>
-
-               <div class="mmt_super">
-                  <p> <i class="fa fa-circle"></i> Get Rs 249 off using MMTSUPER</p>
-               </div>
-
-               <div class="view_files_details">
-                  <p><a href="">View files details</a></p>
-               </div>
-            </div>
-
-            <div class="book_flight">
-               <div class="book_flight_table">
-                  <p>FARES</p>
-               </div>
-               <div class="book_flight_table">
-                  <p>CABIN BAG</p>
-               </div>
-               <div class="book_flight_table">
-                  <p>CHECK IN</p>
-               </div>
-               <div class="book_flight_table">
-                  <p>CANCELLATION</p>
-               </div>
-               <div class="book_flight_table">
-                  <p>DATE CHANGE</p>
-               </div>
-               <div class="book_flight_table">
-                  <p>SEAT</p>
-               </div>
-               <div class="book_flight_table">
-                  <p>MEAL</p>
-               </div>
-               <div class="book_flight_table"></div>
-               <div class="book_flight_table_data border_display">
-                  <p class="saver">Saver</p>
-                  <p class="fare">Fare offered by airline.</p>
-               </div>
-               <div class="book_flight_table_data border_display">
-                  <p class="fare">7 Kgs</p>
-               </div>
-               <div class="book_flight_table_data border_display">
-                  <p class="check_in fare">15 Kgs</p>
-               </div>
-               <div class="book_flight_table_data border_display">
-                  <p class="fare line_height">Cancellation Fee Starting ₹ 3,000</p>
-               </div>
-               <div class="book_flight_table_data border_display">
-                  <p class="fare line_height">Date Change fee starting ₹ 2,500</p>
-               </div>
-               <div class="book_flight_table_data border_display">
-                  <p class="fare">Chargeable</p>
-               </div>
-               <div class="book_flight_table_data border_display">
-                  <p class="fare">Chargeable</p>
-               </div>
-               <div class="book_flight_table_data border_display lock_price">
-                  <p>₹ 5,135</p>
-                  <button>Lock Price</button>
-                  <button> <a href="./booking.html">Book Now</a></button>
-               </div>
-               <div class="book_flight_table_data">
-                  <p class="saver">Saver</p>
-                  <p class="fare">Fare offered by airline.</p>
-               </div>
-               <div class="book_flight_table_data">
-                  <p class="fare">7 Kgs</p>
-               </div>
-               <div class="book_flight_table_data">
-                  <p class="check_in fare">15 Kgs</p>
-               </div>
-               <div class="book_flight_table_data">
-                  <p class="fare line_height">Cancellation Fee Starting ₹ 3,000</p>
-               </div>
-               <div class="book_flight_table_data">
-                  <p class="fare line_height">Date Change fee starting ₹ 2,500</p>
-               </div>
-               <div class="book_flight_table_data">
-                  <p class="fare">Chargeable</p>
-               </div>
-               <div class="book_flight_table_data">
-                  <p class="fare">Chargeable</p>
-               </div>
-               <div class="book_flight_table_data lock_price">
-                  <p>₹ 5,135</p>
-                  <button>Lock Price</button>
-                  <button> <a href="./booking.html">Book Now</a></button>
-               </div>
-            </div>
-         </section>
          <div class="flight_info_display">
-            <div class="blue_lock_box">
+
+            <!-- <div class="blue_lock_box">
                <img
                   src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/farelock/fl_small_blue_plain_lock.png" />
                <p>Lock this Price<span>i</span></p>
@@ -947,347 +602,19 @@
                </div>
 
                <button class="info_btn">View All <i class="fa fa-angle-down" aria-hidden="true"></i></button>
-            </div>
+            </div> -->
 
 
 
          </div>
-         <div class="flight_info_display">
-            <div class="blue_lock_box">
-               <img
-                  src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/farelock/fl_small_blue_plain_lock.png" />
-               <p>Lock this Price<span>i</span></p>
-            </div>
 
-            <div class="go_first">
-               <div class="go_first_logo">
-                  <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/G8.png?v=14" )" alt=""
-                     srcset="">
-                  <div class="go_first_para">
-                     <p>Go First</p>
-                     <p>G8 713, G8 392</p>
-                  </div>
-               </div>
-               <div class="flight_time">
-                  <p>20:25</p>
-                  <p>New Delhi</p>
-               </div>
-               <div class="one_stop">
-                  <p>10 h 30 m</p>
-                  <div class="blue_line"></div>
-                  <p>1 stop via Ahmedabad</p>
-               </div>
-
-               <div class>
-                  <div class="arrival_info">
-                     <p>06:55 </p>
-                     <div class="plus_one_day">
-                        <p>+1</p>
-                        <p>Day</p>
-                     </div>
-                  </div>
-                  <p class="destination">Mumbai</p>
-               </div>
-               <div class="price_details">
-                  <p>
-                     ₹ 5,023</p>
-               </div>
-
-               <button class="info_btn">View All <i class="fa fa-angle-down" aria-hidden="true"></i></button>
-            </div>
-
-
-
-         </div>
-         <div class="flight_info_display">
-            <div class="blue_lock_box">
-               <img
-                  src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/farelock/fl_small_blue_plain_lock.png" />
-               <p>Lock this Price<span>i</span></p>
-            </div>
-
-            <div class="go_first">
-               <div class="go_first_logo">
-                  <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/G8.png?v=14" )" alt=""
-                     srcset="">
-                  <div class="go_first_para">
-                     <p>Go First</p>
-                     <p>G8 713, G8 392</p>
-                  </div>
-               </div>
-               <div class="flight_time">
-                  <p>20:25</p>
-                  <p>New Delhi</p>
-               </div>
-               <div class="one_stop">
-                  <p>10 h 30 m</p>
-                  <div class="blue_line"></div>
-                  <p>1 stop via Ahmedabad</p>
-               </div>
-
-               <div class>
-                  <div class="arrival_info">
-                     <p>06:55 </p>
-                     <div class="plus_one_day">
-                        <p>+1</p>
-                        <p>Day</p>
-                     </div>
-                  </div>
-                  <p class="destination">Mumbai</p>
-               </div>
-               <div class="price_details">
-                  <p>
-                     ₹ 5,023</p>
-               </div>
-
-               <button class="info_btn">View All <i class="fa fa-angle-down" aria-hidden="true"></i></button>
-            </div>
-
-
-
-         </div>
-         <div class="flight_info_display">
-            <div class="blue_lock_box">
-               <img
-                  src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/farelock/fl_small_blue_plain_lock.png" />
-               <p>Lock this Price<span>i</span></p>
-            </div>
-
-            <div class="go_first">
-               <div class="go_first_logo">
-                  <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/G8.png?v=14" )" alt=""
-                     srcset="">
-                  <div class="go_first_para">
-                     <p>Go First</p>
-                     <p>G8 713, G8 392</p>
-                  </div>
-               </div>
-               <div class="flight_time">
-                  <p>20:25</p>
-                  <p>New Delhi</p>
-               </div>
-               <div class="one_stop">
-                  <p>10 h 30 m</p>
-                  <div class="blue_line"></div>
-                  <p>1 stop via Ahmedabad</p>
-               </div>
-
-               <div class>
-                  <div class="arrival_info">
-                     <p>06:55 </p>
-                     <div class="plus_one_day">
-                        <p>+1</p>
-                        <p>Day</p>
-                     </div>
-                  </div>
-                  <p class="destination">Mumbai</p>
-               </div>
-               <div class="price_details">
-                  <p>
-                     ₹ 5,023</p>
-               </div>
-
-               <button class="info_btn">View All <i class="fa fa-angle-down" aria-hidden="true"></i></button>
-            </div>
-
-
-
-         </div>
-         <div class="flight_info_display">
-            <div class="blue_lock_box">
-               <img
-                  src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/farelock/fl_small_blue_plain_lock.png" />
-               <p>Lock this Price<span>i</span></p>
-            </div>
-
-            <div class="go_first">
-               <div class="go_first_logo">
-                  <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/G8.png?v=14" )" alt=""
-                     srcset="">
-                  <div class="go_first_para">
-                     <p>Go First</p>
-                     <p>G8 713, G8 392</p>
-                  </div>
-               </div>
-               <div class="flight_time">
-                  <p>20:25</p>
-                  <p>New Delhi</p>
-               </div>
-               <div class="one_stop">
-                  <p>10 h 30 m</p>
-                  <div class="blue_line"></div>
-                  <p>1 stop via Ahmedabad</p>
-               </div>
-
-               <div class>
-                  <div class="arrival_info">
-                     <p>06:55 </p>
-                     <div class="plus_one_day">
-                        <p>+1</p>
-                        <p>Day</p>
-                     </div>
-                  </div>
-                  <p class="destination">Mumbai</p>
-               </div>
-               <div class="price_details">
-                  <p>
-                     ₹ 5,023</p>
-               </div>
-
-               <button class="info_btn">View All <i class="fa fa-angle-down" aria-hidden="true"></i></button>
-            </div>
-
-
-
-         </div>
-         <div class="flight_info_display">
-            <div class="blue_lock_box">
-               <img
-                  src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/farelock/fl_small_blue_plain_lock.png" />
-               <p>Lock this Price<span>i</span></p>
-            </div>
-
-            <div class="go_first">
-               <div class="go_first_logo">
-                  <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/G8.png?v=14" )" alt=""
-                     srcset="">
-                  <div class="go_first_para">
-                     <p>Go First</p>
-                     <p>G8 713, G8 392</p>
-                  </div>
-               </div>
-               <div class="flight_time">
-                  <p>20:25</p>
-                  <p>New Delhi</p>
-               </div>
-               <div class="one_stop">
-                  <p>10 h 30 m</p>
-                  <div class="blue_line"></div>
-                  <p>1 stop via Ahmedabad</p>
-               </div>
-
-               <div class>
-                  <div class="arrival_info">
-                     <p>06:55 </p>
-                     <div class="plus_one_day">
-                        <p>+1</p>
-                        <p>Day</p>
-                     </div>
-                  </div>
-                  <p class="destination">Mumbai</p>
-               </div>
-               <div class="price_details">
-                  <p>
-                     ₹ 5,023</p>
-               </div>
-
-               <button class="info_btn">View All <i class="fa fa-angle-down" aria-hidden="true"></i></button>
-            </div>
-
-
-
-         </div>
-         <div class="flight_info_display">
-            <div class="blue_lock_box">
-               <img
-                  src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/farelock/fl_small_blue_plain_lock.png" />
-               <p>Lock this Price<span>i</span></p>
-            </div>
-
-            <div class="go_first">
-               <div class="go_first_logo">
-                  <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/G8.png?v=14" )" alt=""
-                     srcset="">
-                  <div class="go_first_para">
-                     <p>Go First</p>
-                     <p>G8 713, G8 392</p>
-                  </div>
-               </div>
-               <div class="flight_time">
-                  <p>20:25</p>
-                  <p>New Delhi</p>
-               </div>
-               <div class="one_stop">
-                  <p>10 h 30 m</p>
-                  <div class="blue_line"></div>
-                  <p>1 stop via Ahmedabad</p>
-               </div>
-
-               <div class>
-                  <div class="arrival_info">
-                     <p>06:55 </p>
-                     <div class="plus_one_day">
-                        <p>+1</p>
-                        <p>Day</p>
-                     </div>
-                  </div>
-                  <p class="destination">Mumbai</p>
-               </div>
-               <div class="price_details">
-                  <p>
-                     ₹ 5,023</p>
-               </div>
-
-               <button class="info_btn">View All <i class="fa fa-angle-down" aria-hidden="true"></i></button>
-            </div>
-
-
-
-         </div>
-         <div class="flight_info_display  last_flight_info_display">
-            <div class="blue_lock_box">
-               <img
-                  src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/farelock/fl_small_blue_plain_lock.png" />
-               <p>Lock this Price<span>i</span></p>
-            </div>
-
-            <div class="go_first">
-               <div class="go_first_logo">
-                  <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/G8.png?v=14" )" alt=""
-                     srcset="">
-                  <div class="go_first_para">
-                     <p>Go First</p>
-                     <p>G8 713, G8 392</p>
-                  </div>
-               </div>
-               <div class="flight_time">
-                  <p>20:25</p>
-                  <p>New Delhi</p>
-               </div>
-               <div class="one_stop">
-                  <p>10 h 30 m</p>
-                  <div class="blue_line"></div>
-                  <p>1 stop via Ahmedabad</p>
-               </div>
-
-               <div class>
-                  <div class="arrival_info">
-                     <p>06:55 </p>
-                     <div class="plus_one_day">
-                        <p>+1</p>
-                        <p>Day</p>
-                     </div>
-                  </div>
-                  <p class="destination">Mumbai</p>
-               </div>
-               <div class="price_details">
-                  <p>
-                     ₹ 5,023</p>
-               </div>
-
-               <button class="info_btn">View All <i class="fa fa-angle-down" aria-hidden="true"></i></button>
-            </div>
-
-
-
-         </div>
       </div>
 
 
 
 
 
-
+<script type="module" src="../js/searchPage.js"></script>
 
    </section>
 </body>

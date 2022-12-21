@@ -399,6 +399,19 @@ button{
 }
 
 
+.black_background {
+    position: fixed;
+    background-color: rgba(20, 18, 18, 0.7);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+  
+}
+
+
+
 
 
 

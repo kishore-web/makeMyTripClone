@@ -29,6 +29,7 @@ const errorDisplayOnSigninPage = document.getElementById('error-signin');
 const errorDisplayOnOTPPage = document.getElementById('error-otp');
 
 const backClick = document.getElementById('back-click');
+const blackBackground = document.querySelector('.black_background')
 
 
 const messageDisplayForUserExist = document.querySelector(".message-display");
@@ -50,11 +51,13 @@ function reset() {
 }
 
 function login() {
+  blackBackground.classList.remove('hidden');
   loginPopUp.style.display = "block";
   myBizSection.classList.add("hidden");
   persnolAccountSection.classList.remove("hidden");
   otpSection.classList.add("hidden");
   signUpSection.classList.add("hidden");
+
 
  
 
@@ -63,6 +66,7 @@ function login() {
 function disappear() {
   reset();
   loginPopUp.style.display = "none";
+  blackBackground.classList.add('hidden');
   
 }
 
