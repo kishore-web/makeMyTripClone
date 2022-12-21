@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Mukta', 'Lato', sans-serif;
   font-size: 14px;
 }
 body{
@@ -417,6 +417,61 @@ div.booknow-text p{
 .imp-info-img{
   margin-right: 10px;
 }
+/*--========================== Travel Insurance section Starts Here ===============================-->*/
+
+.insurance-traveller {
+  position: absolute;
+  width: 860px;
+ }
+ .insurance-wrapper{
+   border: 2px solid red;
+   width: 880px;
+   height:130px;
+   position: relative;
+   background-color: #f5f5ff;
+ }
+ .insurance-card{
+   background-color: white;
+   border-radius: 5px;
+   padding: 10px 10px 10px 30px;
+   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
+   display: flex;
+ }
+ .swiper-img{
+   width: 24px;
+   height: 24px;
+   margin-right: 8px;
+   margin-top: 4px;
+ }
+ .swiper-img img{
+   width: 100%;
+ }
+ .swiper-text h3{
+   color: #00a19c;
+   font-weight: 700;
+ }
+ .swiper-text p{
+   font-weight: 900;
+ }
+ .swiper-button-next {
+   background-image: url(../images/bookingImg/Angle_right.svg);
+   background-repeat: no-repeat;
+   background-size: 100% auto;
+   background-position: center;
+ }
+ .swiper-button-next::after {
+   display: none;
+ }
+ .swiper-button-prev {
+   background-image: url(../images/bookingImg/Angle_left.svg);
+   background-repeat: no-repeat;
+   background-size: 100% auto;
+   background-position: center;
+ }
+ .swiper-button-prev::after {
+   display: none;
+ }
+/*--========================== Travel Insurance section ends Here ===============================-->*/
 .traveller-details{
   background-color: white;
   margin-top: 20px;
