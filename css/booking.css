@@ -419,16 +419,46 @@ div.booknow-text p{
 }
 /*--========================== Travel Insurance section Starts Here ===============================-->*/
 
+.insurance-wrapper{
+  background-color: white;
+  width: 882px;
+  height: 460px;
+  position: relative;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.insurance-wrapper .travel-insurance{
+  display: flex;
+  align-items: center;
+  padding: 20px 20px 10px 20px;
+}
+.travel-insurance .insurance-shield{
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+.travel-insurance h1{
+  font-size: large;
+}
+.travel-insurance .reliance-insu{
+  width: 60px;
+  margin-left: auto;
+}
 .insurance-traveller {
   position: absolute;
-  width: 860px;
+  width: 882px;
+  background-color: #f5f5ff;
+  padding: 15px 20px;
  }
- .insurance-wrapper{
-   border: 2px solid red;
-   width: 880px;
-   height:130px;
-   position: relative;
-   background-color: #f5f5ff;
+ .insurance-traveller>p{
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 10px;
+ }
+ .insurance-traveller>p>span{
+  font-weight: 400;
+  font-size: 12px;
  }
  .insurance-card{
    background-color: white;
@@ -436,11 +466,12 @@ div.booknow-text p{
    padding: 10px 10px 10px 30px;
    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
    display: flex;
+   margin: 5px;
  }
  .swiper-img{
    width: 24px;
    height: 24px;
-   margin-right: 8px;
+   margin-right: 10px;
    margin-top: 4px;
  }
  .swiper-img img{
@@ -451,7 +482,9 @@ div.booknow-text p{
    font-weight: 700;
  }
  .swiper-text p{
-   font-weight: 900;
+   font-weight: 700;
+   margin-top: 5px;
+   font-size: 12px;
  }
  .swiper-button-next {
    background-image: url(../images/bookingImg/Angle_right.svg);
@@ -471,7 +504,16 @@ div.booknow-text p{
  .swiper-button-prev::after {
    display: none;
  }
+
+.insurance-wrapper .insurance-reviews{
+  color: red;
+  z-index: 100;
+  position: relative;
+  top: 150px;
+}
+
 /*--========================== Travel Insurance section ends Here ===============================-->*/
+
 .traveller-details{
   background-color: white;
   margin-top: 20px;

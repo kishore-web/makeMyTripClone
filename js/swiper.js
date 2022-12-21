@@ -1,7 +1,7 @@
  new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
-  loop: true,
+  loop: false,
   slidesPerView: 3,
   spaceBetween: 10,
   // Navigation arrows
