@@ -1,5 +1,5 @@
  new Swiper('.swiper', {
-  // Optional parameters
+  
   direction: 'horizontal',
   loop: false,
   slidesPerView: 3,
@@ -10,3 +10,17 @@
     prevEl: '.swiper-button-prev',
   },
 });
+
+new Swiper('.swiper1', {
+
+  direction: 'horizontal',
+  loop: false,
+  slidesPerView: 2,
+  spaceBetween: 10,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
