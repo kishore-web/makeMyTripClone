@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Mukta', 'Lato', sans-serif;
   font-size: 14px;
 }
 body{
@@ -417,6 +417,117 @@ div.booknow-text p{
 .imp-info-img{
   margin-right: 10px;
 }
+/*--========================== Travel Insurance section Starts Here ===============================-->*/
+
+.insurance-wrapper{
+  background-color: white;
+  width: 882px;
+  height: 460px;
+  position: relative;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.insurance-wrapper .travel-insurance{
+  display: flex;
+  align-items: center;
+  padding: 20px 20px 10px 20px;
+}
+.travel-insurance .insurance-shield{
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+.travel-insurance h1{
+  font-size: large;
+}
+.travel-insurance .reliance-insu{
+  width: 60px;
+  margin-left: auto;
+}
+.insurance-traveller {
+  position: absolute;
+  width: 882px;
+  background-color: #f5f5ff;
+  padding: 15px 20px;
+ }
+ .insurance-traveller>p{
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 10px;
+ }
+ .insurance-traveller>p>span{
+  font-weight: 400;
+  font-size: 12px;
+ }
+ .insurance-card{
+   background-color: white;
+   border-radius: 5px;
+   padding: 10px 10px 10px 30px;
+   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
+   display: flex;
+   margin: 5px;
+ }
+ .swiper-img{
+   width: 24px;
+   height: 24px;
+   margin-right: 10px;
+   margin-top: 4px;
+ }
+ .swiper-img img{
+   width: 100%;
+ }
+ .swiper-text h3{
+   color: #00a19c;
+   font-weight: 700;
+ }
+ .swiper-text p{
+   font-weight: 700;
+   margin-top: 5px;
+   font-size: 12px;
+ }
+ .swiper-button-next {
+   background-image: url(../images/bookingImg/Angle_right.svg);
+   background-repeat: no-repeat;
+   background-size: 100% auto;
+   background-position: center;
+ }
+ .swiper-button-next::after {
+   display: none;
+ }
+ .swiper-button-prev {
+   background-image: url(../images/bookingImg/Angle_left.svg);
+   background-repeat: no-repeat;
+   background-size: 100% auto;
+   background-position: center;
+ }
+ .swiper-button-prev::after {
+   display: none;
+ }
+
+.insurance-wrapper .insurance-reviews{
+  /* color: red; */
+  /* z-index: 5; */
+  /* position: relative; */
+  top: 190px;
+  border: 2px solid #b8860b;
+  position: absolute;
+  width: 882px;
+  /* background-color: #f5f5ff; */
+  padding: 15px 20px;
+  overflow: hidden;
+}
+.review-card{
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  padding: 10px 10px 10px 30px;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
+  display: flex;
+  margin: 5px;
+}
+
+/*--========================== Travel Insurance section ends Here ===============================-->*/
+
 .traveller-details{
   background-color: white;
   margin-top: 20px;
