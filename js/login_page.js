@@ -15,6 +15,7 @@ const myBizSection = document.querySelector(".mybizz-section");
 const persnolAccountSection = document.querySelector(".personal-account-section");
 const otpSection = document.querySelector(".otp-section");
 const signUpSection = document.querySelector(".sign-up-section");
+const congratsMessageSection = document.querySelector(".congrats-section");
 
 const verifyInput = document.querySelector(".login-credentials-btn");
 const nameForSignUpInput = document.getElementById('name-signup');
@@ -51,6 +52,7 @@ function reset() {
     errorDisplayOnSignUpPage.innerText = "";
     errorDisplayOnSigninPage.innerText = "";
     errorDisplayOnOTPPage.innerText = "";
+    loginPopUp.style.backgroundColor = "white"
 
  
     nameForSignUpInput.style.borderColor = "black";
@@ -72,6 +74,7 @@ function login() {
   persnolAccountSection.classList.remove("hidden");
   otpSection.classList.add("hidden");
   signUpSection.classList.add("hidden");
+  crossButton.classList.remove('hidden');
 
 
  
@@ -82,6 +85,10 @@ function disappear() {
   reset();
   loginPopUp.style.display = "none";
   blackBackground.classList.add('hidden');
+  congratsMessageSection.classList.add('hidden');
+  crossButton.classList.remove('hidden');
+  
+  
   
 }
 
@@ -90,6 +97,8 @@ function loginFields() {
   persnolAccountSection.classList.remove("hidden");
   otpSection.classList.add("hidden");
   signUpSection.classList.add("hidden");
+  congratsMessageSection.classList.add('hidden');
+  crossButton.classList.remove('hidden');
 }
 
 function myBizz() {
@@ -97,6 +106,8 @@ function myBizz() {
   persnolAccountSection.classList.add("hidden");
   otpSection.classList.add("hidden");
   signUpSection.classList.add("hidden");
+  congratsMessageSection.classList.add('hidden');
+  crossButton.classList.remove('hidden');
 }
 
 function signUpFields() {
@@ -104,6 +115,8 @@ function signUpFields() {
   persnolAccountSection.classList.add("hidden");
   otpSection.classList.add("hidden");
   signUpSection.classList.remove("hidden");
+  congratsMessageSection.classList.add('hidden');
+  crossButton.classList.remove('hidden');
   errorDisplayOnSignUpPage.innerText="";
   messageDisplayForUserExist.classList.remove('green-background');
   messageDisplayForUserExist.classList.remove('red-background');
@@ -118,6 +131,8 @@ function backClickFunction(){
   persnolAccountSection.classList.remove("hidden");
   otpSection.classList.add("hidden");
   signUpSection.classList.add("hidden");
+  congratsMessageSection.classList.add('hidden');
+  crossButton.classList.remove('hidden');
   errorDisplayOnSigninPage.innerText = "";
 }
 
@@ -188,15 +203,23 @@ function createAccount(e){
 
     userArray.push(userObject);
     localStorage.setItem("user", JSON.stringify(userArray));
-    loginPopUp.innerHTML="<div class='success_msg'><h1 class='congrats_message'> <img class='green_tick' src='../icons/tick icon/green_tick.webp'>Congratulations!!! New Account Created</h1></div>";
-    loginPopUp.style.height="100px";
+
+    congratsMessageSection.classList.remove('hidden');
+    myBizSection.classList.add("hidden");
+    persnolAccountSection.classList.add("hidden");
+    otpSection.classList.add("hidden");
+    signUpSection.classList.add("hidden");
+    crossButton.classList.add('hidden');
+    loginPopUp.style.backgroundColor = "transparent"
+    
+    
     setTimeout(()=>{
      
    disappear();
       
     },2000)
 
-    reset();
+  
 
 }
 
@@ -236,13 +259,16 @@ console.log("hello")
     persnolAccountSection.classList.add("hidden");
     otpSection.classList.remove("hidden");
     signUpSection.classList.add("hidden");
+    crossButton.classList.remove('hidden');
   } else {
+    crossButton.classList.remove('hidden');
     messageDisplayForUserExist.innerText = "User not found. Please Sign Up";
     messageDisplayForUserExist.classList.add('red-background');
     messageDisplayForUserExist.classList.remove('green-background');
     myBizSection.classList.add("hidden");
     persnolAccountSection.classList.add("hidden");
     otpSection.classList.add("hidden");
+    congratsMessageSection.classList.add('hidden');
     signUpSection.classList.remove("hidden");
 
   }

@@ -115,7 +115,7 @@
 .continue, .otp-button, .sign-up-button, .create-account-button {
     font-size: 14px;
     font-weight: bold;
-    background-color: aqua;
+    background-color: #008cff;
     color: white;
     padding: 7px;
     border-radius: 7px;
@@ -256,7 +256,7 @@
    padding: 4px;
    width: 29%;
    font-weight: bold;
-   background-color: aqua;
+   background-color: #008cff;
    border-radius: 5px;
    border: none;
    color: white;
@@ -330,6 +330,8 @@
     color:red;
     position: absolute;
     top:5px;
+    left:50%;
+    transform: translate(-50%);
 }
 
 #error-signin{
@@ -366,9 +368,9 @@ align-items: center;
 
 }
 
-/* input{
+input{
     outline: none;
-} */
+}
 
 /* otp section css  */
 
@@ -416,7 +418,9 @@ button{
     font-size: 2rem;
     background-color: rgb(151, 240, 151);
     border-radius: 15px;
-    padding:10px;
+    padding:30px 50px;
+    display: flex; 
+    justify-content: center;
     color:rgb(4, 79, 4);
 }
 
@@ -425,15 +429,22 @@ button{
     width:50px;
     padding: 0 10px;
     position: relative;
-    top:4px;
+    top:6px;
 
 }
 
 .success_msg{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;  
+    
 }
+
+
+
+.create-account-button{
+    margin-top: 20%;
+ }
 
 
 
