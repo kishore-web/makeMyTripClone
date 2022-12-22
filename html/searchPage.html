@@ -17,6 +17,10 @@
    <!-- link to css for view-flightdetails  -->
    <link rel="stylesheet" href="../css/view-flight-details.css">
 
+   <!-- link to css main style page  -->
+
+   <link rel="stylesheet" href="../css/mainpagestyle.css">
+
    <!-- cdn link fot font awsome  -->
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,92 +30,109 @@
 
    <!-- this is common header section  -->
 
-   <header>
+   <header id="Header_Id">
       <nav class="flex">
-         <div class="logommt rin">
-            <img src="../images/homepageallimages/logo@2x.png" alt="" />
-         </div>
+        <div class="logommt rin">
+          <img src="./images/homepageallimages/logo@2x.png" alt="" />
+        </div>
 
-         <div class="allicon rin flex">
-            <ul>
-               <li>
-                  <img src="../icons/allnavicon/icons8-airplane-take-off-50.png" alt="" />
-                  <p>Flight</p>
-               </li>
-               <li>
-                  <img src="../icons/allnavicon/icons8-hotel-50.png" alt="" />
-                  <p>Hotels</p>
-               </li>
-               <li>
-                  <img src="../icons/allnavicon/icons8-house-with-a-garden-50.png" alt="" />
-                  <p>Homestays</p>
-               </li>
-               <li>
-                  <img src="../icons/allnavicon/icons8-balloon-5011.png" alt="" />
-                  <p>Packages</p>
-               </li>
-               <li>
-                  <img src="../icons/allnavicon/icons8-locomotive-50.png" alt="" />
-                  <p>Trains</p>
-               </li>
-               <li>
-                  <img src="../icons/allnavicon/icons8-bus-50.png" alt="" />
-                  <p>Buses</p>
-               </li>
-               <li>
-                  <img src="../icons/allnavicon/icons8-taxi-50.png" alt="" />
-                  <p>Cabs</p>
-               </li>
-               <li>
-                  <img src="../icons/allnavicon/icons8-money-yours-50.png" alt="" />
-                  <p>Forex</p>
-               </li>
-               <li>
-                  <img src="../icons/allnavicon/icons8-airplane-50.png" alt="" />
-                  <p>Charter</p>
-               </li>
-               <li>
-                  <img src="../icons/allnavicon/icons8-trekking-50.png" alt="" />
-                  <p>Activities</p>
-               </li>
-            </ul>
-         </div>
+        <div class="allicon  rin flex">
+          <ul class="">
+            <li>
+              <img
+                src="./icons/allnavicon/icons8-airplane-take-off-50.png"
+                alt="" 
+              />
+              <p>Flight</p>
+            </li>
 
-         <div class="lastunorderedlist flex rin">
-            <div class="login flex rin">
-               <div><img src="../images/homepageallimages/my.png" alt="" /></div>
-               <div>
-                  <div>Login or</div>
-                  <div>Create Account</div>
-               </div>
+            <li>
+              <a href="./html/hotels.html" target="_blank" >
+                <img src="./icons/allnavicon/icons8-hotel-50.png" alt="" />
+              <p>Hotels</p>
+              </a>
+            </li>
+
+            <li>
+             <a href="./html/homestays.html"  target="_blank">
+              <img
+              src="./icons/allnavicon/icons8-house-with-a-garden-50.png"
+              alt=""
+            />
+            <p>Homestays</p>
+             </a>
+            </li>
+
+            <li>
+              <a href="./html/holiday-packages.html"  target="_blank">
+                <img src="./icons/allnavicon/icons8-balloon-5011.png" alt="" />
+              <p>Packages</p>
+              </a>
+            </li>
+
+
+            <li>
+              <img src="./icons/allnavicon/icons8-locomotive-50.png" alt="" />
+              <p>Trains</p>
+            </li>
+            <li>
+              <img src="./icons/allnavicon/icons8-bus-50.png" alt="" />
+              <p>Buses</p>
+            </li>
+            <li>
+              <img src="./icons/allnavicon/icons8-taxi-50.png" alt="" />
+              <p>Cabs</p>
+            </li>
+            <li>
+              <img src="./icons/allnavicon/icons8-money-yours-50.png" alt="" />
+              <p>Forex</p>
+            </li>
+            <li>
+              <img src="./icons/allnavicon/icons8-airplane-50.png" alt="" />
+              <p>Charter</p>
+            </li>
+            <li>
+              <img src="./icons/allnavicon/icons8-trekking-50.png" alt="" />
+              <p>Activities</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="lastunorderedlist flex rin">
+          <div class="login flex rin">
+            <div><img src="./images/homepageallimages/my.png" alt="" /></div>
+            <div>
+              <div>Login or</div>
+              <div>Create Account</div>
             </div>
+          </div>
 
-            <div class="country rin">
-               <div class="smallfont">Country</div>
-               <div>
-                  <select name="" id="country">
-                     <option value="India" class="option">India</option>
-                     <option value="Pakistan">Pakistan</option>
-                     <option value="Australia">Australia</option>
-                     <option value="Africa">Africa</option>
-                  </select>
-               </div>
+          <div class="country rin">
+            <div class="smallfont">Country</div>
+            <div>
+              <select name="" id="country">
+                <option value="India" class="option">India</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Australia">Australia</option>
+                <option value="Africa">Africa</option>
+              </select>
             </div>
+          </div>
 
-            <div class="language rin">
-               <div class="smallfont">Language</div>
-               <div>
-                  <select name="" id="language">
-                     <option value="ENG" class="option">ENG</option>
-                     <option value="HINDI">Hindi</option>
-                     <option value="URDU">Urdu</option>
-                     <option value="SANSKRIT">Sanskrit</option>
-                  </select>
-               </div>
+          <div class="language rin">
+            <div class="smallfont">Language</div>
+            <div>
+              <select name="" id="language">
+                <option value="ENG" class="option">ENG</option>
+                <option value="HINDI">Hindi</option>
+                <option value="URDU">Urdu</option>
+                <option value="SANSKRIT">Sanskrit</option>
+              </select>
             </div>
-         </div>
+          </div>
+        </div>
       </nav>
-   </header>
+    </header>
 
    <!-- this is search bar header section  -->
 
