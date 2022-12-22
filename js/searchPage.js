@@ -1,5 +1,7 @@
 import info from '../hope.json' assert {type: 'json'};
 
+console.log(info.data)
+
 const flightInfoDisplay = document.querySelector('.flight_info_display');
 const arriveCityContainer = document.querySelector('.arrive_city_container');
 const departCityContainer = document.querySelector('.depart_city_container');

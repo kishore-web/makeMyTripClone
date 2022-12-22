@@ -364,9 +364,9 @@ align-items: center;
 
 }
 
-input{
+/* input{
     outline: none;
-}
+} */
 
 /* otp section css  */
 
@@ -399,7 +399,7 @@ button{
 }
 
 
-.black_background {
+.black_background{
     position: fixed;
     background-color: rgba(20, 18, 18, 0.7);
     height: 100%;
@@ -409,6 +409,30 @@ button{
     z-index: 1000;
   
 }
+
+.congrats_message{
+    font-size: 2rem;
+    background-color: rgb(151, 240, 151);
+    border-radius: 15px;
+    padding:10px;
+    color:rgb(4, 79, 4);
+}
+
+.green_tick{
+    height: 30px;
+    width:50px;
+    padding: 0 10px;
+    position: relative;
+    top:4px;
+
+}
+
+.success_msg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
 

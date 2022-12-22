@@ -36,6 +36,10 @@ const messageDisplayForUserExist = document.querySelector(".message-display");
 const userNameDisplay = document.querySelector('.user-name-display');
 
 let userArray = JSON.parse(localStorage.getItem("user")) ?? [];
+
+if(!userArray){
+  userArray=[];
+}
 let userId;
 
 function reset() {
@@ -47,6 +51,17 @@ function reset() {
     errorDisplayOnSignUpPage.innerText = "";
     errorDisplayOnSigninPage.innerText = "";
     errorDisplayOnOTPPage.innerText = "";
+
+ 
+    nameForSignUpInput.style.borderColor = "black";
+    emailForSignUpInput.style.borderColor = "black";
+    mobileForSignUpInput.style.borderColor = "black";
+    passwordForSignUpInput.style.borderColor = "black";
+    verifyInput.style.borderColor = "black";
+    otpInput.style.borderColor = "black";
+
+    loginPopUp.style.height="480px";
+
 
 }
 
@@ -111,30 +126,53 @@ function createAccount(e){
 
     if(nameForSignUpInput.value == ""){
         errorDisplayOnSignUpPage.innerText = "*Please enter your name";
+        nameForSignUpInput.style.borderColor = "red"
+        emailForSignUpInput.style.borderColor = "black"
+        mobileForSignUpInput.style.borderColor = "black"
+        passwordForSignUpInput.style.borderColor = "black"
         return;
     }
 
     if(emailForSignUpInput.value == ""){
         errorDisplayOnSignUpPage.innerText = "*Please enter your email";
+        nameForSignUpInput.style.borderColor = "black"
+        emailForSignUpInput.style.borderColor = "red"
+        mobileForSignUpInput.style.borderColor = "black"
+        passwordForSignUpInput.style.borderColor = "black"
         return;
-    }else if(!emailForSignUpInput.value.includes("@")){
+    }else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailForSignUpInput.value)){
       errorDisplayOnSignUpPage.innerText = "*invalid email";
-      return;
-    }else if(!emailForSignUpInput.value.includes(".")){
-      errorDisplayOnSignUpPage.innerText = "*invalid email";
+      nameForSignUpInput.style.borderColor = "black"
+      emailForSignUpInput.style.borderColor = "red"
+      mobileForSignUpInput.style.borderColor = "black"
+      passwordForSignUpInput.style.borderColor = "black"
       return;
     }
-
     if(mobileForSignUpInput.value == ""){
       errorDisplayOnSignUpPage.innerText = "*Please enter your mobile";
+      nameForSignUpInput.style.borderColor = "black"
+      emailForSignUpInput.style.borderColor = "black"
+      mobileForSignUpInput.style.borderColor = "red";
+      passwordForSignUpInput.style.borderColor = "black"
       return;
-    }else  if(mobileForSignUpInput.value%1!==0){
+    }else  if(mobileForSignUpInput.value%1!==0 ){
       errorDisplayOnSignUpPage.innerText = "*Please enter numbers only";
+      nameForSignUpInput.style.borderColor = "black"
+      emailForSignUpInput.style.borderColor = "black"
+      mobileForSignUpInput.style.borderColor = "red"
+      passwordForSignUpInput.style.borderColor = "black"
+      return;
+    }else  if(mobileForSignUpInput.value.length!==10 ){
+      errorDisplayOnSignUpPage.innerText = "*Please enter 10 digits mobile number";
       return;
     }
 
     if(passwordForSignUpInput.value == ""){
         errorDisplayOnSignUpPage.innerText = "*Please set your password";
+        nameForSignUpInput.style.borderColor = "black"
+        emailForSignUpInput.style.borderColor = "black"
+        mobileForSignUpInput.style.borderColor = "black"
+        passwordForSignUpInput.style.borderColor = "red"
         return;
     }
 
@@ -150,12 +188,15 @@ function createAccount(e){
 
     userArray.push(userObject);
     localStorage.setItem("user", JSON.stringify(userArray));
+    loginPopUp.innerHTML="<div class='success_msg'><h1 class='congrats_message'> <img class='green_tick' src='../icons/tick icon/green_tick.webp'>Congratulations!!! New Account Created</h1></div>";
+    loginPopUp.style.height="100px";
+    setTimeout(()=>{
+     
+   disappear();
+      
+    },2000)
+
     reset();
-    messageDisplayForUserExist.innerText = `New Account Created`;
-    messageDisplayForUserExist.classList.remove('red-background');
-    messageDisplayForUserExist.classList.add('green-background');
-    messageDisplayForUserExist.classList.add('')
-    console.log(userArray);
 
 }
 
@@ -163,9 +204,24 @@ function userVerify() {
   let flag = false;
   if(verifyInput.value == ""){
     errorDisplayOnSigninPage.innerText = "*Please enter email or mobile";
+    verifyInput.style.borderColor = "red"
     return;
   }
 
+  if(verifyInput.value%1==0 && verifyInput.value.length!==10){
+    errorDisplayOnSigninPage.innerText = "*Please enter 10 digit mobile number";
+    verifyInput.style.borderColor = "red"
+    return;
+  }
+
+  if(verifyInput.value%1!==0 && !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(verifyInput.value)){
+    errorDisplayOnSigninPage.innerText = "*Please enter valid email Id";
+    verifyInput.style.borderColor = "red"
+    return;
+  }
+
+ 
+console.log("hello")
 
   for (let i = 0; i < userArray.length; i++) {
     if (userArray[i].email == verifyInput.value || userArray[i].mobile==verifyInput.value) {
@@ -198,14 +254,17 @@ function loginAccount(){
 
   if(otpInput.value == "") {
      errorDisplayOnOTPPage.innerText = "*Please enter otp";
+     otpInput.style.borderColor = "red"
      return;
   }
   if(otpInput.value%1!==0){
     errorDisplayOnOTPPage.innerText = "*Please enter numbers only";
+    otpInput.style.borderColor = "red"
     return;
   }
   if(otpInput.value.length!==4){
     errorDisplayOnOTPPage.innerText = "*Invalid Otp";
+    otpInput.style.borderColor = "red"
     return;
   }
 
