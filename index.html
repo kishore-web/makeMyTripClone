@@ -8,8 +8,8 @@
       MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp; Holiday
     </title>
 
-    <link rel="stylesheet" href="./css/mainpagestyle.css" />
     <link rel="stylesheet" href="./css/sign-in.css">
+    <link rel="stylesheet" href="./css/mainpagestyle.css" />
     <link
       rel="icon"
       type="image/x-icon"
@@ -17,10 +17,7 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
-      rel="stylesheet"
-    />
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -28,19 +25,18 @@
   </head>
   <body>
     <!-- =============NAV BAR PORTION STARTS FROM HERE====================== -->
-
-    <header id="huyu">
+    <header id="Header_Id">
       <nav class="flex">
         <div class="logommt rin">
           <img src="./images/homepageallimages/logo@2x.png" alt="" />
         </div>
 
-        <div class="allicon rin flex">
-          <ul>
+        <div class="allicon  rin flex">
+          <ul class="">
             <li>
               <img
                 src="./icons/allnavicon/icons8-airplane-take-off-50.png"
-                alt=""
+                alt="" 
               />
               <p>Flight</p>
             </li>
@@ -49,11 +45,13 @@
               <p>Hotels</p>
             </li>
             <li>
+             <a href="./html/homestays.html">
               <img
-                src="./icons/allnavicon/icons8-house-with-a-garden-50.png"
-                alt=""
-              />
-              <p>Homestays</p>
+              src="./icons/allnavicon/icons8-house-with-a-garden-50.png"
+              alt=""
+            />
+            <p>Homestays</p>
+             </a>
             </li>
             <li>
               <img src="./icons/allnavicon/icons8-balloon-5011.png" alt="" />
@@ -173,8 +171,8 @@
 
           <div class="Language_btn flex rin">
             <button>
-              <img src="./icons/allnavicon/icons8-indian-flag-30.png" alt="" />
-              | IN | ENG | INR
+              <img src="./icons/allnavicon/icons8-indian-flag-30.png" alt="" /> 
+               <span> | IN | ENG | INR</span>
               <i
                 class="fa fa-angle-down"
                 style="font-size: 15px; color: white"
@@ -190,10 +188,10 @@
         <!-- ===========================1ST PORTION STARTS============================ -->
 
         <div class="mid_portion fle">
-          <div class="allicon rin flex">
-            <ul>
+          <div class="allicon rin flex" id="All_icon">
+            <ul class="seprate_elements top_nav_bar">
               <li>
-                <img
+                <img class="flight"
                   src="./icons/allnavicon/icons8-airplane-take-off-50.png"
                   alt=""
                 />
@@ -201,6 +199,7 @@
               </li>
               <li>
                 <img src="./icons/allnavicon/icons8-hotel-50.png" alt="" />
+                 <!-- <img src="./images/homepageallimages/blueImages/icons8-hotel-50b.png" alt=""> -->
                 <p>Hotels</p>
               </li>
               <li>
@@ -252,91 +251,171 @@
               <ul>
                 <li>
                   <label for="oneway"></label>
-                  <input name="oneway" type="radio" />ONE WAY
+                  <input name="oneway" type="radio" /><span>ONE WAY</span>
                 </li>
 
                 <li>
                   <label for="oneway"></label>
-                  <input name="oneway" type="radio" />ROUND TRIP
+                  <input name="oneway" type="radio" /><span>ROUND TRIP</span>
                 </li>
 
                 <li>
                   <label for="oneway"></label>
-                  <input name="oneway" type="radio" />MULTICITY
+                  <input name="oneway" type="radio" /><span>MULTICITY</span>
                 </li>
               </ul>
             </div>
             <div>Book International and Domestic Flights</div>
           </div>
 
-          <div class="mid_part flex">
-            <div class="first_box all_Box">
+          <div class="mid_part flex space_evenly ">
+            <label class="first_box all_Box widthtf">
               <h4>FROM</h4>
               <h1>Delhi</h1>
               <p>DEL, Delhi Airport India</p>
-            </div>
+            </label>
 
-            <div class="all_Box">
-              <h4>FROM</h4>
-              <h1>Delhi</h1>
-              <p>DEL, Delhi Airport India</p>
-            </div>
+            <label class="all_Box">
+              <h4>TO</h4>
+              <h1>Kolkata</h1>
+              <p>Netaji Subhash Chandra Bose</p>
+            </label>
 
-            <div class="all_Box">
+            <div class="all_Box widthtt">
+              
               <h4>DEPARTURE</h4>
-              <h1>26 <span>Jan'23</span></h1>
+              <div class="flex"> 
+              <h1>26 </h1> <span> Jan'23 </span>
+            </div>
               <p>Thrusday</p>
             </div>
 
-            <div class="all_Box">
+            <div class="all_Box widthtt">
               <h4>RETURN</h4>
               <!-- <h1>Delhi</h1> -->
               <p>Tap to add the date</p>
             </div>
 
-            <div class="all_Box_left">
+            <div class="all_Box left" style="border: none;">
               <h4>TRAVELLERS & CLASS</h4>
-              <h1>1 <span> TRAVELLERS </span></h1>
-              <p>Economy/Premium Economy</p>
-              <p>Group Booking Available</p>
+               
+                <div >
+                  <strong>1</strong>
+                <span> TRAVELLERS </span>
+                </div>
+              
+              <p class="Same_font" >Economy/Premium Economy</p>
+              <p class="Same_font">Group Booking Available</p>
             </div>
           </div>
           <!-- ===========================2ND PORTION ENDS============================ -->
           <!-- ===========================3RD PORTION STARTS============================ -->
 
-          <div class="mid_portion_li">
-            <ul>
-              <li>SelectA Fare Type</li>
-              <li>
-                <label for="oneway"></label>
-                <input name="oneway" type="radio" />Regular Fares
-              </li>
+          <div class="mid_portion_li flex space_between  rin ">
 
-              <li>
-                <label for="oneway"></label>
-                <input name="oneway" type="radio" />Armed Fares
-              </li>
+            <div class="flex rin">
+            <div class="flex rin One_radio" style="background-color:white;">
+                <div >
+                  <span >SelectA<br>Fare Type</span>
+                </div>
+            </div>
 
-              <li>
+            <div class="flex rin One_radio">
+              <div class="rin Radio_circle">
                 <label for="oneway"></label>
-                <input name="oneway" type="radio" />Student Fares
-              </li>
+                <input name="oneway" type="radio" />
+              </div>
+                <div>
+                  <span>Regular <br> Fares</span>
+                </div>
+            </div>
 
-              <li>
+            <div class="flex rin One_radio">
+              <div class="rin Radio_circle">
                 <label for="oneway"></label>
-                <input name="oneway" type="radio" />Senior Citizen Fares
-              </li>
+                <input name="oneway" type="radio" />
+              </div>
+                <div>
+                  <span>Armed Forces <br> Fares</span>
+                </div>
+            </div>
 
-              <li>
+            <div class="flex rin One_radio">
+              <div class="rin Radio_circle">
                 <label for="oneway"></label>
-                <input name="oneway" type="radio" />Doctors & Nurses Fares
-              </li>
+                <input name="oneway" type="radio" />
+              </div>
+                <div>
+                  <span>Student <br> Fares</span>
+                </div>
+            </div>
 
-              <li>
+            <div class="flex rin One_radio">
+              <div class="rin Radio_circle">
                 <label for="oneway"></label>
-                <input name="oneway" type="radio" />Double Seat Fares
-              </li>
-            </ul>
+                <input name="oneway" type="radio" />
+              </div>
+                <div>
+                  <span>Senior Citizen <br> Fares</span>
+                </div>
+            </div>
+
+            <div class="flex rin One_radio">
+              <div class="rin Radio_circle">
+                <label for="oneway"></label>
+                <input name="oneway" type="radio" />
+              </div>
+                <div>
+                  <span>Doctors & Nurses<br> Fares</span>
+                </div>
+            </div>
+
+            <div class="flex rin One_radio">
+              <div class="rin Radio_circle">
+                <label for="oneway"></label>
+                <input name="oneway" type="radio" />
+              </div>
+                <div>
+                  <span>Double Seat <br> Fares</span>
+                </div>
+            </div>
+
+          </div>
+
+          <div class="rin right_button">
+            <div class="flex  space_around ">
+              <div class="">
+                <h5>Recent Searches:</h5>
+              </div>
+
+              <div class="backgrey"> 
+                <div class="flex">
+                  <h6>New Delhi</h6>
+                  <i class="fa fa-arrow-right" style="color: blue; font-size:11px; margin: 0px 8px;"></i>
+                  <h6>New Delhi</h6>
+                </div>
+                <div>
+                  <h6>23 Jan 23</h6>
+                </div>
+              </div>
+
+              <div  class="backgrey"> 
+                <div class="flex">
+                  <h6>New Delhi</h6>
+                  <i class="fa fa-arrow-right"  style="color: blue; font-size:11px; margin: 0px 8px;"></i>
+                  <h6>New Delhi</h6>
+                </div>
+                <div>
+                  <h6>23 Jan 23</h6>
+                </div>
+              </div>
+
+                 
+            </div>
+          </div>
+
+          
+
           </div>
 
           <div class="search_button flex">
@@ -399,14 +478,14 @@
         <ul>
           <li><h1>Offers</h1></li>
 
-          <li><h6>ALL OFFERS</h6></li>
-          <li><h6>FLIGHTS</h6></li>
-          <li><h6>HOTELS</h6></li>
-          <li><h6>HOLIDAYS</h6></li>
-          <li><h6>TRAINS</h6></li>
-          <li><h6>CABS</h6></li>
-          <li><h6>BANK OFFERS</h6></li>
-          <li><h6>OTHERS</h6></li>
+          <li><h4>ALL OFFERS</h4></li>
+          <li><h4>FLIGHTS</h4></li>
+          <li><h4>HOTELS</h4></li>
+          <li><h4>HOLIDAYS</h4></li>
+          <li><h4>TRAINS</h4></li>
+          <li><h4>CABS</h4></li>
+          <li><h4>BANK OFFERS</h4></li>
+          <li><h4>OTHERS</h4></li>
         </ul>
         <hr />
 
@@ -792,142 +871,156 @@
 
       <div class="Scanned_portion fle rin">
         <div class="scanned_text_top fle">
-          <h1>Lorem ipsum dolor sit amet.</h1>
-          <h6>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
-            totam!
-          </h6>
+          <h1>Download App Now !</h1>
+          <p>
+            Get India's #1 travel super app, join 100 Million+ happy travellers!
+          </p>
         </div>
-        <hr />
-        <div class="flex rin space_around">
-          <div>
+        
+        <div class="flex rin  space_between padding_bottom">
+          <div class="flex border_right">
+            <div class="Image_resize"> 
             <img src="./icons/allnavicon/scanportion.png" alt="" />
           </div>
-          <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            <input type="text" />
-            <input type="submit" />
+            <div id="  ring">
+              <p>Use code <strong>WELCOMEMMT</strong> and get upto <strong>Rs 1200</strong> off on your first domestic flight booking</p>
+              <input type="text" placeholder="+91 Enter Mobile Number" id="input_box_scanner"/>
+              <input type="submit" id="Submit_btb_scanner" value="GET APP LINK"/>
+            </div>
           </div>
-          <div class="qrscan">
-            <p>Lorem ipsum dolor sit.</p>
-            <button>Google play</button>
-            <button>App Store</button>
+          
+          <div class="qrscan flex rin">
+            <div class="text_content_scanner"> 
+            <p>MORE WAYS TO GET THE APP</p>
+            <button><img src="./images/homepageallimages/googleplay.png" alt=""></button>
+            <div>
+              <button><img src="./images/homepageallimages/app store.png" alt=""></button>
+            </div>
+          </div>
+          <div> 
             <img src="./images/homepageallimages/QR_scan.webp" alt="" />
+            <p>SCAN QR</p>
+          </div>
           </div>
         </div>
       </div>
       <!-- ===============SCANNED PORTION  ENDS FROM HERE========================= -->
       <!-- ===============STRIP STARTS FROM HERE========================= -->
 
-      <div class="stripp rin">
-        <div class="flex space_between">
+      <div class="stripp rin flex space_between">
+
+        <div class="flex space_betwee">
           <div class="small_images">
             <img src="./images/homepageallimages/strip1.png" alt="koko" />
           </div>
-          <div class="fle space_betwee">
-            <h2>Lorem ipsum dolor sit amet.</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
-              amet.
+          <div class="fle space_betwee fff">
+            <img src="./images/homepageallimages/TRIPMONEY.png" alt="" id="trip_money">
+            <p class="align_top">
+              Forex at best exchange rates delivered at your doorstep
             </p>
-            <a href="">BOOK NOW</a>
+            
           </div>
         </div>
+
+        <div>
+          <a href="">BOOK NOW</a>
+        </div>
+
       </div>
       <!-- ===============STRIP ENDS FROM HERE========================= -->
       <div class="last_block rin">
-        <div class="flex three_wrapper space_around rin">
+        <div class="flex three_wrapper space_between rin">
           <div class="flex rin">
             <div class="rin">
               <img src="./images/homepageallimages/bottomw.webp" alt="" />
             </div>
+            <div class="align_top">
+              <h3>Chennai Flight</h3>
+              <span>Via - Delhi, Mumbai, Coimbatore, Madurai</span>
+            </div>
+          </div>
+
+          <div class="flex mid_element">
             <div>
-              <p>Lorem ipsum dolor sit amet.</p>
-              <span>Lorem, ipsum.</span>
+              <img src="./images/homepageallimages/bottomsmall1.webp" alt="" />
+            </div>
+            <div class="align_top">
+              <h3>Chennai Flight</h3>
+              <span>Via - Delhi, Mumbai, Coimbatore, Madurai</span>
             </div>
           </div>
 
           <div class="flex">
             <div>
-              <img src="./images/homepageallimages/bottomw.webp" alt="" />
+              <img src="./images/homepageallimages/bottomsmall2.webp" alt="" />
             </div>
-            <div>
-              <p>Lorem ipsum dolor sit amet.</p>
-              <span>Lorem, ipsum.</span>
-            </div>
-          </div>
-
-          <div class="flex">
-            <div>
-              <img src="./images/homepageallimages/bottomw.webp" alt="" />
-            </div>
-            <div>
-              <p>Lorem ipsum dolor sit amet.</p>
-              <span>Lorem, ipsum.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex three_wrapper space_around rin">
-          <div class="flex">
-            <div>
-              <img src="./images/homepageallimages/bottomw.webp" alt="" />
-            </div>
-            <div>
-              <p>Lorem ipsum dolor sit amet.</p>
-              <span>Lorem, ipsum.</span>
-            </div>
-          </div>
-
-          <div class="flex">
-            <div>
-              <img src="./images/homepageallimages/bottomw.webp" alt="" />
-            </div>
-            <div>
-              <p>Lorem ipsum dolor sit amet.</p>
-              <span>Lorem, ipsum.</span>
-            </div>
-          </div>
-
-          <div class="flex">
-            <div>
-              <img src="./images/homepageallimages/bottomw.webp" alt="" />
-            </div>
-            <div>
-              <p>Lorem ipsum dolor sit amet.</p>
-              <span>Lorem, ipsum.</span>
+            <div class="align_top">
+              <h3>Chennai Flight</h3>
+              <span>Via - Delhi, Mumbai, Coimbatore, Madurai</span>
             </div>
           </div>
         </div>
 
-        <div class="flex three_wrapper space_around rin">
+        <div class="flex three_wrapper space_between rin">
           <div class="flex">
             <div>
-              <img src="./images/homepageallimages/bottomw.webp" alt="" />
+              <img src="./images/homepageallimages/bottomsmall3.webp" alt="" />
             </div>
-            <div>
-              <p>Lorem ipsum dolor sit amet.</p>
-              <span>Lorem, ipsum.</span>
+            <div class="align_top">
+              <h3>Chennai Flight</h3>
+              <span>Via - Delhi, Mumbai, Coimbatore, Madurai</span>
             </div>
           </div>
 
           <div class="flex">
             <div>
-              <img src="./images/homepageallimages/bottomw.webp" alt="" />
+              <img src="./images/homepageallimages/bottomsmall4.webp" alt="" />
             </div>
-            <div>
-              <p>Lorem ipsum dolor sit amet.</p>
-              <span>Lorem, ipsum.</span>
+            <div class="align_top">
+              <h3>Chennai Flight</h3>
+              <span>Via - Delhi, Mumbai, Coimbatore, Madurai</span>
             </div>
           </div>
 
           <div class="flex">
             <div>
-              <img src="./images/homepageallimages/bottomw.webp" alt="" />
+              <img src="./images/homepageallimages/bottomsmall5.webp" alt="" />
             </div>
+            <div class="align_top">
+              <h3>Chennai Flight</h3>
+              <span>Via - Delhi, Mumbai, Coimbatore, Madurai</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex three_wrapper space_between rin">
+          <div class="flex">
             <div>
-              <p>Lorem ipsum dolor sit amet.</p>
-              <span>Lorem, ipsum.</span>
+              <img src="./images/homepageallimages/bottomsmall6.webp" alt="" />
+            </div>
+            <div class="align_top">
+              <h3>Chennai Flight</h3>
+              <span>Via - Delhi, Mumbai, Coimbatore, Madurai</span>
+            </div>
+          </div>
+
+          <div class="flex">
+            <div>
+              <img src="./images/homepageallimages/bottomsmall7.webp" alt="" />
+            </div>
+            <div class="align_top">
+              <h3>Chennai Flight</h3>
+              <span>Via - Delhi, Mumbai, Coimbatore, Madurai</span>
+            </div>
+          </div>
+
+          <div class="flex rin">
+            <div>
+              <img src="./images/homepageallimages/bottomsmall8.webp" alt="" />
+            </div>
+            <div class="align_top" >
+              <h3>Chennai Flight</h3>
+              <span>Via - Delhi, Mumbai, Coimbatore, Madurai</span>
             </div>
           </div>
         </div>
@@ -1066,10 +1159,10 @@
         </div>
       </div>
 
-      <div class="Last_social_icon flex space_around">
+      <div class="Last_social_icon flex space_between">
         <div class="all_icon">
-          <i class="fa fa-twitter" style="font-size: 48px; color: white"></i>
-          <i class="fa fa-facebook-f" style="font-size: 48px; color: white"></i>
+          <i class="fa fa-twitter" style="font-size: 33px; color: white"></i>
+          <i class="fa fa-facebook-f" style="font-size: 33px; color: white"></i>
         </div>
 
         <div>
@@ -1081,8 +1174,8 @@
     </footer>
     <!-- ================================ FOOTER=================================== -->
 
-<section class="black_background hidden">
-    <section class="popup-box">
+
+    <article class="popup-box">
        
       <section class="personal-account-section">
     
@@ -1219,11 +1312,10 @@
   </section> 
     
      <div class="cross_btn">X</div>
-</section>
-</section>
-
+    </article>
+      
         <script src="js/login_page.js"></script>
-
+        <script src="js/index.js"></script>
 
   </body>
 </html>

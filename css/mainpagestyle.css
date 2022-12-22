@@ -2,7 +2,6 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 /* ==========ALL GENERAL CSS STARTS HERE================= */
@@ -11,8 +10,8 @@
   --justify_Content: justify-content;
   --font_size: 12px;
   --SMALL_font_size: 10px;
-
-  --font_size14: 12px;
+  --background_color_for_top_li: rgb(218, 218, 218);
+  --font_size14: 14px;
   --Box_shadow_0_0_grey: 0px 0px 5px grey;
 
   --margin_top: 10px;
@@ -20,9 +19,13 @@
   --width_80per: 80%;
 }
 
+body {
+  font-family: "Lato", sans-serif;
+}
+
 a {
   text-decoration: none;
-  color: white;
+  color: var(--font_color);
 }
 
 .ring {
@@ -49,16 +52,17 @@ a {
 
 /* ==============ALL GENERAL CSS END HERE========= */
 /* ============NAV BAR PORTION STARTS FROM HERE====================== */
-#huyu {
-  /* position: absolute;
-  top: 0; */
-  /* width: 100%; */
-  height: max-content;
+#Header_Id {
+  width: 100%;
+  height: 70px;
 
   padding: 5px;
-
-  /* /* position: relative;
-    top: -100px; */ 
+  box-shadow: 0px 0px 10px gray;
+  position: fixed;
+  top: -100px;
+  z-index: 100;
+  background-color: white;
+  transform: 0.5s all;
 }
 
 .allicon li {
@@ -68,7 +72,7 @@ a {
   font-weight: bold;
   font-size: var(--font_size);
   color: var(--font_color);
-  margin: 3px;
+  margin: 3px 5px;
 }
 
 nav .logommt img {
@@ -132,8 +136,10 @@ nav .allicon img {
 
 /* ============NAV BAR PORTION ENDS HERE====================== */
 /* <!-- ==============PARTS BELOW NAV BLUE BACKGROUND  STARTS FROM HERE========================= --> */
+
 #main_bar_tag {
   position: relative;
+  /* top: 70px; */
   /* bottom: 72px; */
 }
 
@@ -145,7 +151,6 @@ nav .allicon img {
 
 .top_element {
   padding-top: 10px;
-  margin-bottom: 20px;
 }
 
 .smalllogo img {
@@ -190,7 +195,6 @@ section .logommt img {
 .top_element button {
   height: 38px;
   padding: 5px;
-  margin: 5px;
 }
 
 .login_btn button {
@@ -206,10 +210,17 @@ section .logommt img {
   margin-left: 20px;
   color: white;
   padding-left: 10px;
+  font-size: var(--SMALL_font_size);
 }
 
 .Language_btn button {
   width: 12em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b3745;
+  color: white;
+  font-size: var(--font_size);
 }
 
 .login_btn .fa-angle-down {
@@ -221,6 +232,31 @@ section .logommt img {
 /* ==================TOP BOX DETAILS STARTS FROM HERE====================== */
 /* ===========================1ST PORTION STARTS============================  */
 
+.allicon .seprate_elements li {
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  font-size: var(--font_size);
+  color: var(--font_color);
+  margin: 5px 10px;
+}
+
+.allicon .seprate_elements img {
+  width: 38px;
+  height: 38px;
+  margin: 0px 15px;
+  /* margin-top: var(--margin_top); */
+}
+
+/* .seprate_elements p{
+  
+  background-color: #4a65dd;
+  color: white;
+  border-radius: 10px;
+   padding: 1px;
+} */
+
 .mid_portion {
   padding: 8px 30px;
   width: max-content;
@@ -229,21 +265,35 @@ section .logommt img {
   border-radius: 10px;
   background-color: white;
   position: relative;
-  
-  top: 50px;
+
+  top: 40px;
   z-index: 2;
 }
 
 .all_radio_btn {
-  padding: 0px 40px;
-  padding-bottom: 3px;
+  padding: 0px 25px;
+  padding-bottom: 5px;
+  padding-right: 50px;
 }
 
 .all_radio_btn li {
+  padding: 3px 8px;
+  border-radius: 15px;
+  background-color: var(--background_color_for_top_li);
   list-style: none;
   display: inline-block;
-  margin-right: 40px;
+  margin-right: 20px;
   font-weight: bold;
+  font-size: var(--font_size14);
+  border: 1px solid rgb(209, 209, 209);
+}
+
+.all_radio_btn li span {
+  margin-left: 5px;
+}
+
+input[type="radio"] {
+  accent-color: black;
 }
 
 .mid_portion ul img {
@@ -256,8 +306,7 @@ section .logommt img {
 /* ===========================2ND PORTION STARTS============================  */
 
 .wrapper {
-  padding-top: 80px;
-
+  padding-top: 65px;
   box-shadow: var(--Box_shadow_0_0_grey);
   width: var(--width_80per);
   margin: 0px auto;
@@ -269,23 +318,52 @@ section .logommt img {
 }
 
 .mid_part {
+  width: 93%;
+  margin-top: 20px;
   border: 1px solid gray;
   border-radius: 10px;
   margin: 0px 40px;
+  justify-content: left;
+  align-items: flex-start;
+
+  /* border: 5px solid red; */
+}
+
+.widthtf {
+  width: 25%;
+}
+
+.widthtt {
+  width: 15%;
 }
 
 .all_Box {
-  padding: 30px 20px;
+  position: relative;
+
+  height: 120px;
+  padding: 25px 30px;
+
   border-right: 1px solid gray;
-  height: max-content;
+}
+
+.all_Box span {
+  margin-left: 8px;
+}
+
+.all_Box strong {
+  font-size: 35px;
+}
+
+.Same_font {
+  font-size: var(--SMALL_font_size);
 }
 
 .mid_part h1 {
   font-size: 30px;
 }
 .all_Box_left {
-  padding-left: 15px;
-  border-left: 1px solid gray;
+  padding-left: 5px;
+  /* border-left: 1px solid gray; */
 }
 
 /* ===========================2ND PORTION ENDS============================  */
@@ -294,17 +372,20 @@ section .logommt img {
 /* ===========================3RD PORTION ENDS============================  */
 
 .mid_portion_li {
-  padding: 0px 40px;
+  padding: 5px 40px;
   margin: 15px 10px;
+  margin: 0px auto;
 }
 
-.mid_portion_li ul li {
-  list-style: none;
-  display: inline-block;
+.mid_portion_li .One_radio {
+  margin: 5px 1px;
   font-size: var(--font_size);
-  background-color: rgb(212, 212, 212);
-  text-align: justify;
-  padding: 10px;
+  background-color: rgb(204, 204, 204);
+  padding: 5px 5px;
+}
+
+.Radio_circle {
+  margin: 5px;
 }
 
 .search_button {
@@ -327,6 +408,15 @@ section .logommt img {
     rgba(69, 91, 252, 1) 79%
   );
   color: white;
+}
+
+.right_button {
+  width: 400px;
+}
+
+.backgrey {
+  background-color: var(--background_color_for_top_li);
+  padding: 5px 10px;
 }
 
 /* ==================TOP BOX DETAILS ENDS FROM HERE====================== */
@@ -387,6 +477,11 @@ section .logommt img {
   width: var(--width_80per);
   border: 1px solid gray;
   border-radius: 10px;
+  box-shadow: var(--Box_shadow_0_0_grey);
+}
+
+.slider_main ul {
+  margin: 13px 0px;
 }
 
 .slider_main ul li {
@@ -394,6 +489,19 @@ section .logommt img {
   display: inline-block;
   margin-top: 10px;
   color: var(--font_color);
+  cursor: pointer;
+  margin-left: 13px;
+}
+
+.slider_main ul li:hover {
+  list-style: none;
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--font_color);
+  cursor: pointer;
+  margin-left: 13px;
+  text-underline-offset: 8px;
+  text-decoration: 3px underline blueviolet;
 }
 
 .slider_main h1 {
@@ -403,9 +511,9 @@ section .logommt img {
   font-weight: bold;
 }
 
-.slider_main h6 {
-  margin-left: 9px;
-  font-size: 20px;
+.slider_main h4 {
+  /* margin-left: 9px; */
+  /* font-size: 16px; */
 }
 
 .image_cont {
@@ -419,7 +527,6 @@ section .logommt img {
   border-radius: 10px;
 }
 
-/* <!-- ===============SLIDER ENDS FROM HERE========================= --> */
 .div_text_content {
   text-align: left;
   margin-left: 10px;
@@ -475,7 +582,7 @@ section .logommt img {
   width: 100%;
   height: 420px;
   margin-right: 0px;
-  box-sizing: border-box;
+
   background: white;
   transform-origin: center center;
   transform: scale(1);
@@ -514,6 +621,9 @@ a.slide__next {
   right: 5%;
 }
 
+/* <!-- ===============SLIDER ENDS FROM HERE========================= --> */
+/* <!-- ===============SCANNED PORTION ENDS FROM HERE========================= -->  */
+
 .Scanned_portion {
   position: relative;
   top: 50px;
@@ -524,7 +634,66 @@ a.slide__next {
 }
 
 .scanned_text_top {
-  margin: 20px 40px;
+  padding: 20px 25px;
+}
+
+#input_box_scanner {
+  width: 320px;
+  height: 38px;
+  margin-top: 15px;
+  /* margin: 15px; */
+  padding-left: 10px;
+}
+
+#Submit_btb_scanner {
+  color: blue;
+  font-weight: bold;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid blueviolet;
+  border-radius: 3px;
+}
+
+.border_right {
+  /* padding-top: 10px; */
+}
+
+.Image_resize img {
+  width: 110px;
+}
+
+.text_content_scanner {
+  width: max-content;
+}
+
+.padding_bottom {
+  padding: 0px 30px;
+  padding-bottom: 40px;
+}
+
+.scanned_text_top h1 {
+  font-size: 45px;
+}
+
+.scanned_text_top p {
+  font-size: 22px;
+}
+
+.qrscan {
+  border-left: 1px solid grey;
+  padding-left: 100px;
+}
+
+.qrscan button {
+  border: none;
+  background-color: rgb(255, 255, 255);
+}
+
+.qrscan button img {
+  width: 133px;
+  height: 43px;
+  margin: 10px;
+  box-shadow: var(--Box_shadow_0_0_grey);
 }
 
 .qrscan img {
@@ -536,21 +705,21 @@ a.slide__next {
   margin: 0px auto;
   position: relative;
   top: 80px;
-  padding: 10px 50px;
+  padding: 0px 30px;
   border-radius: 10px;
   box-shadow: var(--Box_shadow_0_0_grey);
 }
 
+#trip_money {
+  position: relative;
+  right: 9px;
+  width: 75px;
+  height: 35px;
+}
+
 .stripp img {
-  width: 80px;
-}
-
-.stripp h2 {
-  vertical-align: top;
-}
-
-.stripp p {
-  vertical-align: top;
+  width: 70px;
+  margin: 10px;
 }
 
 .last_block {
@@ -567,13 +736,24 @@ a.slide__next {
   width: 50px;
   border-radius: 50%;
   margin: 5px;
+  margin-right: 10px;
+}
+
+.last_block span {
+  font-size: var(--font_size14);
+}
+
+.align_top {
+  position: relative;
+  bottom: 5px;
 }
 
 .three_wrapper {
-  padding: 10px 0px;
-  width: var(--width_80per);
+  padding: 10px 67px;
+
   margin: 0px auto;
 }
+/* <!-- ===============SCANNED PORTION ENDS FROM HERE========================= --> */
 
 /* <!-- ================================ FOOTER=================================== -->
 <!-- =======================FOOTER PART ONE STARTS HERE=========================== --> */
@@ -595,11 +775,12 @@ footer {
 
 .footer_part_one h3 {
   margin-bottom: 5px;
-  font-size: var(--font_size14);
+  font-size: var(--font_size);
 }
 
 .footer_part_one p {
   font-size: var(--font_size);
+  color: black;
 }
 
 /* <!-- ===========================FOOTER PART ONE ENDS HERE=========================== -->
@@ -607,18 +788,20 @@ footer {
 /* ===========================FOOTER PART TWO STARTS HERE=========================== */
 
 .second_footer_part {
-  padding: 25px 30px;
-  width: var(--width_80per);
+  background-color: rgb(237, 237, 237);
+  padding: 25px 180px;
+  width: 100%;
   margin: 0px auto;
 }
 
 .second_footer_part h3 {
   margin: 25px 0px;
   /* padding: 5px 30px; */
-  font-size: var(--font_size);
+  font-size: var(--font_size14);
 }
 
 .second_footer_part p {
+  text-align: justify;
   padding-right: 45px;
   /* padding: 5px 30px; */
   font-size: var(--font_size14);
@@ -631,10 +814,12 @@ footer {
   margin: 0px auto;
   background-color: black;
   color: white;
+  padding: 0px 165px;
+  padding-right: 230px;
 }
 
 .all_icon i {
-  margin: 0px 20px;
+  margin: 10px 20px;
 }
 
 /* <!-- ================================ FOOTER================================== --> */
