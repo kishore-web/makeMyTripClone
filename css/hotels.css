@@ -14,7 +14,7 @@ body {
 
 @media only screen and (max-width: 1200px) and (min-width: 220px) {
     body {
-        /* background-color: tomato; */
+        background-color: tomato;
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -67,34 +67,99 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* --------------Slider box CSS-------------------------   */
-.wrapper-slider-box {
-    /* border: 1px dashed blue; */
-    padding: 15px auto;
-    margin-top: 50px;
-}
 
-.slider-box {
-    align-items: flex-start;
-}
-
-.slider-box .slider-cards img {
-    margin-top: 15px;
-    aspect-ratio: 0.9;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.slider-cards .item:hover {
-    padding: 15px;
-    background-color: hsl(351, 100%, 86%, 0.3);
+/* -----------------mmt luxe-box selections css----------------------- */
+.mmt-lux-box {
+    padding: 30px;
+    background-color: white;
     border-radius: 15px;
+    margin: 20px auto;
+    border: 3px solid tomato;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.cards {
+    flex-wrap: wrap;
+    gap: 25px;
+    border-right: 20px;
+    margin-left: 20px;  
+    border: 1px solid blue;
+    margin: auto;
+}
+/* -----------------mmt luxe-box details css----------------------- */
+.mmt-lux-disc {
+    border: 3px solid blue;
+    width: 300px;
+}
+.mmt-lux-disc p:nth-child(1) {
+    color: rgb(0, 0, 0, 0.8);
+    font-weight: 600;
+    /* border: 1px solid red; */
+}
+.mmt-lux-disc h1 {
+    color: #e1be5b;
+    font-size: 32px;
+    margin-bottom: -5px;
+}  
+.mmt-lux-disc .para {
+    font-size: 14px;
+    /* border: 1px solid blue; */
+    margin: 5px auto;
+}
+.mmt-lux-disc button {
+    padding: 5px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #e1be5b;
+    border: none;
+    margin: 10px auto;
 }
 
-.slider-box .slider-cards .slider-text {
-    color: gray;
-    margin-top: 15px;
+
+/* -----------------mmt luxe-box cards css----------------------- */
+.mmt-lux-box .cards img {
+    width: 240px;
+    height: 150px;
+    border-top-left-radius: 5px ;
+    border-top-right-radius: 5px;
+   
 }
+.card-container {
+    border-radius: 5px;
+    width: 240px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-container div:nth-child(2) {
+    padding: 10px;
+    margin-top: -10px;
+    background-color: white;
+    border-bottom-left-radius: 5px ;
+    border-bottom-right-radius: 5px;
+}
+.card-container div:nth-child(2) p {
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: sans-serif;
+    color: lightslategray;
+}
+
+
+
+
+
+/* -------------------Adds Box CSS-------------------------- */
+.adds-box {
+    margin: 20px auto;
+}
+
+.adds-box img {
+    width: 100%;
+}
+
+
+
 
 
 /* -------------City List Box CSS------------------------- */
@@ -107,7 +172,8 @@ body {
     border-radius: 15px;
     background-color: white;
     padding: 20px;
-    padding-right: 150px;
+    padding-right: 20px;
+    gap: 20px;
 }
 
 .wrapper-city-box img {
@@ -119,7 +185,7 @@ body {
 
 .city {
     max-width: fit-content;
-    flex: 5;
+    flex: 5;  
 }
 
 /* responsiveness City List Box HTML */
@@ -147,41 +213,6 @@ body {
 
 
 
-/* -------------------Adds Box CSS-------------------------- */
-.adds-box {
-    margin: 20px auto;
-}
-
-.adds-box img {
-    width: 100%;
-}
-
-/* --------------Offers List Box CSS------------------------- */
-.wrapper-offers {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 15px;
-}
-
-.mmt-offers ul {
-    flex-direction: row;
-    border-bottom: 1px solid grey;
-    margin-left: -40px;
-}
-
-.mmt-offers ul li {
-    padding: 10px;
-    font-weight: bold;
-    color: rgb(0, 0, 0, 0.8);
-}
-
-.mmt-offers h1 {
-    font-size: 42px;
-    color: rgb(0, 0, 0, 0.8);
-    font-weight: lighter;
-    margin-left: 0;
-}
 
 
 
@@ -222,6 +253,27 @@ body {
 .order-now-box .img-box {
     margin-right: 10px;
 }
+
+
+
+/* -------------------Footer Portion-Top Box CSS---------------------- */
+.footer-top-one-unit .heading {
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.footer-top-one-unit {
+    margin-bottom: 12px;
+}
+
+.footer-top-one-unit p:hover {
+    color: blue;
+}
+
+.footer-top {
+    margin: 60px auto;
+}
+
 
 
 
