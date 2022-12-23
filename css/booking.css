@@ -613,6 +613,7 @@ div.booknow-text p{
   color: #008cff;
   padding: 12px 0 12px 12px;
   cursor: pointer;
+  font-size: 12px;
 }
 .booking-send{
   padding: 20px;
