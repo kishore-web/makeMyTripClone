@@ -45,7 +45,7 @@ body {
 }
 
 .border-check {
-    border: 2px dashed blue;
+    /* border: 2px dashed blue; */
 }
 
 .small-font {
@@ -74,7 +74,7 @@ body {
     background-color: white;
     border-radius: 15px;
     margin: 20px auto;
-    border: 3px solid tomato;
+    /* border: 3px solid tomato; */
     flex-wrap: wrap;
     gap: 25px;
 }
@@ -83,12 +83,12 @@ body {
     gap: 25px;
     border-right: 20px;
     margin-left: 20px;  
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     margin: auto;
 }
 /* -----------------mmt luxe-box details css----------------------- */
 .mmt-lux-disc {
-    border: 3px solid blue;
+    /* border: 3px solid blue; */
     width: 300px;
 }
 .mmt-lux-disc p:nth-child(1) {
