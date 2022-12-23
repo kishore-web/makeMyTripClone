@@ -16,7 +16,7 @@ new Swiper('.swiper1', {
   direction: 'horizontal',
   loop: false,
   slidesPerView: 2,
-  spaceBetween: 10,
+  spaceBetween: 15,
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',

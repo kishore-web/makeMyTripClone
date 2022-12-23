@@ -422,12 +422,13 @@ div.booknow-text p{
 .insurance-wrapper{
   background-color: white;
   width: 882px;
-  height: 460px;
+  height: 395px;
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
   margin-top: 15px;
   margin-bottom: 10px;
 }
+
 .insurance-wrapper .travel-insurance{
   display: flex;
   align-items: center;
@@ -504,28 +505,57 @@ div.booknow-text p{
  .swiper-button-prev::after {
    display: none;
  }
-
+ .industry-first{
+  position: absolute;
+  top: 202px;
+  margin-left: 20px;
+}
 .insurance-wrapper .insurance-reviews{
-  /* color: red; */
-  /* z-index: 5; */
-  /* position: relative; */
-  top: 190px;
-  border: 2px solid #b8860b;
+  top: 207px;
   position: absolute;
   width: 882px;
-  /* background-color: #f5f5ff; */
   padding: 15px 20px;
   overflow: hidden;
+}
+.secure-trip{
+  position:absolute;
+  top: 320px;
+  margin-left: 20px;
+}
+.secure-trip label{
+  padding: 0 0 6px 6px;
+  display: inline-block;
+}
+.secure-trip>p{
+  font-size: 11px;
+  color: #979797;
+}
+.secure-trip a{
+  text-decoration: none;
+  font-size: 11px;
+  color: #008cff;
 }
 .review-card{
   background-color: #f4f4f4;
   border-radius: 5px;
-  padding: 10px 10px 10px 30px;
+  padding: 8px 10px;
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 15%);
   display: flex;
   margin: 5px;
+  width: 405px;
 }
-
+.insurance-reviews h3{
+  padding-bottom: 8px;
+}
+.review-card .swiper-text p:first-child{
+  font-weight: 100;
+}
+.review-card .swiper-text .reviewers-name{
+  text-align: right;
+}
+.review-card .swiper-img{
+  width: 45px;
+}
 /*--========================== Travel Insurance section ends Here ===============================-->*/
 
 .traveller-details{
@@ -583,6 +613,7 @@ div.booknow-text p{
   color: #008cff;
   padding: 12px 0 12px 12px;
   cursor: pointer;
+  font-size: 12px;
 }
 .booking-send{
   padding: 20px;
