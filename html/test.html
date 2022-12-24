@@ -1,3 +1,5 @@
+<img src="../images/ailrlines/airline-1.jpg" alt="" srcset="">
+
 // import info from '../hope.json' assert {type: 'json'};
 
 // api url
@@ -29,15 +31,11 @@ const flightInfoDisplay = document.querySelector('.flight_info_display');
 const arriveCityContainer = document.querySelector('.arrive_city_container');
 const departCityContainer = document.querySelector('.depart_city_container');
 const tripArrive = document.querySelector('.trip_arrive');
-const tripDepart = document.querySelector('.trip_depart');
+const tripDepart =document.querySelector('.trip_depart');
 const arriveCityDisplay = document.querySelector('.arrive_city_display');
 const departCityDisplay = document.querySelector('.depart_city_display');
 const departCity = document.getElementById("depart_city");
-const arriveCity = document.getElementById("arrive_city");
-const tripTypeWay = document.querySelector('.trip_type_way'); 
-const tripWayOptions = document.querySelector('.trip_way');
-const tripWayOptionClick = document.querySelector('.trip_way_options');
-const tripWayDynamic = document.querySelector('.trip_way_dynamic');
+const arriveCity =document.getElementById("arrive_city");
 
 const searchButton = document.querySelector('.search_btn');
 
@@ -85,14 +83,14 @@ function displaySearchResult(val){
    flightInfoDisplay.innerHTML+=`
    <div class="wrapper_search">
    <div class="blue_lock_box">
-   <img
-      src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/farelock/fl_small_blue_plain_lock.png" />
+   <img src=../images/ailrlines/airline-${image_number}.jpg" alt="" srcset="">
    <p>Lock this Price<span>i</span></p>
 </div>
 
 <div class="go_first">
    <div class="go_first_logo">
-   <img src="../images/ailrlines/airline-${image_number}.jpg" alt="" srcset="">
+      <img src="https://imgak.mmtcdn.com/flights/assets/media/dt/common/icons/G8.png?v=14" )" alt=""
+         srcset="">
       <div class="go_first_para">
          <p class="flight_name">${val.flight} </p>
          <p>G8 713, G8 392</p>
@@ -102,8 +100,6 @@ function displaySearchResult(val){
       <p class="departure_time">${val.dept_time}</p>
       <p class="departure_airport hidden">${val.depart_airport_name}</p>
       <p class="arrival_airport hidden">${val.arrive_airport_name}</p>
-      <p class="arrival_airport hidden">${val.depart_IATA_code}</p>
-      <p class="arrival_airport hidden">${val.arrive_IATA_code}</p>
       <p class="departure_city_name">${val.depart_city_name}</p>
    </div>
    <div class="one_stop">
@@ -181,7 +177,6 @@ function bookingTicket(e){
       let flightNamePath = e.path[1].firstElementChild;
       let flightDetailPath = flightNamePath.nextElementSibling.nextElementSibling;
       let airportDetails = flightNamePath.nextElementSibling.firstElementChild;
-      let airportCodeDetails = flightNamePath.nextElementSibling.lastElementChild;
      
     const bookingTicketObj = {
      flight : flightNamePath.querySelector('p').innerText,
@@ -192,11 +187,10 @@ function bookingTicket(e){
      arrival_time : flightDetailPath.nextElementSibling.firstElementChild.querySelector('p').innerText,
      arrival_city : flightDetailPath.nextElementSibling.lastElementChild.innerText,
      departure_airport : airportDetails.nextElementSibling.innerText,
-     arrival_airport : airportDetails.nextElementSibling.nextElementSibling.innerText,
-     arrive_city_code : airportCodeDetails.previousElementSibling.innerText,
-     depart_city_code : airportCodeDetails.previousElementSibling.previousElementSibling.innerText
+     arrival_airport : airportDetails.nextElementSibling.nextElementSibling.innerText 
      
    }
+
 
  bookingArray.push(bookingTicketObj)
 
@@ -205,17 +199,6 @@ localStorage.setItem("booking", JSON.stringify(bookingArray));
 window.location.href = "../html/booking.html";
    }
  
-}
-
-function tripTypeOptions(){
-   tripWayOptions.classList.remove('hidden');
-}
-
-function tripWayOptionClickFuncion(e){
-   tripWayDynamic.innerText = e.target.innerText;
-   tripWayOptions.classList.add('hidden');
-   console.log(e.target)
-
 }
 
 
@@ -230,10 +213,6 @@ tripArrive.addEventListener('click', arriveCityClick);
 tripArrive.addEventListener('change', disappearArriveSelectMenu);
 
 flightInfoDisplay.addEventListener('click', bookingTicket);
-
-tripTypeWay.addEventListener('click', tripTypeOptions);
-
-tripWayOptionClick.addEventListener('click', tripWayOptionClickFuncion)
 
 
 
