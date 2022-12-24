@@ -16,6 +16,15 @@ let infantsNo = 0;
 let sum;
 let travelType= ""
 
+
+const travelCount = document.querySelector('#Travellers_count');
+
+
+travelCount.addEventListener('click', traverllerCountPopUp)
+
+ 
+
+
 travelClass.addEventListener("click", (e)=>{
    travelType = e.target.innerHTML
    e.target.classList.add("selected")
@@ -68,3 +77,6 @@ applybutton.addEventListener("click", submitTotalTravellers)
 applybutton.addEventListener("click", resetValues)
 clickbutton.addEventListener("click", displaywin)
 window.addEventListener("click", closewin)
+
+// =================================================================
+

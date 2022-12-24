@@ -8,6 +8,7 @@
       MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp; Holiday
     </title>
 
+    <link rel="stylesheet" href="./css/dropdown.css">
     <link rel="stylesheet" href="./css/sign-in.css">
     <link rel="stylesheet" href="./css/mainpagestyle.css" />
     <link
@@ -361,18 +362,23 @@
               <p>Tap to add the date</p>
             </div>
 
-            <div class="all_Box left" style="border: none;">
+            <div class="all_Box left" style="border: none;" id="Travellers_count">
               <h4>TRAVELLERS & CLASS <i class="fa fa-angle-down" style="font-size:20px;color:rgb(54, 82, 193)"></i></h4>
                
-                <div >
-                  <strong>1</strong>
+                <div  >
+                  <strong  ><span  >1</span></strong>
                 <span> TRAVELLERS </span>
                 </div>
               
-              <p class="Same_font" >Economy/Premium Economy</p>
+              <p class="Same_font"  >Economy/Premium Economy</p>
               <p class="Same_font">Group Booking Available</p>
             </div>
           </div>
+
+          <!-- <div class="box">
+            <h1 class="select-trav"><span class="travel-number">2</span> Travellers</h1>
+            <p id="class-type">Economy/Premium Economy</p>
+          </div> -->
           <!-- ===========================2ND PORTION ENDS============================ -->
           <!-- ===========================3RD PORTION STARTS============================ -->
 
@@ -1429,10 +1435,79 @@
 
 <!-- ======================================================================================== -->
 
- 
+<!-- ======================KISHORE DA POP-UP======================== -->
+<!-- 
+<div class="tr-container" id="color-red">
+
+
+  <div class="box">
+    <h1 class="select-trav"><span class="travel-number">2</span> Travellers</h1>
+    <p id="class-type">Economy/Premium Economy</p>
+  </div>
+
+
+
+  <div class="travellers-details">
+    <div id="travellers-div">
+      <h3>ADULTS(12y +)</h3>
+      <ul class="adults adult-age">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+      </ul>
+      <div class="children-infant">
+        <div>
+          <h3>CHILDRENS(2y - 12y)</h3>
+          <ul class="children adult-age">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+          </ul>
+        </div>
+        <div>
+          <h3>INFANTS(below 2y)</h3>
+          <ul class="infants adult-age">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+          </ul>
+        </div>
+      </div>
+      <div class="travel-class">
+        <h3>CHOOSE TRAVEL CLASS</h3>
+        <ul class="travel-class-select adult-age">
+          <li>Economy/Premium Economy</li>
+          <li>Premium Economy</li>
+          <li>Business</li>
+        </ul>
+      </div>
+    </div>
+    <div class="button-div">
+      <button class="apply-btn" type="submit">APPLY</button>
+    </div>
+  </div>
+
+</div> -->
+
+ <!-- ======================KISHORE DA POP-UP======================== -->
       
         <script src="js/login_page.js"></script>
         <script src="js/index.js"></script>
+        <script src="./js/dropdown.js"></script>
 
   </body>
 </html>
