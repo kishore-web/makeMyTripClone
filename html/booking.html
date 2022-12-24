@@ -34,8 +34,8 @@
               <div class="fgt-padding">
                 <div class="flight-details-top">
                   <div class="flight-trip">
-                    <h2>Bengaluru → Visakhapatnam</h2>
-                    <p><span>Sunday, Dec 18</span>Non Stop · 1h 35m</p>
+                    <h2> <span class="city_departure">Bengaluru</span>  → <span class="city_arrival">Visakhapatnam</span> </h2>
+                    <p><span>Sunday, Dec 18</span>Non Stop ·<span class="trip-duration"> 1h 35m</span></p>
                   </div>
                   <div class="fare-rules">
                     <p class="fee">CANCELLATION FEES APPLY</p>
@@ -45,7 +45,7 @@
                 <div class="flight-details-bottom">
                   <div class="flex-div">
                     <img class="flight-img" src="../images/bookingImg/akasaair.png" alt="AkasaAir">
-                    <p><span>Akasa Air</span> <span style="margin-left: 8px;">QP 1337</span></p>
+                    <p><span class="flight_name">Akasa Air</span> <span style="margin-left: 8px;">QP 1337</span></p>
                   </div>
                   <div class="flex-div">
                     <p><span>Economy</span> > <span class="saver">SAVER</span></p><img class="eco-img" src="../images/bookingImg/economysaver.png" alt="">
@@ -53,13 +53,13 @@
                 </div>
                 <div class="flight-timings flex-div">
                     <div class="timings-left">
-                      <span><b>05:25</b></span>
+                      <span class="depart_flight_time"><b>05:25</b></span>
                       <span class="circle-timings"></span>
-                      <p class="arrival-place"><b>Bengaluru</b> . Bengaluru International Airport, Terminal T1</p>
-                      <p class="trip-hours">1h 35m</p>
-                      <span><b>07:00</b></span>
+                      <p class="arrival-place"> <span class="city_departure1">Bengaluru</span> . <span class="departure_airport_name">Bengaluru International Airport, Terminal T1</span></p>
+                      <p class="trip-hours trip-duration1">1h 35m</p>
+                      <span class="arrive_flight_time"><b>07:00</b></span>
                       <span class="circle-timings"></span>
-                      <p class="arrival-place"><b>Visakhapatnam</b> . Visakhapatnam International Airport</p>
+                      <p class="arrival-place"><span class="city_arrival1">Visakhapatnam</span> . <span class="arrival_airport_name"> Visakhapatnam International Airport</span></p>
                     </div>
                     <div class="flex-div timings-right">
                       <table>
@@ -87,8 +87,8 @@
                       <p>View Policy</p>
                     </div>
                     <div class="flex-div marginTopBtm">
-                      <img class="flight-img" src="../images/bookingImg/akasaair.png" alt="AkasaAir">
-                      <p class="blackFont">BLR-VTZ</p>
+                      <img class="flight-img flight-img1" src="../images/bookingImg/akasaair.png" alt="AkasaAir">
+                      <p class="blackFont"> <span class="depart_city_code">BLR</span>-<span class="arrive_city_code">VTZ</span></p>
                     </div>
                     <div class="cancel-policy">
                       <div class="cancel-penalty">
@@ -402,12 +402,12 @@
                     <img class="bfs-img" src="../images/bookingImg/plus.png" alt="">
                     <p>Base Fare</p>
                    </div>
-                    <p class="basefare-price">₹ 4,352</p>
+                    <p class="basefare-price">₹<span class="basefare-price1">4,352</span> </p>
                   </div>
                 
                 <div class="fare--div flexJ displayn">
-                    <p>Adult(s) (1 X ₹ 4,352)</p>
-                    <p> ₹ 4,352</p>
+                    <p>Adult(s) (1 X ₹<span class="basefare-price2">4,352</span>)</p>
+                    <p> ₹<span class="basefare-price3">4,352</p>
                 </div>
               </div>
               <div class="fee--surcharge">
@@ -426,7 +426,7 @@
               </div>
               <div class="flexJ total--amount">
                 <h2>Total Amount</h2>
-                <h2>₹ 5,325</h2>
+                <h2>₹ <span class="basefare-price4">5,325</span></h2>
               </div>
             </div>
 
@@ -504,5 +504,6 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="../js/swiper.js"></script>
   <script src="../js/booking.js"></script>
+  <script src="../js/booking_ticket.js"></script>
 </body>
 </html>

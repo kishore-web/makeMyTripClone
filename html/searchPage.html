@@ -19,7 +19,7 @@
 
    <!-- link to css main style page  -->
 
-   <link rel="stylesheet" href="../css/mainpagestyle.css">
+   <!-- <link rel="stylesheet" href="../css/mainpagestyle.css"> -->
 
    <!-- cdn link fot font awsome  -->
 
@@ -33,30 +33,30 @@
    <header id="Header_Id">
       <nav class="flex">
         <div class="logommt rin">
-          <img src="./images/homepageallimages/logo@2x.png" alt="" />
+          <img src="../images/homepageallimages/logo@2x.png" alt="" />
         </div>
 
         <div class="allicon  rin flex">
           <ul class="">
             <li>
               <img
-                src="./icons/allnavicon/icons8-airplane-take-off-50.png"
+                src="../icons/allnavicon/icons8-airplane-take-off-50.png"
                 alt="" 
               />
               <p>Flight</p>
             </li>
 
             <li>
-              <a href="./html/hotels.html" target="_blank" >
-                <img src="./icons/allnavicon/icons8-hotel-50.png" alt="" />
+              <a href="../html/hotels.html" target="_blank" >
+                <img src="../icons/allnavicon/icons8-hotel-50.png" alt="" />
               <p>Hotels</p>
               </a>
             </li>
 
             <li>
-             <a href="./html/homestays.html"  target="_blank">
+             <a href="../html/homestays.html"  target="_blank">
               <img
-              src="./icons/allnavicon/icons8-house-with-a-garden-50.png"
+              src="../icons/allnavicon/icons8-house-with-a-garden-50.png"
               alt=""
             />
             <p>Homestays</p>
@@ -64,35 +64,35 @@
             </li>
 
             <li>
-              <a href="./html/holiday-packages.html"  target="_blank">
-                <img src="./icons/allnavicon/icons8-balloon-5011.png" alt="" />
+              <a href="../html/holiday-packages.html"  target="_blank">
+                <img src="../icons/allnavicon/icons8-balloon-5011.png" alt="" />
               <p>Packages</p>
               </a>
             </li>
 
 
             <li>
-              <img src="./icons/allnavicon/icons8-locomotive-50.png" alt="" />
+              <img src="../icons/allnavicon/icons8-locomotive-50.png" alt="" />
               <p>Trains</p>
             </li>
             <li>
-              <img src="./icons/allnavicon/icons8-bus-50.png" alt="" />
+              <img src="../icons/allnavicon/icons8-bus-50.png" alt="" />
               <p>Buses</p>
             </li>
             <li>
-              <img src="./icons/allnavicon/icons8-taxi-50.png" alt="" />
+              <img src="../icons/allnavicon/icons8-taxi-50.png" alt="" />
               <p>Cabs</p>
             </li>
             <li>
-              <img src="./icons/allnavicon/icons8-money-yours-50.png" alt="" />
+              <img src="../icons/allnavicon/icons8-money-yours-50.png" alt="" />
               <p>Forex</p>
             </li>
             <li>
-              <img src="./icons/allnavicon/icons8-airplane-50.png" alt="" />
+              <img src="../icons/allnavicon/icons8-airplane-50.png" alt="" />
               <p>Charter</p>
             </li>
             <li>
-              <img src="./icons/allnavicon/icons8-trekking-50.png" alt="" />
+              <img src="../icons/allnavicon/icons8-trekking-50.png" alt="" />
               <p>Activities</p>
             </li>
           </ul>
@@ -100,7 +100,7 @@
 
         <div class="lastunorderedlist flex rin">
           <div class="login flex rin">
-            <div><img src="./images/homepageallimages/my.png" alt="" /></div>
+            <div><img src="../images/homepageallimages/my.png" alt="" /></div>
             <div>
               <div>Login or</div>
               <div>Create Account</div>
@@ -141,9 +141,17 @@
          <div class="trip_type trip_type_way">
             <div class="trip_type_option">
                <p>Trip Type</p>
-               <p>One Way</p>
+               <p class="trip_way_dynamic">One Way</p>
             </div class="angle_down">
             <i class="fa fa-angle-down" aria-hidden="true"></i>
+
+         </div>
+         <div class="trip_way hidden">
+            <ul class="trip_way_options">
+               <li>One Way</li>
+               <li>Round</li>
+               <li>Multi-trip</li>
+            </ul>
          </div>
 
          <div class="trip_type trip_type_from trip_depart">
@@ -151,8 +159,8 @@
             <p class="depart_city_display">Indore</p>
             <div class="depart_city_container">
                <select id="depart_city" class="hidden">
-                  <option class="depart_option" value="Ahmedabad">Ahmedabad</option>
                   <option class="depart_option" value="Bangalore">Bangalore</option>
+                  <option class="depart_option" value="Ahmedabad">Ahmedabad</option>
                   <option class="depart_option" value="Goa">Goa</option>
                   <option class="depart_option" value="Indore">Indore</option>
                   <option class="depart_option" value="New Delhi">New Delhi</option>
@@ -189,7 +197,7 @@
          </div>
          <div class="trip_type trip_type_from trip_type_margin">
             <p>Return</p>
-            <p>Select Return</p>
+            <p class="select_return">Select Return</p>
          </div>
          <div class="trip_type trip_type_from trip_type_margin">
             <p>Passengers & Class</p>
@@ -628,6 +636,8 @@
          </div>
 
       </div>
+
+
 
 
 
