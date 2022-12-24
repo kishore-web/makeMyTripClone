@@ -8,6 +8,7 @@
       MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp; Holiday
     </title>
 
+    <link rel="stylesheet" href="./css/dropdown.css">
     <link rel="stylesheet" href="./css/sign-in.css">
     <link rel="stylesheet" href="./css/mainpagestyle.css" />
     <link
@@ -301,14 +302,14 @@
 
               <div class="hide_element Searching_box">
                    <!-- ======================================================= -->
-
-            <div class="box_one ">
-              <div  class="flex ring space_Between" id="input_outer"> 
-                  <div> <i class="fa fa-search" style="font-size:25px; "></i> </div> 
-                  <div id="Input_div"> <input type="text" id="input_box_from" placeholder="FROM"  > </div>
+            <div class="box_one">
+              <div  class="flex space_between" id="input_outer"> 
+                  <div> <i class="fa fa-search" style="font-size:21px; color: grey;"></i> </div> 
+                  <div id="Input_div"> <input type="text" id="input_box_from" placeholder="FROM"> </div>
                </div>
               <div id="All_data">
-                  <p>RECENT SEARCH</p>
+                  <p style="font-size:12px; margin: 9px;"> RECENT SEARCH</p>
+
                   <!-- ==========WRAPPER======================== -->
                    
                   <!-- <div class="flex  space_Between   ring " id="airline_one">
@@ -330,9 +331,8 @@
          
                    
               </div>
+               
           </div>
-
-          
             <!-- ============================================== -->
               </div>
             </label>
@@ -341,15 +341,15 @@
           
 
 
-            <label class="all_Box">
+            <label class="all_Box" >
               <h4>TO</h4>
               <h1>Kolkata</h1>
               <p>Netaji Subhash Chandra Bose</p>
             </label>
 
-            <div class="all_Box widthtt">
+            <div class="all_Box widthtt" id="Section_to">
               
-              <h4>DEPARTURE</h4>
+              <h4>DEPARTURE <i class="fa fa-angle-down" style="font-size:20px;color:rgb(54, 82, 193)"></i> </h4>
               <div class="flex"> 
               <h1>26 </h1> <span> Jan'23 </span>
             </div>
@@ -357,23 +357,28 @@
             </div>
 
             <div class="all_Box widthtt">
-              <h4>RETURN</h4>
+              <h4>RETURN <i class="fa fa-angle-down" style="font-size:20px;color:rgb(54, 82, 193)"></i></h4>
               <!-- <h1>Delhi</h1> -->
               <p>Tap to add the date</p>
             </div>
 
-            <div class="all_Box left" style="border: none;">
-              <h4>TRAVELLERS & CLASS</h4>
+            <div class="all_Box left" style="border: none;" id="Travellers_count">
+              <h4>TRAVELLERS & CLASS <i class="fa fa-angle-down" style="font-size:20px;color:rgb(54, 82, 193)"></i></h4>
                
-                <div >
-                  <strong>1</strong>
+                <div  >
+                  <strong  ><span  >1</span></strong>
                 <span> TRAVELLERS </span>
                 </div>
               
-              <p class="Same_font" >Economy/Premium Economy</p>
+              <p class="Same_font"  >Economy/Premium Economy</p>
               <p class="Same_font">Group Booking Available</p>
             </div>
           </div>
+
+          <!-- <div class="box">
+            <h1 class="select-trav"><span class="travel-number">2</span> Travellers</h1>
+            <p id="class-type">Economy/Premium Economy</p>
+          </div> -->
           <!-- ===========================2ND PORTION ENDS============================ -->
           <!-- ===========================3RD PORTION STARTS============================ -->
 
@@ -1386,10 +1391,123 @@
 </section>
 </section>
 
- 
+<!-- ======================================================================================== -->
+<div class="contianer" style="display: none;" id="Main_calender">
+  <div class="calendar">
+    <div class="calendar-header">
+      <span class="month-picker" id="month-picker"> May </span>
+      <div class="year-picker" id="year-picker">
+        <span class="year-change" id="pre-year">
+          <pre><</pre>
+        </span>
+        <span id="year">2020 </span>
+        <span class="year-change" id="next-year">
+          <pre>></pre>
+        </span>
+      </div>
+    </div>
+
+    <div class="calendar-body">
+      <div class="calendar-week-days">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+      </div>
+      <div class="calendar-days">
+      </div>
+    </div>
+    <div class="calendar-footer">
+    </div>
+    <div class="date-time-formate">
+      <div class="day-text-formate">TODAY</div>
+      <div class="date-time-value">
+        <div class="time-formate">02:51:20</div>
+        <div class="date-formate">23 - july - 2022</div>
+      </div>
+    </div>
+    <div class="month-list"></div>
+  </div>
+</div>
+
+<!-- ======================================================================================== -->
+
+<!-- ======================KISHORE DA POP-UP======================== -->
+<!-- 
+<div class="tr-container" id="color-red">
+
+
+  <div class="box">
+    <h1 class="select-trav"><span class="travel-number">2</span> Travellers</h1>
+    <p id="class-type">Economy/Premium Economy</p>
+  </div>
+
+
+
+  <div class="travellers-details">
+    <div id="travellers-div">
+      <h3>ADULTS(12y +)</h3>
+      <ul class="adults adult-age">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+      </ul>
+      <div class="children-infant">
+        <div>
+          <h3>CHILDRENS(2y - 12y)</h3>
+          <ul class="children adult-age">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+          </ul>
+        </div>
+        <div>
+          <h3>INFANTS(below 2y)</h3>
+          <ul class="infants adult-age">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+          </ul>
+        </div>
+      </div>
+      <div class="travel-class">
+        <h3>CHOOSE TRAVEL CLASS</h3>
+        <ul class="travel-class-select adult-age">
+          <li>Economy/Premium Economy</li>
+          <li>Premium Economy</li>
+          <li>Business</li>
+        </ul>
+      </div>
+    </div>
+    <div class="button-div">
+      <button class="apply-btn" type="submit">APPLY</button>
+    </div>
+  </div>
+
+</div> -->
+
+ <!-- ======================KISHORE DA POP-UP======================== -->
       
         <script src="js/login_page.js"></script>
         <script src="js/index.js"></script>
+        <script src="./js/dropdown.js"></script>
 
   </body>
 </html>
