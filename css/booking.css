@@ -606,6 +606,7 @@ div.booknow-text p{
   border-bottom: 1px solid rgb(245, 245, 245);
   padding: 12px 0 12px 12px;
 }
+
 #addnew-adult{
   border: 0;
   background: transparent;
@@ -614,6 +615,25 @@ div.booknow-text p{
   padding: 12px 0 12px 12px;
   cursor: pointer;
   font-size: 12px;
+}
+.adult-section input[type=text] {
+  border: 1px solid #979797;
+  width: 220px;
+  height: 40px;
+  border-radius: 4px;
+  margin: 4px;
+}
+.adult-section input::placeholder{
+  padding-left: 10px;
+}
+.gender-section{
+  display: inline-block;
+  border: 1px solid #979797;
+  height: 40px;
+  vertical-align: middle;
+}
+.gender-section input[type=radio]{
+  visibility: hidden;
 }
 .booking-send{
   padding: 20px;

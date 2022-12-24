@@ -30,3 +30,5 @@ plusicon2.addEventListener("click", (e)=>{
   surchargePrice.classList.toggle("displayn")
  
 })
+
+// ===================== Adding Adult==================
