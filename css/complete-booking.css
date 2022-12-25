@@ -12,12 +12,19 @@
   --bg-clr: #e5eef4;
   --green-clr: #00a19c;
   --blue-clr: #0084ff;
+  --liteblue: #008cff;
 }
 body{
   background-color: var(--bg-clr);
 }
 html { 
   scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+  color: var(--liteblue);
+  padding: 0 10px;
+  font-weight: 300;
 }
 h2{
   font-size: 1.3rem;
@@ -49,7 +56,7 @@ input[type=checkbox], input[type=radio]{
 .defaultBox-prop{
   padding: 20px;
   box-shadow: 0 3px 30px 0 rgb(0 0 0 / 10%);
-  margin-bottom: 15px;
+  margin-top: 15px;
   border-radius: 3px;
   background-color: var(--white-clr);
 }
@@ -82,7 +89,7 @@ input[type=checkbox], input[type=radio]{
   align-items: center;
   color: white;
 }
-.header-container ul li,a {
+.header-container ul li>a{
   color: hsla(0,0%,100%,.5);
   font-size: 0.85rem;
   padding: 5px;
@@ -167,9 +174,9 @@ margin-top: 10px;
 .pickup-checkbox input[type=checkbox]{
   color: red;
   background-color: #00a19c;
- margin-right: 8px;
+  margin-right: 8px;
 }
-.pickup-checkbox select{
+.cabs{
   border: none;
   color: var(--blue-clr);
   margin-left: 3px;
@@ -181,10 +188,11 @@ margin-top: 10px;
   font-size: 10px;
   z-index: 2;
   border-radius: 2px;
+  display: inline-block;
 }
 .drop-airport{
-  margin-left: 25px;
-  margin-right: 23px;
+  margin-left: 23px;
+  margin-right: 25px;
 }
 .drop-fare{
   padding-top: 10px;
@@ -193,12 +201,122 @@ margin-top: 10px;
 .drop-fare h3{
   color: black;
 }
-.arrival-pickup{
+.arrival-drop{
   width: 49%;
 }
-
-
-
+.pickup-checkbox select{
+  border: none;
+  color: var(--blue-clr);
+}
+.pickup-checkbox>p{
+  margin-left: 10px;
+}
+.drop-airport1{
+  margin-left: 23px;
+  margin-right: 16px;
+}
+.mysafety-div{
+  margin-top: 20px;
+}
+.mysafety-div img{
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+.mysafety-div span{
+  color: var(--blue-clr);
+}
+.exact-location{
+  padding: 10px 20px;
+  background-color: rgb(217, 235, 255);
+  border-radius: 4px;
+  margin-top: 15px;
+}
+.exact-location li {
+   font-size: 12px;
+}
+.courier-bags img{
+  width: 80px;
+  height: 32px;
+}
+.courier-bags-text{
+  color: var(--green-clr);
+  font-weight: 400;
+  padding-top: 5px;
+}
+.courier-type{
+  border: 1px solid  rgb(212, 212, 212);
+  display: inline-block;
+  border-radius: 2px;
+}
+.courier-type li{
+  padding: 10px 15px;
+  list-style: none;
+  display: inline-block;
+  
+}
+.courier-type .surface{
+  border-right: 1px solid  rgb(212, 212, 212);
+}
+.boldtext{
+  font-size: 16px;
+  font-weight: 900;
+  padding-right: 5px;
+}
+.litetext{
+  font-size: 12px;
+}
+.courier-charges{
+  width: 50%;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 21%);
+  padding: 10px;
+  border-radius: 3px;
+}
+.courier-price{
+  margin-top: 10px;
+}
+.courier-price label{
+  font-weight: 700;
+  margin-left: 10px;
+}
+.courier-price p{
+  margin-left: auto;
+  color: var(--blue-clr);
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.courier-warning{
+  background-color: #ffedd1;
+  padding: 10px 22px;
+  margin-top: 15px;
+  border-radius: 2px;
+}
+.courier-warning li {
+  font-size: 12px;
+  padding: 3px 0;
+}
+.courier-warning li:first-child{
+  color: red;
+}
+.top-faqs{
+  background-color: var(--white-clr);
+  border-top: 1px solid #dedede;
+  padding: 15px 0 10px 10px;
+}
+.faq-links a{
+  text-decoration: underline;
+  color: var(--lightgray);
+  font-size: 12px;
+}
+.umbrella{
+  width: 34px;
+  margin-right: 10px;
+}
+.reliance-in{
+  width: 40px;
+  height: 20px;
+  margin-left: auto;
+}
 
 
 

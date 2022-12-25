@@ -10,6 +10,7 @@
   <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <div class="traveller-container">
@@ -20,8 +21,8 @@
           <li><a href="#top">Flight Summary</a></li>
           <li><a href="#travel-insu">Travel Insurance</a> </li>
           <li><a href="#traveller-d">Traveller Details</a> </li>
-          <li>Seats & Meals</li>
-          <li>Add-ons</li>
+          <li><a href="#">Seats & Meals</a></li>
+          <li><a href="#">Add-ons</a></li>
         </ul>
        </div>
     </div>
@@ -64,14 +65,13 @@
               </div>
               <p>Select cabs for Bengaluru to Visakhapatnam Trip</p>
               <div class="pick-drop">
-                
                 <div class="departure-pickup">
                     <div class="flexJ">
                       <div class="pickup-checkbox">
                         <input type="checkbox">
                         <label for="cabs">Pick-up:</label>
-                        <select name="cabs" id="cabs">
-                          <option value="">Bangalore(42kms)</option>
+                        <select name="cabs" class="cabs" id="cabs">
+                          <option value="Bangalore">Bangalore(42kms)</option>
                           <option value="Mysore">Mysore</option>
                           <option value="Hosur">Hosur</option>
                           <option value="Mandya">Mandya</option>
@@ -79,7 +79,7 @@
                     </div>
                     <p class="pickup-dt">8 Feb</p>
                   </div>
-                  <div class="flex-div ">
+                  <div class="flex-div">
                     <p class="drop-airport">Drop:</p>
                     <p>Bengaluru Intl Airport</p>
                   </div>
@@ -89,15 +89,106 @@
                   </div>
                 </div>
                 
-               <div class="arrival-pickup ring">
-
-               </div>
+                <div class="arrival-drop departure-pickup">
+                    <div class="flexJ">
+                      <div class="pickup-checkbox flex-div">
+                        <input type="checkbox">
+                        <label for="cabs">Pick-up:</label>
+                        <p>Bengaluru Intl Airport</p>
+                      </div>
+                      <p class="pickup-dt">8 Feb</p>
+                   </div>
+                  <div class="flex-div ">
+                    <p class="drop-airport1">Drop:</p>
+                    <select name="cabs" class="cabs" id="cabs">
+                      <option value="Visakhapatnam">Visakhapatnam</option>
+                      <option value="Narsipatnam">Narsipatnam</option>
+                      <option value="Tuni">Tuni</option>
+                    </select>
+                  </div>
+                  <div class="flexJ drop-fare">
+                    <p>Flat ₹833 up to 20 kms</p>
+                    <h3>₹833</h3>
+                  </div>
+                </div>
               </div>
+              
+              <div class="flex-div mysafety-div">
+                <img src="../images/bookingImg/mysafety.png" alt="">
+                <h3><span>My</span>Safety </h3>
+                <p> - Safe & Hygienic Airport Transfers  </p><a href="">Learn More</a>
+                <img src="../images/bookingImg/tick.png" alt="tick">
+                <p>No surge pricing, no queues</p>
+              </div>
+
+              <ul class="exact-location">
+                <li>Exact location details will be collected post booking.</li>
+              </ul>
+            </div>
+            <!-- ===========Courier yourBags & Travel Baggage Section starts ===============-->
+            <section class="courier-bags defaultBox-prop">
+              <div class="flexJ">
+                <div>
+                  <h2>Courier Your Bags & Travel Baggage Free <a href="https://promos.makemytrip.com/D2d/index.html?tnc=true" target="_blank">Know more</a></h2>
+                <p class="courier-bags-text">Have excess baggage? Send it separately via our logistic partner at affordable rates & travel baggage-free!</p>
+                </div>
+                
+                <img src="../images/bookingImg/avaan.png" alt="avaanindia">
+              </div>
+
+              <ul class="courier-type marginTB15">
+                <li class="surface"><span class="boldtext">SURFACE</span><span class="litetext">4-7 days by road</span></li>
+                <li class="premium"><span class="boldtext">PREMIUM</span><span class="litetext">In 72 hrs by air</span></li>
+              </ul>
+              <div class="courier-charges">
+                <p class="pickup-dt">BLR-VTZ</p>
+                <div class="flex-div courier-price">
+                  <input type="checkbox">
+                  <label for="parcelprice">₹ 900 for 1 Bag</label>
+                  <p>10 kgs <i class="fa fa-angle-down" aria-hidden="true"></i></p>
+                </div>
+              </div>
+
+              <ul class="courier-warning">
+                <li>Baggage will be transported separately via road/rail/air cargo, and NOT in the flight booked.</li>
+                <li>Pickup & drop addresses will be collected post booking.
+                </li>
+              </ul>
+            </section>
+
+            <div class="flexJ top-faqs">
+              <div class="flex-div">
+                <h3>TOP FAQs</h3>
+                <div class="flex-div faq-links">
+                   <a href="https://promos.makemytrip.com/D2d/index.html?faq=true" target="_blank">+ What is Door-to-Door Luggage Delivery Service?</a>
+                
+                <a href="https://promos.makemytrip.com/D2d/index.html?faq=true" target="_blank">+ Will my bags be transported in the same flight?</a>
+                </div>
+               
+              </div>
+              <a href="https://promos.makemytrip.com/D2d/index.html?faq=true" target="_blank">View all FAQs</a>
             </div>
 
+            <!--====================== Medical Cover Section Starts =========================-->
 
+            <section class="defaultBox-prop">
+              <div class="flex-div medical-cover">
+                <img class="umbrella" src="../images/bookingImg/umbrella.png" alt="umbrella">
+                <h2>Travel peacefully with complete Medical & travel inconvenience covers</h2>
+                <img class="reliance-in" src="../images/bookingImg/insurance-reliance.png" alt="">
+              </div>
+              <div class="flexJ">
+                <div>
+                  <p>All inclusive cover with benefits including Rs. 50,000 Medical Benefits incl. Covid, Rs. 750 for</p>
+                  <p>Loss/Damage/Delay of Baggage, Rs. 625 for Trip Delay or Cancellation by operator.T&Cs Apply.T&C</p>
+                </div>
+                <div class="flex-div">
+                  <h2>₹ 129</h2>
+                  <button>+ ADD</button>
+                </div>   
+              </div>
 
-
+            </section>
 
 
 
