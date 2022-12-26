@@ -63,9 +63,9 @@ function CreateSuggestionItem(value){
 
   const FragmentElements = document.createDocumentFragment();
 
+
   const div1 = document.createElement("div");
   div1.setAttribute("class", "flex space_between airline_one");
-   
 
   const div2 = document.createElement("div");
   div2.setAttribute("class", "flex");
@@ -110,19 +110,80 @@ function CreateSuggestionItem(value){
 
   FragmentElements.append(div1);
 
+
 ShowMat.append(FragmentElements);
+
+}
+
+function CreateSuggestionItem1(value){
+
+  const FragmentElements = document.createDocumentFragment();
+
+
+  const div1 = document.createElement("div");
+  div1.setAttribute("class", "flex space_between airline_one");
+
+  const div2 = document.createElement("div");
+  div2.setAttribute("class", "flex");
+
+  const div3 = document.createElement("div");
+  div3.setAttribute("class", "plane_icon");
+
+  const div4 = document.createElement("div");
+  div4.setAttribute("class", "Airport_Name");
+
+  const div5 = document.createElement("div");
+  div5.setAttribute("class", "Div_Five");
+
+  const div6 = document.createElement("div");
+  div6.setAttribute("class", "Div_Six");
+
+  const Ione = document.createElement("i");
+  Ione.setAttribute("class", "fa fa-plane");
+  Ione.style.fontSize = "22px";
+
+  const HeadThree = document.createElement("h3");
+  HeadThree.textContent = `${value.name}`;
+
+  const ParaElement = document.createElement("p");
+  ParaElement.textContent = `${value.municipalityName}`;
+
+  const HeadFive = document.createElement("h5");
+  HeadFive.setAttribute("class", "HeadFive_value");
+  HeadFive.textContent = `${value.iata}`;
+
+  div1.append(div2);
+  div2.append(div3);
+  div3.append(Ione);
+  div4.append(HeadThree);
+  div4.append(ParaElement);
+  div2.append(div6);
+  div5.append(HeadFive);
+  div1.append(div5);
+
+  div6.append(div4);
+  div6.append(div5);
+
+  FragmentElements.append(div1);
+
+
+ShowMat1.append(FragmentElements);
+
 }
 
 const FlightFrom = document.querySelector("#flight_from");
+const FlightTo = document.querySelector("#flight_to");
 const FlightSearchBox = document.querySelector(".Searching_box");
+const FlightSearchBox1 = document.querySelector(".Searching_box1");
 const ShowMat = document.querySelector("#All_data");
+const ShowMat1 = document.querySelector("#All_data1");
 
 FlightFrom.addEventListener("click", async (e) => {
   e.stopPropagation();
 
   //Console coming two times**************************************
 
-  FlightSearchBox.classList.remove("hide_element");
+   FlightSearchBox.classList.remove("hide_element");
   let data = await fetchData();
   console.log(data);
    
@@ -142,20 +203,64 @@ FlightFrom.addEventListener("click", async (e) => {
 });
 
 
+FlightTo.addEventListener("click", async (e) => {
+  e.stopPropagation();
+
+  //Console coming two times**************************************
+
+  FlightSearchBox1.classList.remove("hide_element");
+  let data = await fetchData();
+  console.log(data);
+   
+
+  //Pick five data and render (for loop or slice)
+
+  data.items.forEach((airport) => {
+    CreateSuggestionItem1(airport)
+  })
+
+   
+
+  const FetchingCityName = document.querySelector(".Div_Six");
+  FetchingCityName.addEventListener("click", (e) => {
+    console.log(FetchingCityName.firstElementChild);
+  });
+});
+
+
 
 
 const Input_Box = document.querySelector("#input_box_from");
+const Input_Box1 = document.querySelector("#input_box_from1");
 
 Input_Box.addEventListener("input", Search_Handle);
+Input_Box1.addEventListener("input", Search_Handle1);
 
 async function Search_Handle(){
   ShowMat.innerHTML = "";
+
 
   let data = await fetchData(Input_Box.value);
 
   data.items.forEach((value) => {
     if (value.name.includes(Input_Box.value)) {
     CreateSuggestionItem(value)
+    }
+  })
+
+   
+}
+async function Search_Handle1(){
+
+  ShowMat1.innerHTML = "";
+
+  let data = await fetchData(Input_Box1.value);
+  console.log(data);
+  console.log("jjjjjjjjjjjjjjj")
+
+  data.items.forEach((value) => {
+    if (value.name.includes(Input_Box1.value)) {
+    CreateSuggestionItem1(value)
     }
   })
 
@@ -174,9 +279,38 @@ ShowMat.addEventListener('click',(e)=>{
       document.getElementById('City-Name').innerText = e.path[i].querySelector('h3').innerText;
       document.getElementById('Airport-Code').innerText = e.path[i].querySelector('p').innerText;
       document.getElementById('Airport-Name').innerText = e.path[i].querySelector('h5').innerText;
+      FlightSearchBox.classList.add("hide_element");
+
+      let departCity = document.getElementById('City-Name').innerText;
+      console.log(departCity)
+      localStorage.setItem("departCity", departCity )
     }
+
+   
   
-  console.log(e.path[i].querySelector('h3'))
+
+})
+ShowMat1.addEventListener('click',(e)=>{
+  // if()
+console.log("hellooooooooo")
+  console.log(e.path)
+ 
+  testingVariable = e;
+  for(let i=0; i<e.path.length; i++)
+    if(e.path[i].classList.contains('airline_one')){
+
+      
+      document.getElementById('City-Name1').innerText = e.path[i].querySelector('h3').innerText;
+      document.getElementById('Airport-Code1').innerText = e.path[i].querySelector('p').innerText;
+      document.getElementById('Airport-Name1').innerText = e.path[i].querySelector('h5').innerText;
+
+      let arriveCity = document.getElementById('City-Name1').innerText;
+      FlightSearchBox1.classList.add("hide_element");
+      localStorage.setItem("arriveCity", arriveCity)
+    }
+   
+  // console.log(e.path[i].querySelector('h3'))
+ 
 })
  
 

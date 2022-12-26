@@ -38,33 +38,42 @@ const tripTypeWay = document.querySelector('.trip_type_way');
 const tripWayOptions = document.querySelector('.trip_way');
 const tripWayOptionClick = document.querySelector('.trip_way_options');
 const tripWayDynamic = document.querySelector('.trip_way_dynamic');
+const totalPassengerDisplay = document.querySelector('.total_passenger');
+const passengerClassDisplay = document.querySelector('.passenger_class');
 
 const searchButton = document.querySelector('.search_btn');
 
 let bookingArray=JSON.parse(localStorage.getItem("booking")) ?? [];
 
+departCityDisplay.innerText = localStorage.getItem("departCity")
+arriveCityDisplay.innerText = localStorage.getItem("arriveCity");
 
+let totalPassenger = localStorage.getItem("sum");
+let passengerClass = localStorage.getItem("class");
 
-
-
+totalPassengerDisplay.innerText = totalPassenger;
+passengerClassDisplay.innerText = passengerClass;
 
 
 let arriveCityValue;
 let departCityValue;
 
-searchFunction();
+// searchFunction();
 
 
 function cityText(){
    let selectArriveCity = arriveCity.selectedIndex;
    arriveCityValue = document.getElementsByClassName("arrive_option")[selectArriveCity].value;
    arriveCityDisplay.innerText = arriveCityValue;
+ 
 }
 
 function departCityText(){
    let selectDepartCity = departCity.selectedIndex;
    departCityValue = document.getElementsByClassName("depart_option")[selectDepartCity].value;
    departCityDisplay.innerText = departCityValue;
+
+
 }
 
 
@@ -235,7 +244,130 @@ tripTypeWay.addEventListener('click', tripTypeOptions);
 
 tripWayOptionClick.addEventListener('click', tripWayOptionClickFuncion)
 
+// =====================================================
+async function searchFunctionFlight(flightName){
 
+   cityText();
+   departCityText();
+
+   
+
+
+
+   let data = await fetchData(api_url);
+
+data.data.map((val)=>{
+
+   if(flightName.length>0){
+   if(val.flight==flightName && val.depart_city_name==departCityValue && val.arrive_city_name==arriveCityValue){
+      
+      displaySearchResult(val);
+   }
+}else{
+   if(val.depart_city_name==departCityValue && val.arrive_city_name==arriveCityValue){
+      displaySearchResult(val);
+   }
+}
+})
+
+   
+}
+
+
+
+
+document.getElementById('air_india').addEventListener('click',async ()=>{
+
+      let airIndia = document.getElementById("air_india");
+
+
+if (airIndia.checked == true){
+   let flightName="air india"
+   flightInfoDisplay.innerHTML="";
+searchFunctionFlight(flightName);
+      }
+
+})
+
+
+document.getElementById('akasa_air').addEventListener('click',async ()=>{
+
+      let akasa = document.getElementById("akasa_air");
+
+
+if (akasa.checked == true){
+   let flightName="akasa"
+   flightInfoDisplay.innerHTML="";
+searchFunctionFlight(flightName);
+
+} 
+        
+      
+})
+document.getElementById('emirates').addEventListener('click',async ()=>{
+
+      let emirates= document.getElementById("emirates");
+
+
+if (emirates.checked == true){
+   let flightName="emirates"
+   flightInfoDisplay.innerHTML="";
+searchFunctionFlight(flightName);
+
+} 
+        
+      
+})
+document.getElementById('indigo').addEventListener('click',async ()=>{
+
+      let indigo = document.getElementById("indigo");
+
+
+if (indigo.checked == true){
+   let flightName="indigo"
+   flightInfoDisplay.innerHTML="";
+searchFunctionFlight(flightName);
+
+} 
+        
+      
+})
+document.getElementById('spice_jet').addEventListener('click',async ()=>{
+
+      let spiceJet = document.getElementById("spice_jet");
+
+
+if (spiceJet.checked == true){
+   let flightName="spice jet"
+   flightInfoDisplay.innerHTML="";
+searchFunctionFlight(flightName);
+
+} 
+        
+      
+})
+document.getElementById('vistara').addEventListener('click',async ()=>{
+
+      let vistara = document.getElementById("vistara");
+
+
+if (vistara.checked == true){
+   let flightName="vistara"
+   flightInfoDisplay.innerHTML="";
+searchFunctionFlight(flightName);
+
+} 
+        
+      
+})
+document.getElementById('all_flights').addEventListener('click',async ()=>{
+
+  
+
+searchFunction();
+        
+      
+})
 
 
 
