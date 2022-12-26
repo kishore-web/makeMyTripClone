@@ -316,7 +316,7 @@ margin-top: 10px;
 .top-faqs{
   background-color: var(--white-clr);
   border-top: 1px solid #dedede;
-  padding: 15px 0 10px 10px;
+  padding: 15px 10px 10px 10px;
 }
 .faq-links a{
   text-decoration: underline;
