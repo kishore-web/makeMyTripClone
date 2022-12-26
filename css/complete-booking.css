@@ -23,7 +23,7 @@ html {
 a{
   text-decoration: none;
   color: var(--liteblue);
-  padding: 0 10px;
+  padding: 0 8px;
   font-weight: 300;
 }
 h2{
@@ -35,6 +35,9 @@ h2{
 }
 .marginTB15{
   margin: 15px 0;
+}
+.marginT{
+  margin-top: 15px;
 }
 .padding20{
   padding: 20px;
@@ -137,6 +140,18 @@ margin-top: 10px;
 }
 .traveller-det p{
   color: var(--lightgray);
+}
+.fa-angle-down{
+  margin-left: auto;
+  font-size: 18px;
+  color: gray;
+  cursor: pointer;
+}
+.fa-regular{
+  margin-left: auto;
+  color: var(--blue-clr);
+  font-size: 16px;
+  cursor: pointer;
 }
 .summary-trip h3{
   margin-right: 10px;
@@ -317,16 +332,53 @@ margin-top: 10px;
   height: 20px;
   margin-left: auto;
 }
-
-
-
-
-
-
-
-
-
-.continue-btn{
+.medical-text-section{
+  box-shadow: 0 1px 4px rgb(0 0 0 / 21%);
+  margin-top: 15px;
+}
+.medical-cover-text{
+   padding: 12px 10px;
+  border-radius: 4px;
+}
+.medical-cover-text>p{
+  color: var(--lightgray);
+  line-height: 20px;
+}
+.add-btn{
+  border: 1px solid var(--blue-clr);
+  padding: 6px 20px;
+  background-color: var(--white-clr);
+  box-shadow: 0 1px 4px rgb(0 0 0 / 21%);
+  border-radius: 20px;
+  color: var(--blue-clr);
+  margin: 0 15px;
+}
+.donation-section label{
+  font-weight: 600;
+  margin-left: 10px;
+}
+.donation-type{
+  margin-top: 15px;
+}
+.donation-card{
+  display: flex;
+  width: 32.5%;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 21%);
+  padding: 10px;
+  border-radius: 4px;
+}
+.donation-card img{
+  width: 30px;
+}
+.donation-card p{
+  font-size: 12px;
+  padding: 2px 10px;
+}
+.proceed-pay p{
+  color: var(--lightgray);
+  margin-bottom: 12px;
+}
+.proceed-btn{
   border-radius: 35px;
   box-shadow: 0 1px 7px 0 rgb(0 0 0 / 22%);
   cursor: pointer;

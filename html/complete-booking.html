@@ -7,9 +7,6 @@
   <title>MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp; Holiday</title>
   <link rel="icon" type="image/x-icon" href="//imgak.mmtcdn.com/pwa_v3/pwa_commons_assets/favicon.ico">
   <link rel="stylesheet" href="../css/complete-booking.css">
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -31,25 +28,32 @@
       <!-- left and right side container -->
       <div class="booking-container"> 
         <div class="booking-details">
-          <div class="ring main-section">
+          <div class="main-section">
             <!--========== Flights summary section =========-->
             <div class="padding20 flights-summary">
-              <h2>Flights Summary</h2>
+              <div class="flexJ">
+                <h2>Flights Summary</h2>
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </div>
+              
               <div class="flex-div summary-trip">
                 <h3>Bengaluru → Visakhapatnam</h3>
                 <p>Wednesday, Feb 8 · Non Stop · 1h 35m</p>
+                
               </div>
             </div>
             <!--======== Traveller Details =========-->
             <div class="defaultBox-prop traveller-det flex-div">
               <h2>Traveller Details</h2>
               <p>Kishore Ch</p>
+              <i class="fa-regular fa-pen-to-square"></i>
             </div>
             <!-- ========= Seats & Meals =========== -->
 
             <div class="defaultBox-prop traveller-det flex-div">
               <h2>Seats & Meals</h2>
               <p>Departure: 24C</p>
+              <i class="fa-regular fa-pen-to-square"></i>
             </div>
             <!-- ======== Airport Pick & Drop ======= -->
             <div class="defaultBox-prop">
@@ -177,21 +181,47 @@
                 <h2>Travel peacefully with complete Medical & travel inconvenience covers</h2>
                 <img class="reliance-in" src="../images/bookingImg/insurance-reliance.png" alt="">
               </div>
-              <div class="flexJ">
-                <div>
+              <div class="flexJ medical-text-section">
+                <div class="medical-cover-text">
                   <p>All inclusive cover with benefits including Rs. 50,000 Medical Benefits incl. Covid, Rs. 750 for</p>
-                  <p>Loss/Damage/Delay of Baggage, Rs. 625 for Trip Delay or Cancellation by operator.T&Cs Apply.T&C</p>
+                  <p>Loss/Damage/Delay of Baggage, Rs. 625 for Trip Delay or Cancellation by operator.T&Cs Apply.<a href="https://promos.makemytrip.com/reliance-tnc-dom-air.html" target="_blank">T&C</a></p>
                 </div>
                 <div class="flex-div">
                   <h2>₹ 129</h2>
-                  <button>+ ADD</button>
+                  <button class="add-btn">+ ADD</button>
                 </div>   
               </div>
 
             </section>
+            <!--===================== Donation Section starts ====================== -->
+            <section class="defaultBox-prop">
+              <div class="donation-section flex-div">
+                <input type="checkbox">
+                <label for="donation-terms">
+                  Donate ₹ 10 towards responsible tourism
+                  <a href="https://promos.makemytrip.com/charity-deduction-16112017.html" target="_blank">Terms & Conditions</a></label>
+              </div>
+              <div class="flexJ donation-type">
+                <div class="donation-card">
+                  <img src="../images/bookingImg/charity_covid.png" alt="">
+                  <p>Support community empowerment</p>
+                </div>
+                <div class="donation-card">
+                  <img src="../images/bookingImg/charity_1.png" alt="">
+                  <p>Support community empowerment</p>
+                </div>
+                <div class="donation-card">
+                  <img src="../images/bookingImg/charity_2.png" alt="">
+                  <p>Support community empowerment</p>
+                </div>
+              </div>
+            </section>
 
-
-
+            <!--=================== Proceed to payment section ====================-->
+            <section class="defaultBox-prop proceed-pay">
+              <p>By clicking on the Continue button below to proceed with the booking, I confirm that I have read and I accept the Fare Rules , the<a href="https://www.makemytrip.com/legal/in/eng/privacy_policy.html" target="_blank">Privacy Policy</a>, the<a href="https://www.makemytrip.com/legal/in/eng/user_agreement.html#tos" target="_blank">User Agreement</a>and<a href="https://www.makemytrip.com/legal/in/eng/user_agreement.html#tos" target="_blank">Terms of Service</a>  of MakeMyTrip</p>
+              <button class="proceed-btn">PROCEED TO PAY</button>
+            </section>
 
 
 
@@ -312,8 +342,7 @@
       </div>
    </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="../js/swiper.js"></script>
+ 
   <script src="../js/booking.js"></script>
   <script src="../js/booking_ticket.js"></script>
 </body>
