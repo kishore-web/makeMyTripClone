@@ -318,6 +318,7 @@
     color:white;
     font-size: 1.1rem;
     font-weight: bold;
+    cursor:pointer;
 }
 
 .hidden{
@@ -444,6 +445,25 @@ button{
 
 .create-account-button{
     margin-top: 20%;
+ }
+
+ /* sign out section  */
+
+ .sign_out{
+    color:grey;
+    font-size: 1.3em;
+    padding:8px;
+    width:8%;
+    border-radius: 20px;
+    position: absolute;
+    top:42px;
+    right:80px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+ }
+ .user-name-display{
+    margin-left: 10px;
  }
 
 

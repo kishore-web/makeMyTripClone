@@ -21,6 +21,7 @@
 
 body{
     background-color: #e5eef4;
+
 }
 
 
@@ -44,7 +45,7 @@ top:10%;
     background-color: #1e2c39;
     padding: 8px;
     font-size: 1rem;
-    height:4em;
+    height:5em;
     width:170px;
     border-radius: 6px;
 
@@ -171,7 +172,7 @@ padding:10px;
 
     margin-left:60px;
     background-color: white;
-     height:80%;
+     height:95%;
      margin-top: 30px;
 }
 
@@ -330,7 +331,7 @@ padding:10px;
     position:absolute;
     width:100%;
     z-index: -1;
-    bottom:29%;
+    bottom:20%;
    }
    
 

@@ -786,19 +786,20 @@ margin: 10px 8px 10px 0;
   padding-left: 25px;
   margin-top: 12px;
 }
-.fare--div2{
+.fare--div2, .fare--div3{
   padding-left: 25px;
   margin-top: 12px;
 }
 
 
-.fare--summary .fee--surcharge{
+
+.fare--summary .fee--surcharge, .fare--summary .fee--surcharge1 {
   padding-bottom: 15px;
   padding-top: 10px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(194, 194, 194);
   
 }
-.fare--summary .fee--surcharge img{
+.fare--summary .fee--surcharge img, .fare--summary .fee--surcharge1 img {
   width: 16px;
   height: 16px;
   margin-right: 10px;
@@ -876,7 +877,7 @@ margin: 10px 8px 10px 0;
 div.promo-card img{
   width: 25px;
 }
-#mmtsuper{
+.mmtsuper{
   margin-left: 5px;
   line-height: 22px;
 }
@@ -885,6 +886,64 @@ div.promo-card img{
   color: #0091ff;
   cursor: pointer;
 }
+
+.display_column{
+  display: grid;
+  grid-template-rows: auto auto auto;  
+  }
+
 .displayn{
   display: none;
 }
+
+
+
+.promo_btn{
+  width:40%;
+  margin-left: 30%;
+  padding:10px;
+  font-size: 20px;
+  border:none;
+  background-color: #0091ff;
+  color:white;
+  cursor:pointer;
+  margin-top: 10px;
+}
+
+.promo_message{
+  color:green;
+  background-color: rgb(151, 240, 151);
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  z-index: 1000;
+  display: none;
+}
+
+.promo_message h2{
+  font-size: 2em;
+  display: flex;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:80px;
+}
+
+
+.adults, .children, .infants{
+  width:125%;
+  display: flex;
+  justify-content:space-between;
+  
+}
+/* .adults p, .children p, .infants p{
+
+} */
+
+
+
+
+

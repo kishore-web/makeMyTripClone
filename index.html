@@ -277,7 +277,7 @@
               <ul>
                 <li>
                   <label for="oneway"></label>
-                  <input name="oneway" type="radio" /><span>ONE WAY</span>
+                  <input name="oneway" type="radio" checked /><span>ONE WAY</span>
                 </li>
 
                 <li>
@@ -300,52 +300,88 @@
               <h1 id="City-Name">Delhi</h1>
               <p ><span id="Airport-Code" >DEL</span>,<span id="Airport-Name"> Delhi Airport India</span></p>
 
-              <div class="hide_element Searching_box">
-                   <!-- ======================================================= -->
-            <div class="box_one">
-              <div  class="flex space_between" id="input_outer"> 
-                  <div> <i class="fa fa-search" style="font-size:21px; color: grey;"></i> </div> 
-                  <div id="Input_div"> <input type="text" id="input_box_from" placeholder="FROM"> </div>
-               </div>
-              <div id="All_data">
-                  <p style="font-size:12px; margin: 9px;"> RECENT SEARCH</p>
-
-                  <!-- ==========WRAPPER======================== -->
-                   
-                  <!-- <div class="flex  space_Between   ring " id="airline_one">
-                      <div class=" flex ring"> 
-                      <div id="plane_icon">
-                          <i class="fa fa-plane" style="font-size:22px;" ></i>
-                      </div>
-                      <div class="ring" > 
-                          <h3 >Kolkata, India</h3>
-                          <p>Agatti Island Airport</p>
-                      </div>
-                  </div>
-                     <div>
-                      <h5>IATA_code</h5>
-                  </div>
-                  </div> -->
-                  
-      <!-- ==========WRAPPER======================== -->
-         
-                   
-              </div>
-               
-          </div>
-            <!-- ============================================== -->
-              </div>
             </label>
+            <div class="hide_element Searching_box">
+              <!-- ======================================================= -->
+       <div class="box_one">
+         <div  class="flex space_between" id="input_outer"> 
+             <div> <i class="fa fa-search" style="font-size:21px; color: grey;"></i> </div> 
+             <div id="Input_div"> <input type="text" id="input_box_from" placeholder="FROM"> </div>
+          </div>
+         <div id="All_data">
+             <p style="font-size:12px; margin: 9px;"> RECENT SEARCH</p>
+
+             <!-- ==========WRAPPER======================== -->
+              
+             <!-- <div class="flex  space_Between   ring " id="airline_one">
+                 <div class=" flex ring"> 
+                 <div id="plane_icon">
+                     <i class="fa fa-plane" style="font-size:22px;" ></i>
+                 </div>
+                 <div class="ring" > 
+                     <h3 >Kolkata, India</h3>
+                     <p>Agatti Island Airport</p>
+                 </div>
+             </div>
+                <div>
+                 <h5>IATA_code</h5>
+             </div>
+             </div> -->
+             
+ <!-- ==========WRAPPER======================== -->
+    
+              
+         </div>
+          
+     </div>
+       <!-- ============================================== -->
+         </div>
 
 
           
 
 
-            <label class="all_Box" >
+            <label class="all_Box" id="flight_to" >
               <h4>TO</h4>
-              <h1>Kolkata</h1>
-              <p>Netaji Subhash Chandra Bose</p>
+              <h1 id="City-Name1">Kolkata</h1>
+              <p ><span id="Airport-Code1" >CCU</span>,<span id="Airport-Name1"> Netaji S.C. Bose</span></p>
+
             </label>
+            <div class="hide_element Searching_box1">
+              <!-- ======================================================= -->
+       <div class="box_one1">
+         <div  class="flex space_between" id="input_outer1"> 
+             <div> <i class="fa fa-search" style="font-size:21px; color: grey;"></i> </div> 
+             <div id="Input_div1"> <input type="text" id="input_box_from1" placeholder="To"> </div>
+          </div>
+         <div id="All_data1">
+             <p style="font-size:12px; margin: 9px;"> RECENT SEARCH</p>
+
+             <!-- ==========WRAPPER======================== -->
+              
+             <!-- <div class="flex  space_Between   ring " id="airline_one">
+                 <div class=" flex ring"> 
+                 <div id="plane_icon">
+                     <i class="fa fa-plane" style="font-size:22px;" ></i>
+                 </div>
+                 <div class="ring" > 
+                     <h3 >Kolkata, India</h3>
+                     <p>Agatti Island Airport</p>
+                 </div>
+             </div>
+                <div>
+                 <h5>IATA_code</h5>
+             </div>
+             </div> -->
+             
+ <!-- ==========WRAPPER======================== -->
+    
+              
+         </div>
+          
+     </div>
+       <!-- ============================================== -->
+         </div>
 
             <div class="all_Box widthtt" id="Section_to">
               
@@ -366,11 +402,11 @@
               <h4>TRAVELLERS & CLASS <i class="fa fa-angle-down" style="font-size:20px;color:rgb(54, 82, 193)"></i></h4>
                
                 <div  >
-                  <strong  ><span  >1</span></strong>
+                  <strong  ><span class="travel-number" >1</span></strong>
                 <span> TRAVELLERS </span>
                 </div>
               
-              <p class="Same_font"  >Economy/Premium Economy</p>
+              <p class="Same_font" id="class-type" >Economy/Premium Economy</p>
               <p class="Same_font">Group Booking Available</p>
             </div>
           </div>
@@ -1436,63 +1472,64 @@
 <!-- ======================================================================================== -->
 
 <!-- ======================KISHORE DA POP-UP======================== -->
-<!-- 
+
 <div class="tr-container" id="color-red">
 
 
-  <div class="box">
+  <!-- <div class="box">
     <h1 class="select-trav"><span class="travel-number">2</span> Travellers</h1>
     <p id="class-type">Economy/Premium Economy</p>
-  </div>
+  </div> -->
 
 
 
-  <div class="travellers-details">
+  <div class="travellers-details hide_element">
     <div id="travellers-div">
       <h3>ADULTS(12y +)</h3>
       <ul class="adults adult-age">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-        <li>8</li>
-        <li>9</li>
+        <li class="how_many_adults">0</li>
+        <li class="how_many_adults">1</li>
+        <li class="how_many_adults">2</li>
+        <li class="how_many_adults">3</li>
+        <li class="how_many_adults">4</li>
+        <li class="how_many_adults">5</li>
+        <li class="how_many_adults">6</li>
+        <li class="how_many_adults">7</li>
+        <li class="how_many_adults">8</li>
+        <li class="how_many_adults">9</li>
       </ul>
       <div class="children-infant">
         <div>
           <h3>CHILDRENS(2y - 12y)</h3>
           <ul class="children adult-age">
-            <li>0</li>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
+            <li class="how_many_children">0</li>
+            <li class="how_many_children">1</li>
+            <li class="how_many_children">2</li>
+            <li class="how_many_children">3</li>
+            <li class="how_many_children">4</li>
+            <li class="how_many_children">5</li>
+            <li class="how_many_children">6</li>
           </ul>
         </div>
         <div>
           <h3>INFANTS(below 2y)</h3>
           <ul class="infants adult-age">
-            <li>0</li>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
+            <li class="how_many_infant">0</li>
+            <li class="how_many_infant">1</li>
+            <li class="how_many_infant">2</li>
+            <li class="how_many_infant">3</li>
+            <li class="how_many_infant">4</li>
+            <li class="how_many_infant">5</li>
+            <li class="how_many_infant">6</li>
           </ul>
         </div>
       </div>
       <div class="travel-class">
         <h3>CHOOSE TRAVEL CLASS</h3>
         <ul class="travel-class-select adult-age">
-          <li>Economy/Premium Economy</li>
-          <li>Premium Economy</li>
-          <li>Business</li>
+          <li class="economy_premium_buiseness_class">Economy/Premium Economy</li>
+          <li class="economy_premium_buiseness_class">Premium Economy</li>
+          <li class="economy_premium_buiseness_class">Business</li>
         </ul>
       </div>
     </div>
@@ -1501,13 +1538,18 @@
     </div>
   </div>
 
-</div> -->
+</div>
 
  <!-- ======================KISHORE DA POP-UP======================== -->
+
+
+ <div class="sign_out hidden">
+  <h4>Sign out</h4>
+ </div>
       
         <script src="js/login_page.js"></script>
         <script src="js/index.js"></script>
-        <script src="./js/dropdown.js"></script>
+        <script src="js/dropdown.js"></script>
 
   </body>
 </html>

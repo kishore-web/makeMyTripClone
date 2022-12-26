@@ -201,7 +201,7 @@
          </div>
          <div class="trip_type trip_type_from trip_type_margin">
             <p>Passengers & Class</p>
-            <p>1 Adult, Economy</p>
+            <p> <span class="total_passenger">20</span> Passenger, <span class="passenger_class">Premium/Economy</span> </p>
          </div>
          <button class="trip_type trip_type_from trip_type_margin search_btn">SEARCH</button>
       </div>
@@ -259,78 +259,59 @@
          <!-- popular filter section  -->
 
          <div class="popular_filter_heading">
-            <h3>Popular filters</h3>
+            <h3>Flight filters</h3>
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">Non Stop (54)</label>
+                  <input type="radio" name="airline" id="all_flights">
+                  <label for="">All Flights</label>
                </div>
                <span>₹ 5,890</span>
             </div>
+           
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">Late Departures (25)</label>
-               </div>
-               <span>₹ 4,955</span>
-            </div>
-            <div class="filter_val">
-               <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">Morning Departures (36)</label>
-               </div>
-               <span>₹ 5,422</span>
-            </div>
-            <div class="filter_val">
-               <div>
-                  <input type="checkbox" name="air_india" id="air_india" value="air india">
+                  <input type="radio" name="airline" id="air_india" value="air india">
                   <label for="air_india">Air India (5)</label>
                </div>
                <span>₹ 6,255</span>
             </div>
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="akasa" id="akasa_air" value="akasa">
+                  <input type="radio" name="airline" id="akasa_air" value="akasa">
                   <label for="akasa_air">Akasa Air (1)</label>
                </div>
                <span>₹ 5,890</span>
             </div>
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="emirates" id="emirates" value="emirates">
+                  <input type="radio" name="airline" id="emirates" value="emirates">
                   <label for="emirates">Emirates (2)</label>
                </div>
                <span>₹ 5,023</span>
             </div>
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="indigo" id="indigo" value="indigo">
+                  <input type="radio" name="airline" id="indigo" value="indigo">
                   <label for="indigo">Indigo (34)</label>
                </div>
                <span>₹ 4,955</span>
             </div>
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="spice_jet" id="spice_jet" value="spice jet">
+                  <input type="radio" name="airline" id="spice_jet" value="spice jet">
                   <label for="spice_jet">Spice jet (34)</label>
                </div>
                <span>₹ 5,145</span>
             </div>
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="vistara" id="vistara" value="vistara">
+                  <input type="radio" name="airline" id="vistara" value="vistara">
                   <label for="vistara">Vistara (34)</label>
                </div>
                <span>₹ 6,890</span>
             </div>
-            <div class="filter_val">
-               <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">Refundable fares (85)</label>
-               </div>
-               <span>₹ 4,360</span>
-            </div>
-            <p class="show">Show less</p>
+           
+            <!-- <p class="show">Show less</p> -->
          </div>
 
           <!-- this in one way price section  -->
@@ -351,14 +332,14 @@
             <h3>Stops From New Delhi</h3>
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="" id="">
+                  <input type="radio" name="airline" id="">
                   <label for="">Non Stop (54)</label>
                </div>
                <span>₹ 5,890</span>
             </div>
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="" id="">
+                  <input type="radio" name="airline" id="">
                   <label for="">1 Stop (31)</label>
                </div>
                <span>₹ 4,955</span>
@@ -436,70 +417,38 @@
          <!-- this is airlines section  -->
 
          <div class="popular_airlines airlines">
-            <h3>Airlines</h3>
+            <h3>Popular Filters</h3>
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">Air India (11)</label>
-               </div>
-               <span>₹ 6,255</span>
-
-            </div>
-
-            <div class="filter_val">
-               <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">Air Asia (2)</label>
+                  <input type="radio" name="airline" id="">
+                  <label for="">Non Stop (54)</label>
                </div>
                <span>₹ 5,890</span>
-
             </div>
-
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">Akasa Air (1)</label>
-               </div>
-               <span>₹ 5,023</span>
-
-            </div>
-
-            <div class="filter_val">
-               <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">Go First (15)</label>
+                  <input type="radio" name="airline" id="">
+                  <label for="">Late Departures (25)</label>
                </div>
                <span>₹ 4,955</span>
             </div>
-
-
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">IndiGo (34)</label>
+                  <input type="radio" name="airline" id="">
+                  <label for="">Morning Departures (36)</label>
                </div>
-               <span>₹ 5,145</span>
-
+               <span>₹ 5,422</span>
             </div>
 
             <div class="filter_val">
                <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">Spice Jet (4)</label>
+                  <input type="radio" name="airline" id="">
+                  <label for="">Refundable fares (85)</label>
                </div>
-               <span>₹ 6,890</span>
-
+               <span>₹ 4,360</span>
             </div>
 
-            <div class="filter_val">
-               <div>
-                  <input type="checkbox" name="" id="">
-                  <label for="">Vistara (18)</label>
-               </div>
-               <span>₹ 4,880</span>
-            </div>
-
-            <p class="show">Show Less</p>
+            <!-- <p class="show">Show Less</p> -->
          </div>
          
       </div>
