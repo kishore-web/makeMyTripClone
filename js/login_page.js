@@ -38,6 +38,9 @@ const userNameDisplay = document.querySelector('.user-name-display');
 const signOutButton = document.querySelector('.sign_out');
 
 
+
+
+
 let userArray = JSON.parse(localStorage.getItem("user")) ?? [];
 
 let name_to_display =localStorage.getItem("username") ?? "";

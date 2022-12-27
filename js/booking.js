@@ -25,12 +25,15 @@ const surchargefare  = document.querySelector(".fare--div2")
 const surchargefare2  = document.querySelector(".fare--div3")
 const surchargePrice = document.querySelector(".surcharge-price")
 const surchargePrice1 = document.querySelector(".surcharge-price1")
+const surchargePrice2 = document.querySelector(".surcharge-price2")
 
 plusicon2.addEventListener("click", (e)=>{
   surchargefare.classList.toggle("displayn")
   surchargePrice.classList.toggle("displayn")
  
 })
+
+
 plusicon3.addEventListener("click", (e)=>{
   surchargefare2.classList.toggle("displayn")
   surchargePrice1.classList.toggle("displayn")
