@@ -6,13 +6,13 @@ let totalChildren = localStorage.getItem("children") ?? 0;
 let totalInfants = localStorage.getItem("infants") ?? 0;
 
 
-console.log(totalAdults)
-console.log(totalChildren)
-console.log(totalInfants)
+// console.log(totalAdults)
+// console.log(totalChildren)
+// console.log(totalInfants)
 
 
 
-console.log(totalPassengers)
+// console.log(totalPassengers)
 
 let bookingDetails = bookingTicketDetails[bookingTicketDetails.length-1];
 
@@ -50,7 +50,7 @@ const discountAmount1 = document.querySelector('.surcharge-price1');
 const discountAmount2 = document.querySelector('.surcharge-price2');
 
 
-console.log(totalNumberAdults.innerText)
+// console.log(totalNumberAdults.innerText)
 let price = bookingDetails.ticket_price;
 let price2=Number(price.slice(-4));
 
@@ -102,9 +102,9 @@ ticketPrice4.innerText = Math.floor(price2/2);
 ticketPrice5.innerText = basePrice + 973;
 
 
-console.log("hellolll")
+// console.log("hellolll")
 
-console.log(totalNumberAdults.innerText, totalAdults)
+// console.log(totalNumberAdults.innerText, totalAdults)
 
 
 
