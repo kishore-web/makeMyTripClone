@@ -56,47 +56,49 @@ secureTrip.addEventListener("click", (e)=>{
   }
 })
 
-//=============ADD Adult(travellers list)================
-const addnewAdult = document.querySelector("#addnew-adult")
-const displayTravellersDiv = document.querySelector(".display-travellers-div")
-const notAddedText = document.querySelector(".notadded-adults")
 
 
-// let number = localStorage.getItem("sum");
-// console.log(number)
-let number = 5;
-let count = 0;
-let gender = 0
-// notAddedText.classList.add("displayn")
+// addnewAdult.addEventListener("click",addTravellerData)
 
-for(let i = 0; i < number; i++){
 
-  displayTravellersDiv.innerHTML += `<div class="adult-add">
-  
-    <div>
-      <input type="checkbox" id="adult1" name="adult" checked>
-      <label for="adult" style="font-weight: bold;">PASSENGER ${++count}</label>
-    </div>
-    <div class="adult-section">
-      <input type="text" id="first_name" placeholder="First & Middle Name">
-      <input type="text" id="last_name" placeholder="Last Name">
-      <div class="gender-section">
-        <input type="radio" name="gender${gender}" checked>
-        <label for="male">MALE</label>
-        <input type="radio" name="gender${gender}">
-        <label for="female">FEMALE</label>
-      </div>
-    </div>
-</div>`
-gender++
+//Traveller review details Pop-Up
+
+const popupWindow = document.querySelector(".review-popup")
+let noOfPassenger = 5
+let countOfpass = 0
+for(i = 1; i<=noOfPassenger; i++){
+
+popupWindow.innerHTML += ` <table class="cardreview-wrap">
+                    <tr>
+                        <th colspan="2">ADULT ${++countOfpass}</th>
+                    </tr>
+                    <tr>
+                        <td>First & Middle Name</td>
+                        <td>Kishore</td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td>Ch</td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>Male</td>
+                    </tr>
+            </table> `
 }
-  
 
-// localStorage.setItem("formname", abc)
+const clickContinue = document.querySelector(".continue-btn")
+const clickEdit = document.querySelector(".edit")
+const clickCross = document.querySelector(".close-review-box")
 
-// count++
+clickContinue.addEventListener("click", (e)=>{
+  document.querySelector(".rd-popup-box").style.display = "flex";
+})
 
+function closeReviewTravellers(){
+  document.querySelector(".rd-popup-box").style.display = "none";
+}
 
+clickEdit.addEventListener("click", closeReviewTravellers)
+clickCross.addEventListener("click", closeReviewTravellers)
 
-document.querySelector(".continue-btn").addEventListener("click", addTravellerData)
-addnewAdult.addEventListener("click",addTravellerData)

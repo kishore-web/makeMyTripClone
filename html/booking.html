@@ -6,10 +6,13 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <title>MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp; Holiday</title>
   <link rel="icon" type="image/x-icon" href="//imgak.mmtcdn.com/pwa_v3/pwa_commons_assets/favicon.ico">
+
+  <link rel="stylesheet" href="../css/review-details.css">
   <link rel="stylesheet" href="../css/booking.css">
   <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+ 
 </head>
 <body>
   <div class="traveller-container">
@@ -412,7 +415,7 @@
               <button class="locknow-btn">LOCK NOW</button>
             </section>
 
-            <a href="../html/flighseatlayout.html"><button class="continue-btn">CONTINUE</button></a> 
+            <button class="continue-btn">CONTINUE</button>
 
 
             <div class="addon-section flex-div">
@@ -558,6 +561,33 @@
   <div class="promo_message">
     <h2>Promo Code Successfully Applied</h2>
   </div>
+
+
+  <!--=========== Continue button popup code ============-->
+ 
+  <div class="rd-popup-box">
+    <div class="rd-popup-content">
+        <div class="close-review-box">x</div>
+        <div> 
+            <h2>Review Details</h2>
+            <p class="spell-check-box">Please ensure that the spelling of your name and other details match with your travel document/govt. ID, as these cannot be changed later. Errors might lead to cancellation penalties.</p>
+        </div>
+          
+        <div class="review-content">
+          
+          <div class="review-popup"></div>   
+
+        </div>
+                  
+        <div class="edit-cnf">
+            <button class="edit">EDIT</button>
+            <a href="../html/flighseatlayout.html"><button class="confirm-btn">CONFIRM</button></a>
+        </div>
+    </div>
+</div>
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="../js/swiper.js"></script>
   <script src="../js/booking.js"></script>
