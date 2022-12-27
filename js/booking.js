@@ -56,93 +56,50 @@ secureTrip.addEventListener("click", (e)=>{
   }
 })
 
-//=============ADD Adult(travellers list)================
-const addnewAdult = document.querySelector("#addnew-adult")
-const displayTravellersDiv = document.querySelector(".display-travellers-div")
-const notAddedText = document.querySelector(".notadded-adults")
-
-
-let numberOfTraveller = localStorage.getItem("sum");
-// console.log(number)
-let number = numberOfTraveller;
-let count = 0;
-let name_num = 1;
-let gender = 1;
-let passengerDetailsObj = {};
-let passengerInfoArray=[];
-let a;
-let b;
-let c;
 // notAddedText.classList.add("displayn")
 
-for(let i = 0; i < number; i++){
 
-  displayTravellersDiv.innerHTML += `<div class="adult-add">
-  
-    <div>
-     
-      <label for="adult" style="font-weight: bold;">PASSENGER ${++count}</label>
-    </div>
-    <div class="adult-section">
-      <input type="text" id="first_name${name_num}" placeholder="First & Middle Name">
-      <input type="text" id="last_name${name_num}" placeholder="Last Name">
-      <div class="gender-section">
-        <input type="radio" name="gender${gender}" value="male">
-        <label for="male">MALE</label>
-        <input type="radio" name="gender${gender}" value="female">
-        <label for="female">FEMALE</label>
-      </div>
-    </div>
-</div>`
-gender++;
-name_num++;
+//Traveller review details Pop-Up
 
-//   lastname: document.querySelector(`#last_name${num}`).value,
-//   gender: document.querySelector(`gender${num}`).value
-// }
+const popupWindow = document.querySelector(".review-popup")
+let noOfPassenger = 5
+let countOfpass = 0
+for(i = 1; i<=noOfPassenger; i++){
 
+popupWindow.innerHTML += ` <table class="cardreview-wrap">
+                    <tr>
+                        <th colspan="2">ADULT ${++countOfpass}</th>
+                    </tr>
+                    <tr>
+                        <td>First & Middle Name</td>
+                        <td>Kishore</td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td>Ch</td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>Male</td>
+                    </tr>
+            </table> `
 }
 
 
+const clickContinue = document.querySelector(".continue-btn")
+const clickEdit = document.querySelector(".edit")
+const clickCross = document.querySelector(".close-review-box")
 
 
-
- 
-
-// localStorage.setItem("formname", abc)
-
-// count++
-const totalCount = document.querySelector('.total_count')
-const totalCount1 = document.querySelector('.total_count1')
-
-let totalPassenger = localStorage.getItem("sum") ?? 0;
-
-totalCount.innerText =totalPassenger;
-totalCount1.innerText =totalPassenger;
-
-
-
-document.querySelector(".continue-btn").addEventListener("click", ()=>{
-
- let k=1;
- let iteration = localStorage.getItem("sum")
- for(let i=0; i<iteration; i++){
-  a=document.querySelector(`#first_name${k}`).value;
-  b=document.querySelector(`#last_name${k}`).value;
-  c=document.querySelector(`input[name="gender${k}"]:checked`).value;
-  k++;
-
-  passengerDetailsObj = {
-    firstName : a,
-    lastName : b,
-    gender : c
-  }
-
-  passengerInfoArray.push(passengerDetailsObj)
-  
-  
-}
-localStorage.setItem("passengerList", JSON.stringify(passengerInfoArray));
-
+clickContinue.addEventListener("click", (e)=>{
+  document.querySelector(".rd-popup-box").style.display = "flex";
 })
-// addnewAdult.addEventListener("click",addTravellerData)
+
+function closeReviewTravellers(){
+  document.querySelector(".rd-popup-box").style.display = "none";
+}
+
+
+clickEdit.addEventListener("click", closeReviewTravellers)
+clickCross.addEventListener("click", closeReviewTravellers)
+
