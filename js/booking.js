@@ -56,9 +56,7 @@ secureTrip.addEventListener("click", (e)=>{
   }
 })
 
-
-
-// addnewAdult.addEventListener("click",addTravellerData)
+// notAddedText.classList.add("displayn")
 
 
 //Traveller review details Pop-Up
@@ -87,9 +85,11 @@ popupWindow.innerHTML += ` <table class="cardreview-wrap">
             </table> `
 }
 
+
 const clickContinue = document.querySelector(".continue-btn")
 const clickEdit = document.querySelector(".edit")
 const clickCross = document.querySelector(".close-review-box")
+
 
 clickContinue.addEventListener("click", (e)=>{
   document.querySelector(".rd-popup-box").style.display = "flex";
@@ -98,6 +98,7 @@ clickContinue.addEventListener("click", (e)=>{
 function closeReviewTravellers(){
   document.querySelector(".rd-popup-box").style.display = "none";
 }
+
 
 clickEdit.addEventListener("click", closeReviewTravellers)
 clickCross.addEventListener("click", closeReviewTravellers)

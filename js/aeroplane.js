@@ -196,3 +196,14 @@ document.getElementById('promo_code_1').addEventListener('click', ()=>{
   
     localStorage.setItem("total_amount", ticketPrice5.innerText )
    })
+
+
+   const passengerNameToShow = document.querySelector('.passenger_name_to_show');
+   let passengerDetailArray =JSON.parse(localStorage.getItem("passengerList"));
+
+   passengerDetailArray.map((passenger)=>{
+    passengerNameToShow.innerHTML+=`<p><span>${passenger.firstName}</span> <span>${passenger.lastName}</span></p>`
+   })
+
+
+localStorage.removeItem("passengerList")
