@@ -207,44 +207,8 @@ let dynamicImageName ={
  })
 
  
-//  function promoCodeApply(){
-//    if(document.getElementById('promo_code_1').checked){
-//      discount=550;
-//      discountSection.classList.remove('displayn');
-   
-//      console.log(discount)
-//    }else if(document.getElementById('promo_code_2').checked){
-//     discount=850;
-//     discountSection.classList.remove('displayn')
-//     console.log(discount)
-//   }else if(document.getElementById('promo_code_3').checked){
-//     discount=1050;
-//     discountSection.classList.remove('displayn')
-//     console.log(discount)
-//   }else if(document.getElementById('promo_code_4').checked){
-//     discount=1250;
-//     discountSection.classList.remove('displayn')
-//     console.log(discount)
-//   }
-
-//   if(discount!==undefined){
-//     promoCodeMessage.style.display="block";
-//     setTimeout(()=>{
-//         promoCodeMessage.style.display="none";
-//     },2000)
-//   }
-
-//   discountAmount1.innerText = discount;
-//   discountAmount2.innerText = discount;
-//   ticketPrice5.innerText = basePrice + 973-discount;
-
-//   localStorage.setItem("total_amount", ticketPrice5.innerText )
-   
-//  }
 
 
-
-//  promoCodeButton.addEventListener('click', promoCodeApply)
     
  
 
