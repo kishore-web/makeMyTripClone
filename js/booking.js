@@ -62,11 +62,17 @@ const displayTravellersDiv = document.querySelector(".display-travellers-div")
 const notAddedText = document.querySelector(".notadded-adults")
 
 
-// let number = localStorage.getItem("sum");
+let numberOfTraveller = localStorage.getItem("sum");
 // console.log(number)
-let number = 5;
+let number = numberOfTraveller;
 let count = 0;
-let gender = 0
+let name_num = 1;
+let gender = 1;
+let passengerDetailsObj = {};
+let passengerInfoArray=[];
+let a;
+let b;
+let c;
 // notAddedText.classList.add("displayn")
 
 for(let i = 0; i < number; i++){
@@ -74,29 +80,69 @@ for(let i = 0; i < number; i++){
   displayTravellersDiv.innerHTML += `<div class="adult-add">
   
     <div>
-      <input type="checkbox" id="adult1" name="adult" checked>
+     
       <label for="adult" style="font-weight: bold;">PASSENGER ${++count}</label>
     </div>
     <div class="adult-section">
-      <input type="text" id="first_name" placeholder="First & Middle Name">
-      <input type="text" id="last_name" placeholder="Last Name">
+      <input type="text" id="first_name${name_num}" placeholder="First & Middle Name">
+      <input type="text" id="last_name${name_num}" placeholder="Last Name">
       <div class="gender-section">
-        <input type="radio" name="gender${gender}" checked>
+        <input type="radio" name="gender${gender}" value="male">
         <label for="male">MALE</label>
-        <input type="radio" name="gender${gender}">
+        <input type="radio" name="gender${gender}" value="female">
         <label for="female">FEMALE</label>
       </div>
     </div>
 </div>`
-gender++
+gender++;
+name_num++;
+
+//   lastname: document.querySelector(`#last_name${num}`).value,
+//   gender: document.querySelector(`gender${num}`).value
+// }
+
 }
-  
+
+
+
+
+
+ 
 
 // localStorage.setItem("formname", abc)
 
 // count++
+const totalCount = document.querySelector('.total_count')
+const totalCount1 = document.querySelector('.total_count1')
+
+let totalPassenger = localStorage.getItem("sum") ?? 0;
+
+totalCount.innerText =totalPassenger;
+totalCount1.innerText =totalPassenger;
 
 
 
-document.querySelector(".continue-btn").addEventListener("click", addTravellerData)
-addnewAdult.addEventListener("click",addTravellerData)
+document.querySelector(".continue-btn").addEventListener("click", ()=>{
+
+ let k=1;
+ let iteration = localStorage.getItem("sum")
+ for(let i=0; i<iteration; i++){
+  a=document.querySelector(`#first_name${k}`).value;
+  b=document.querySelector(`#last_name${k}`).value;
+  c=document.querySelector(`input[name="gender${k}"]:checked`).value;
+  k++;
+
+  passengerDetailsObj = {
+    firstName : a,
+    lastName : b,
+    gender : c
+  }
+
+  passengerInfoArray.push(passengerDetailsObj)
+  
+  
+}
+localStorage.setItem("passengerList", JSON.stringify(passengerInfoArray));
+
+})
+// addnewAdult.addEventListener("click",addTravellerData)
