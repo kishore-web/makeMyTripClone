@@ -428,7 +428,7 @@ div.booknow-text p{
 .insurance-wrapper{
   background-color: white;
   width: 882px;
-  height: 395px;
+  /* height: 395px; */
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
   margin-top: 15px;
@@ -442,7 +442,7 @@ div.booknow-text p{
 }
 .travel-insurance .insurance-shield{
   width: 32px;
-  height: 32px;
+  /* height: 32px; */
   margin-right: 10px;
 }
 .travel-insurance h1{
@@ -453,7 +453,7 @@ div.booknow-text p{
   margin-left: auto;
 }
 .insurance-traveller {
-  position: absolute;
+  /* position: absolute; */
   width: 882px;
   background-color: #f5f5ff;
   padding: 15px 20px;
@@ -512,21 +512,23 @@ div.booknow-text p{
    display: none;
  }
  .industry-first{
-  position: absolute;
-  top: 202px;
+  /* position: absolute; */
+  /* top: 202px; */
   margin-left: 20px;
+  padding-top: 10px;
 }
 .insurance-wrapper .insurance-reviews{
-  top: 207px;
-  position: absolute;
+  /* top: 207px;
+  position: absolute; */
   width: 882px;
   padding: 15px 20px;
   overflow: hidden;
 }
 .secure-trip{
-  position:absolute;
-  top: 320px;
+  /* position:absolute; */
+  /* top: 320px; */
   margin-left: 20px;
+  
 }
 .secure-trip label{
   padding: 0 0 6px 6px;
@@ -535,11 +537,22 @@ div.booknow-text p{
 .secure-trip>p{
   font-size: 11px;
   color: #979797;
+  padding-bottom: 20px;
 }
 .secure-trip a{
   text-decoration: none;
   font-size: 11px;
   color: #008cff;
+}
+.yes-message{
+  background-color: #8dffca;
+  padding: 10px;
+  margin: 5px 20px 5px 0px;
+}
+.no-message{
+  background-color: #8dffca;
+  padding: 10px;
+  margin: 5px 20px 5px 0px;
 }
 .review-card{
   background-color: #f4f4f4;
@@ -606,13 +619,16 @@ div.booknow-text p{
   border-radius: 2px;
   box-shadow: 0 3px 30px 0 rgb(0 0 0 / 10%);
   margin-top: 10px;
+  padding-bottom: 10px;
   margin-bottom: 10px;
 }
-.added-status p{
+.notadded-adults{
   border-bottom: 1px solid rgb(245, 245, 245);
   padding: 12px 0 12px 12px;
 }
-
+.adult-add{
+  padding-left: 12px;
+}
 #addnew-adult{
   border: 0;
   background: transparent;
@@ -628,13 +644,11 @@ margin: 10px 8px 10px 0;
 .adult-section input[type=text] {
   border: 1px solid #979797;
   width: 220px;
-  height: 40px;
+  padding: 10px;
   border-radius: 4px;
   margin: 4px 4px 4px 0;
 }
-.adult-section input::placeholder{
-  padding-left: 10px;
-}
+
 .gender-section {
   display: inline;
 }
@@ -662,13 +676,11 @@ margin: 10px 8px 10px 0;
 }
 .booking-send form>div input,select{
   width: 100%;
-  height: 40px;
+  padding: 10px;
   border-radius: 4px;
   border: 1px solid gray;
 }
-.booking-send form>div input::placeholder{
-  padding-left: 10px;
-}
+
 .gst-section{
   padding: 20px;
 }
@@ -679,16 +691,13 @@ margin: 10px 8px 10px 0;
 }
 .gst-details>div input{
   width: 100%;
-  height: 40px;
+  padding: 10px;
   border-radius: 4px;
   border: 1px solid gray;
 }
 .gst-details>div p{
   padding-top: 12px;
   padding-bottom: 8px;
-}
-.gst-details div input::placeholder{
-  padding-left: 10px;
 }
 
 /***********************LOCK PRICE SECTION*********************/
@@ -895,8 +904,6 @@ div.promo-card img{
 .displayn{
   display: none;
 }
-
-
 
 .promo_btn{
   width:40%;
