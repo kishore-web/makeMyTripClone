@@ -1,0 +1,60 @@
+/* --------------General CSS--------------- */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+
+.rd-popup-box {
+    border: 1px solid gray;
+    width: 500px;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 100px auto;
+}
+.spell-check-box {
+    margin: 10px auto;
+    font-size: 14px;
+    color: gray;
+}
+.inner-box {
+    border: 1px solid rgb(240, 233, 233);
+    padding: 15px;
+    padding-right: 100px;
+}
+.inner-box .fn  {
+    margin: 7px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.inner-box .fn p {
+    color: gray;
+}
+
+
+.edit-cnf {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 20px;
+    color: blue;
+    cursor: pointer;
+}
+
+.confirm {
+    background-color: rgb(129, 129, 240);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.edit {
+    padding: 15px 20px;
+}
