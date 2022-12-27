@@ -60,6 +60,22 @@ let departCityValue;
 
 // searchFunction();
 
+const dayToShow = document.querySelector('.day_display');
+const monthToShow = document.querySelector('.month_display');
+const yearToShow = document.querySelector('.year_display');
+const dayNameToShow = document.querySelector('.day_name_display');
+
+let selectedDay = localStorage.getItem("day");
+let selectedMonth = localStorage.getItem("month");
+let selectedYear = localStorage.getItem("year");
+let selectDayName = localStorage.getItem("name_of_day");
+
+dayToShow.innerText = selectedDay;
+monthToShow.innerText = selectedMonth;
+yearToShow.innerText = selectedYear;
+dayNameToShow.innerText = selectDayName;
+
+
 
 function cityText(){
    let selectArriveCity = arriveCity.selectedIndex;

@@ -1,6 +1,8 @@
 let theEnd = 0,
   navBar = document.querySelector("#Header_Id");
 
+
+
 window.addEventListener("scroll", function () {
   var scrollTop = window.pageYOffset;
 
@@ -291,9 +293,9 @@ ShowMat.addEventListener('click',(e)=>{
 
 })
 ShowMat1.addEventListener('click',(e)=>{
-  // if()
-console.log("hellooooooooo")
-  console.log(e.path)
+
+
+
  
   testingVariable = e;
   for(let i=0; i<e.path.length; i++)
@@ -317,14 +319,20 @@ console.log("hellooooooooo")
 // ====================CALENDER VISIBILITY============================
 
 const Box_flightto = document.querySelector('#Section_to');
-const Main_box = document.querySelector('#Main_calender')
+const Main_box = document.querySelector('#Main_calender');
+const calendar_days = document.querySelector('.calendar-days');
+const monthDay = document.querySelector('.month_day');
+const monthName = document.querySelector('.month_name');
+const yearNumber = document.querySelector('.year_number');
+const yearDisplay = document.querySelector('#year');
 
 Box_flightto.addEventListener('click', hideelements)
 
 function hideelements(){
    
-    Main_box.removeAttribute('style',"display:none")
-    Main_box.setAttribute('style', "display:block");
+   
+    Main_box.style.display="block";
+  
   
   
 }
@@ -344,18 +352,18 @@ const getFebDays = (year) => {
 };
 let calendar = document.querySelector('.calendar');
 const month_names = [
-  'January',
-  'February',
-  'March',
-  'April',
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
   'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
 ];
 let month_picker = document.querySelector('#month-picker');
 const dayTextFormate = document.querySelector('.day-text-formate');
@@ -372,10 +380,15 @@ month_picker.onclick = () => {
   timeFormate.classList.add('hideTime');
   dateFormate.classList.remove('showtime');
   dateFormate.classList.add('hideTime');
+
 };
 
+
+
+
+
 const generateCalendar = (month, year) => {
-  let calendar_days = document.querySelector('.calendar-days');
+
   calendar_days.innerHTML = '';
   let calendar_header_year = document.querySelector('#year');
   let days_of_month = [
@@ -394,6 +407,7 @@ const generateCalendar = (month, year) => {
   ];
   
   let currentDate = new Date();
+
   
   month_picker.innerHTML = month_names[month];
   
@@ -405,25 +419,55 @@ const generateCalendar = (month, year) => {
 for (let i = 0; i <= days_of_month[month] + first_day.getDay() - 1; i++) {
 
     let day = document.createElement('div');
+    day.setAttribute('class', "day_number")
 
     if (i >= first_day.getDay()) {
       day.innerHTML = i - first_day.getDay() + 1;
 
-      if (i - first_day.getDay() + 1 === currentDate.getDate() &&
-        year === currentDate.getFullYear() &&
-        month === currentDate.getMonth()
-      ) {
-        day.classList.add('current-date');
-      }
+      // if (i - first_day.getDay() + 1 === currentDate.getDate() &&
+      //   year === currentDate.getFullYear() &&
+      //   month === currentDate.getMonth()
+      // ) {
+      //   day.classList.add('current-date');
+      // }
     }
     calendar_days.appendChild(day);
+
   }
 };
+
+let dayArray=[];
+
+calendar_days.addEventListener('click', (e)=>{
+  if(e.target.classList.contains('day_number')){
+    day=e.target.innerText;
+    localStorage.setItem("day", day);
+
+
+    monthDay.innerText = day;
+
+    if(dayArray.length>0){
+      let rCol = dayArray.shift();
+      rCol.classList.remove("current-date");
+    }
+    dayArray.push(e.target);
+  }
+  
+    dayArray.forEach((e1)=>e1.classList.add("current-date"));
+    Main_box.style.display="none";
+})
+
+
+
+
 
 let month_list = calendar.querySelector('.month-list');
 month_names.forEach((e, index) => {
   let month = document.createElement('div');
-  month.innerHTML = `<div>${e}</div>`;
+
+
+  
+  month.innerHTML = `<div class="month_value">${e}</div>`;
 
   month_list.append(month);
   month.onclick = () => {
@@ -439,16 +483,37 @@ month_names.forEach((e, index) => {
   };
 });
 
+
+
 (function () {
   month_list.classList.add('hideonce');
 })();
+
+document.querySelector('.month-list').addEventListener("click", (e)=>{
+  if(e.target.classList.contains("month_value")){
+   let month_view = e.target.innerText;
+   monthName.innerText = month_view;
+   localStorage.setItem("month", month_view);
+  }
+})
+
 document.querySelector('#pre-year').onclick = () => {
   --currentYear.value;
+
+  yearNumber.innerText = yearDisplay.innerText-1;
+  let yearInNumbers = yearNumber.innerText;
+  localStorage.setItem("year",yearInNumbers);
+ 
   generateCalendar(currentMonth.value, currentYear.value);
 };
 document.querySelector('#next-year').onclick = () => {
   ++currentYear.value;
+  yearNumber.innerText = Number(yearDisplay.innerText)+1 ;
+  let yearInNumbers = yearNumber.innerText;
+  localStorage.setItem("year",yearInNumbers);
+  
   generateCalendar(currentMonth.value, currentYear.value);
+
 };
 
 let currentDate = new Date();
@@ -488,5 +553,33 @@ setInterval(() => {
   )}: ${`${timer.getSeconds()}`.padStart(2, '0')}`;
   todayShowTime.textContent = formateTimer;
 }, 1000);
+
+const dayName = document.querySelector(".calendar-body");
+const dayToDisplay = document.querySelector(".day_to_display");
+
+let dayNameArray=[];
+
+function dayNameValue(e){
+  if(e.target.classList.contains("days_to_select")){
+    let nameOfDay = e.target.innerText;
+    dayToDisplay.innerText = nameOfDay;
+    localStorage.setItem("name_of_day", nameOfDay); 
+
+    if(dayNameArray.length>0){
+      let rCol = dayNameArray.shift();
+      rCol.classList.remove("current-day-name");
+     
+    }
+    dayNameArray.push(e.target);
+  }
+  
+  dayNameArray.forEach((e1)=>e1.classList.add("current-day-name"));
+
+}
+
+
+
+
+dayName.addEventListener("click", dayNameValue);
 
 // =====================JS FOR CALENDER ENDS HERE=======================

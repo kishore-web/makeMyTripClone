@@ -355,6 +355,7 @@
   }
 
 
+
   
  /************************* Right side Fare Summary Section Starts Here ************/
 
@@ -581,3 +582,10 @@ h2{
 }
 
  
+
+.flight_seat_passenger{
+ position: relative;
+ left:-25px;
+}
+
+

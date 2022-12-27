@@ -37,7 +37,7 @@
               </div>
               
               <div class="flex-div summary-trip">
-                <h3>Bengaluru → Visakhapatnam</h3>
+                <h3><span class="air_depart_city">Mumbai</span>  → <span class="air_arrive_city">Bengaluru</span></h3>
                 <p>Wednesday, Feb 8 · Non Stop · 1h 35m</p>
                 
               </div>
@@ -67,25 +67,26 @@
                   <img src="../images/bookingImg/cabs_car.png" alt="cabs-car">
                 </div>
               </div>
-              <p>Select cabs for Bengaluru to Visakhapatnam Trip</p>
+              <p>Select cabs for <span class="air_depart_city1">Bengaluru</span> to <span class="air_arrive_city1">Visakhapatnam</span> Trip</p>
               <div class="pick-drop">
                 <div class="departure-pickup">
                     <div class="flexJ">
                       <div class="pickup-checkbox">
                         <input type="checkbox">
                         <label for="cabs">Pick-up:</label>
-                        <select name="cabs" class="cabs" id="cabs">
+                        <span class="air_depart_city2">Indore</span>
+                        <!-- <select name="cabs" class="cabs" id="cabs">
                           <option value="Bangalore">Bangalore(42kms)</option>
                           <option value="Mysore">Mysore</option>
                           <option value="Hosur">Hosur</option>
                           <option value="Mandya">Mandya</option>
-                        </select>
+                        </select> -->
                     </div>
                     <p class="pickup-dt">8 Feb</p>
                   </div>
                   <div class="flex-div">
                     <p class="drop-airport">Drop:</p>
-                    <p>Bengaluru Intl Airport</p>
+                    <p> <span class="depart_airport_cb">Bengaluru Intl Airport</span> </p>
                   </div>
                   <div class="flexJ drop-fare">
                     <p>Flat ₹1036 up to 42 kms</p>
@@ -98,17 +99,18 @@
                       <div class="pickup-checkbox flex-div">
                         <input type="checkbox">
                         <label for="cabs">Pick-up:</label>
-                        <p>Bengaluru Intl Airport</p>
+                        <p><span class="arrive_airport_cb">Bengaluru Intl Airport</span></p>
                       </div>
                       <p class="pickup-dt">8 Feb</p>
                    </div>
                   <div class="flex-div ">
                     <p class="drop-airport1">Drop:</p>
-                    <select name="cabs" class="cabs" id="cabs">
+                    <span class="air_arrive_city2">Indore</span>
+                    <!-- <select name="cabs" class="cabs" id="cabs">
                       <option value="Visakhapatnam">Visakhapatnam</option>
                       <option value="Narsipatnam">Narsipatnam</option>
                       <option value="Tuni">Tuni</option>
-                    </select>
+                    </select> -->
                   </div>
                   <div class="flexJ drop-fare">
                     <p>Flat ₹833 up to 20 kms</p>
@@ -220,21 +222,14 @@
             <!--=================== Proceed to payment section ====================-->
             <section class="defaultBox-prop proceed-pay">
               <p>By clicking on the Continue button below to proceed with the booking, I confirm that I have read and I accept the Fare Rules , the<a href="https://www.makemytrip.com/legal/in/eng/privacy_policy.html" target="_blank">Privacy Policy</a>, the<a href="https://www.makemytrip.com/legal/in/eng/user_agreement.html#tos" target="_blank">User Agreement</a>and<a href="https://www.makemytrip.com/legal/in/eng/user_agreement.html#tos" target="_blank">Terms of Service</a>  of MakeMyTrip</p>
-              <button class="proceed-btn">PROCEED TO PAY</button>
+             <a href="../html/payment-page.html"><button class="proceed-btn">PROCEED TO PAY</button></a> 
             </section>
-
-
-
-
-
-
-
 
           </div>
 
-           <!--================================== Right side Fare Summary Section Starts Here ==========================-->
+           <!--==================== Right side Fare Summary Section Starts Here =======================-->
         
-          <section class="fare-details">
+           <section class="fare-details">
             <div class="fare--summary">
               <h2>Fare Summary</h2>
               <div class="base--fare">
@@ -246,9 +241,10 @@
                     <p class="basefare-price">₹<span class="basefare-price1">4,352</span> </p>
                   </div>
                 
-                <div class="fare--div flexJ displayn">
-                    <p>Adult(s) (1 X ₹<span class="basefare-price2">4,352</span>)</p>
-                    <p> ₹<span class="basefare-price3">4,352</p>
+                <div class="fare--div flexJ displayn display_column">
+                  <div class="adults"><p>Adult(s) (<span class="total_no_adults">1</span> X ₹<span class="basefare-price2">4,352</span>) </p> <div> ₹<span class="basefare-price_adults_total">4,352</span></div></div>
+                  <div class="children"><p>Child(s) (<span class="total_no_children">1</span> X ₹<span class="basefare-price3">4,352)</span>)</p><div>₹<span class="basefare-price_children_total">4,352</span></div> </div>
+                  <div class="infants"><p>Infants(s) (<span class="total_no_infants">1</span> X ₹<span class="basefare-price4">4,352</span>) </p><div>₹<span class="basefare-price_infants_total">4,352</span></div> </div>
                 </div>
               </div>
               <div class="fee--surcharge">
@@ -257,21 +253,37 @@
                     <img class="bfs-img" src="../images/bookingImg/plus.png" alt="">
                     <p>Fee & Surcharges</p>
                     </div>
-                   <p class="surcharge-price">₹ 973</p>
+                   <p class="surcharge-price">+₹973</p>
                  </div>
                
                 <div class="fare--div2 flexJ displayn">
                     <p>Total fee & surcharges:</p>
-                    <p> ₹ 973</p>
+                    <p> +₹973</p>
+                </div>
+              </div>
+
+
+              <div class="fee--surcharge1 displayn">
+                <div class="flexJ">
+                    <div class="flex-div surcharge-section1">
+                    <img class="bfs-img" src="../images/bookingImg/plus.png" alt="">
+                    <p>Discount</p>
+                    </div>
+                   <p>-₹<span class="surcharge-price1">973</span></p>
+                 </div>
+               
+                <div class="fare--div3 flexJ displayn">
+                    <p>Total Discount:</p>
+                    <p>-₹<span class="surcharge-price2">973</span></p>
                 </div>
               </div>
               <div class="flexJ total--amount">
                 <h2>Total Amount</h2>
-                <h2>₹ <span class="basefare-price4">5,325</span></h2>
+                <h2>₹<span class="basefare-price5">5,325</span></h2>
               </div>
             </div>
 
-              <!--==================================== PROMO CODES Section starts Here ===============================-->
+              <!--======================== PROMO CODES Section starts Here ===========================-->
             <div class="promocodes-container">
               <div class="promo-wrap">
                 <div class="promo-codes">
@@ -283,11 +295,11 @@
                 <input class="enter-promo" type="text" placeholder="Enter promo code here">
                 <div class="promo-card">
                   <div class="promocode-select">
-                    <input type="radio" value="MMTSUPER" name="mmtpromos">
-                    <label for="mmtsuper" id="mmtsuper">
+                    <input type="radio" value="MMTSUPER" name="mmtpromos" id="promo_code_1">
+                    <label for="mmtsuper" class="mmtsuper">
                       <div>
                         <h2>MMTSUPER</h2> 
-                        <p> Use this coupon and get Rs 250 instant discount on your flight booking.</p>
+                        <p> Use this coupon and get Rs 550 instant discount on your flight booking.</p>
                         <p class="mmtpromo-terms">Terms & Conditions</p>
                       </div>
                       </label>
@@ -296,11 +308,11 @@
                 </div>
                 <div class="promo-card">
                   <div class="promocode-select">
-                    <input type="radio" value="MMTSUPER" name="mmtpromos">
-                    <label for="mmtsuper" id="mmtsuper">
+                    <input type="radio" value="MMTSUPER" name="mmtpromos" id="promo_code_2">
+                    <label for="mmtsuper" class="mmtsuper">
                       <div>
-                        <h2>MMTSUPER</h2> 
-                        <p> Use this coupon and get Rs 250 instant discount on your flight booking.</p>
+                        <h2>MMTSUPERDUPER</h2> 
+                        <p> Use this coupon and get Rs 850 instant discount on your flight booking.</p>
                         <p class="mmtpromo-terms">Terms & Conditions</p>
                       </div>
                       </label>
@@ -309,11 +321,11 @@
                 </div>
                 <div class="promo-card">
                   <div class="promocode-select">
-                    <input type="radio" value="MMTSUPER" name="mmtpromos">
-                    <label for="mmtsuper" id="mmtsuper">
+                    <input type="radio" value="MMTSUPER" name="mmtpromos" id="promo_code_3">
+                    <label for="mmtsuper" class="mmtsuper">
                       <div>
-                        <h2>MMTSUPER</h2> 
-                        <p> Use this coupon and get Rs 250 instant discount on your flight booking.</p>
+                        <h2>MMTROCKET</h2> 
+                        <p> Use this coupon and get Rs 1050 instant discount on your flight booking.</p>
                         <p class="mmtpromo-terms">Terms & Conditions</p>
                       </div>
                       </label>
@@ -322,17 +334,18 @@
                 </div>
                 <div class="promo-card">
                   <div class="promocode-select">
-                    <input type="radio" value="MMTSUPER" name="mmtpromos">
-                    <label for="mmtsuper" id="mmtsuper">
+                    <input type="radio" value="MMTSUPER" name="mmtpromos" id="promo_code_4">
+                    <label for="mmtsuper" class="mmtsuper">
                       <div>
-                        <h2>MMTSUPER</h2> 
-                        <p> Use this coupon and get Rs 250 instant discount on your flight booking.</p>
+                        <h2>MMTGALAXY</h2> 
+                        <p> Use this coupon and get Rs 1250  instant discount on your flight booking.</p>
                         <p class="mmtpromo-terms">Terms & Conditions</p>
                       </div>
                       </label>
                       <img src="../images/bookingImg/INSTANT.png" alt="">
                   </div>
                 </div>
+                <!-- <button class="promo_btn">Apply</button> -->
               </div>
               
             </div>
@@ -342,8 +355,22 @@
       </div>
    </div>
   </div>
- 
+
+  <div class="promo_message">
+    <h2>Promo Code Successfully Applied</h2>
+  </div>
+
   <script src="../js/booking.js"></script>
-  <script src="../js/booking_ticket.js"></script>
+<script src="../js/complete-booking.js"></script>
+
+
+<script>
+
+</script>
+ 
+
+
+
+ 
 </body>
 </html>

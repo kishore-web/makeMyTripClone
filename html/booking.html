@@ -34,8 +34,11 @@
               <div class="fgt-padding">
                 <div class="flight-details-top">
                   <div class="flight-trip">
+
                     <h2> <span class="city_departure" >Bengaluru</span>  → <span class="city_arrival">Visakhapatnam</span> </h2>
-                    <p><span>Sunday, Dec 18</span>Non Stop ·<span class="trip-duration"> 1h 35m</span></p>
+                    <p><span> <span class="booking_day_name">Sun</span> <span class="booking_month">Dec</span> <span class="booking_day">18</span>, <span class="booking_year">2023</span></span>Non Stop ·<span class="trip-duration"> 1h 35m</span></p>
+
+
                   </div>
                   <div class="fare-rules">
                     <p class="fee">CANCELLATION FEES APPLY</p>
@@ -174,7 +177,7 @@
                 </ul>
               </div>
 
-                <!--================================ Travel Insurance section Starts Here ===========================-->
+                <!--============================ Travel Insurance section Starts Here ===========================-->
               <div class="insurance-wrapper">
                 <div class="travel-insurance">
                   <img class="insurance-shield" src="../images/bookingImg/insurance-shield.png" alt="">
@@ -310,26 +313,28 @@
                       </div>
                     </div>
                   
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
                   </div>
                 </div>
 
                 <div class="secure-trip">
                   <div>
-                    <input type="radio" name="secure-trip">
+                    <input type="radio" name="secure-trip" class="yes-secure">
                     <label for="yes">Yes, Secure my trip.</label>
+                    <p class="yes-message displayn">Great! Your trip is secured</p>
                   </div>
                   <div>
-                    <input type="radio" name="secure-trip">
+                    <input type="radio" name="secure-trip" class="no-secure">
                     <label for="no">I do not wish to secure my trip</label>
+                    <p class="no-message displayn">Don't let a flight delay or cancellation add to your worries. Get your trip Insured.</p>
                   </div>
                   <p>By adding insurance you confirm all passengers are between 2 to 70 years of age, and agree to the <a href=" https://promos.makemytrip.com/reliance-tnc-dom-air.html" target="_blank">Terms & Conditions</a> and <a href="https://promos.makemytrip.com/reliance-goodhealth.html" target="_blank">Good Health Terms</a> 
                   </p>
                 </div>
               </div>
 
-              <!--========================================== Traveller Details ========================================-->
+              <!--=============================== Traveller Details ==================================-->
 
             <section class="traveller-details">
               <div class="traveller-details-div">
@@ -345,28 +350,13 @@
                   <p class="traveller-added">0/1 added</p>
                 </div>
                 <div class="added-status">
-                    <p>You have not added any adults to the list</p>
-                    <button id="addnew-adult">+ADD NEW ADULT</button>
+                    <!-- <p class="notadded-adults">You have not added any adults to the list</p> -->
+                    <div class="display-travellers-div"></div>
+                    
+                    <!-- <button id="addnew-adult">+ADD NEW ADULT</button> -->
                 </div>
                 <!-- Add new Adult DOM secton -->
-                <div class="adult-add">
-                    <form>
-                      <div>
-                        <input type="checkbox" id="adult1" name="adult">
-                        <label for="adult" style="font-weight: bold;">ADULT 1</label>
-                      </div>
-                      <div class="adult-section">
-                        <input type="text" placeholder="First & Middle Name">
-                        <input type="text" placeholder="Last Name">
-                        <div class="gender-section">
-                          <input type="radio" name="gender" checked>
-                          <label for="male">MALE</label>
-                          <input type="radio" name="gender">
-                          <label for="female">FEMALE</label>
-                        </div>
-                      </div>
-                    </form>
-                </div>
+                
               </div>
                  
               <!--=========================== Booking details will be sent to ===========================-->
@@ -421,7 +411,10 @@
               <h2>Still unsure about this trip?<span> Lock this price!</span></h2>
               <button class="locknow-btn">LOCK NOW</button>
             </section>
-            <a href="../html/flighseatlayout"><button class="continue-btn">CONTINUE</button></a> 
+
+            <a href="../html/flighseatlayout.html"><button class="continue-btn">CONTINUE</button></a> 
+
+
             <div class="addon-section flex-div">
               <h2>Seats & Meals</h2>
             </div>
@@ -459,7 +452,7 @@
                     <img class="bfs-img" src="../images/bookingImg/plus.png" alt="">
                     <p>Fee & Surcharges</p>
                     </div>
-                   <p class="surcharge-price">+₹973</p>
+                   <p class="surcharge-price">₹973</p>
                  </div>
                
                 <div class="fare--div2 flexJ displayn">
@@ -504,7 +497,7 @@
                     <input type="radio" value="MMTSUPER" name="mmtpromos" id="promo_code_1">
                     <label for="mmtsuper" class="mmtsuper">
                       <div>
-                        <h2>MMTSUPER</h2> 
+                        <h3>MMTSUPER</h3> 
                         <p> Use this coupon and get Rs 550 instant discount on your flight booking.</p>
                         <p class="mmtpromo-terms">Terms & Conditions</p>
                       </div>
@@ -517,7 +510,7 @@
                     <input type="radio" value="MMTSUPER" name="mmtpromos" id="promo_code_2">
                     <label for="mmtsuper" class="mmtsuper">
                       <div>
-                        <h2>MMTSUPERDUPER</h2> 
+                        <h3>MMTSUPERDUPER</h3> 
                         <p> Use this coupon and get Rs 850 instant discount on your flight booking.</p>
                         <p class="mmtpromo-terms">Terms & Conditions</p>
                       </div>
@@ -530,7 +523,7 @@
                     <input type="radio" value="MMTSUPER" name="mmtpromos" id="promo_code_3">
                     <label for="mmtsuper" class="mmtsuper">
                       <div>
-                        <h2>MMTROCKET</h2> 
+                        <h3>MMTROCKET</h3> 
                         <p> Use this coupon and get Rs 1050 instant discount on your flight booking.</p>
                         <p class="mmtpromo-terms">Terms & Conditions</p>
                       </div>
@@ -543,7 +536,7 @@
                     <input type="radio" value="MMTSUPER" name="mmtpromos" id="promo_code_4">
                     <label for="mmtsuper" class="mmtsuper">
                       <div>
-                        <h2>MMTGALAXY</h2> 
+                        <h3>MMTGALAXY</h3> 
                         <p> Use this coupon and get Rs 1250  instant discount on your flight booking.</p>
                         <p class="mmtpromo-terms">Terms & Conditions</p>
                       </div>
