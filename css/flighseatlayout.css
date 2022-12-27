@@ -328,3 +328,8 @@
   border-radius: 19px;
   cursor: pointer;
   }
+.flight_seat_passenger{
+ position: relative;
+ left:-25px;
+}
+

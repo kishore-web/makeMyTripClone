@@ -911,8 +911,8 @@ div.promo-card img{
 }
 
 .promo_message{
-  color:green;
-  background-color: rgb(151, 240, 151);
+  color:rgb(6, 74, 6);
+  background-color: rgb(194, 250, 194);
   position: fixed;
   top:50%;
   left:50%;
@@ -929,7 +929,7 @@ div.promo-card img{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding:80px;
+  padding:30px;
 }
 
 

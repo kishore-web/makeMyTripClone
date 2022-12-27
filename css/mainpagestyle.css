@@ -920,7 +920,7 @@ footer {
   
 }
 .calendar {
-  height: 329px;
+  height: max-content;
   width: max-content;
   background-color: white;
   border-radius: 25px;
@@ -938,6 +938,7 @@ footer {
   font-weight: 700;
   color: var(--white);
   padding: 5px;
+  margin-bottom: 5px;
   
 }
 .calendar-body {
@@ -1036,10 +1037,18 @@ transition: all .2s ease-in-out;
   background-color: var(--light-btn);
   border-radius: 20%;
 }
+
+.current-day-name{
+  color: var(--dark-text);
+  background-color: var(--light-btn);
+  border-radius: 20%;
+  
+
+}
 .month-list {
   position: relative;
   left: 0;
-  top: -50px;
+  top: -30px;
   background-color: #ebebeb;
   color: var(--light-text);
   display: grid;
