@@ -35,8 +35,21 @@ const blackBackground = document.querySelector('.black_background')
 
 const messageDisplayForUserExist = document.querySelector(".message-display");
 const userNameDisplay = document.querySelector('.user-name-display');
+const signOutButton = document.querySelector('.sign_out');
+
+
+
+
 
 let userArray = JSON.parse(localStorage.getItem("user")) ?? [];
+
+let name_to_display =localStorage.getItem("username") ?? "";
+if(name_to_display!==""){
+userNameDisplay.innerText=`Hi, ${name_to_display}`;
+}else{
+  userNameDisplay.innerTex="";
+}
+
 
 if(!userArray){
   userArray=[];
@@ -276,6 +289,10 @@ console.log("hello")
   reset();
 }
 
+function onLoad(){
+
+}
+
 function loginAccount(){
 
   if(otpInput.value == "") {
@@ -295,13 +312,34 @@ function loginAccount(){
   }
 
     userArray.map((val) => {
+      let user_name_display =val.name;
+      
         if(val.id==userId){
-            userNameDisplay.innerText=`Hi, ${val.name}`
+          localStorage.setItem("username", val.name);
+          
+          name_to_display =localStorage.getItem("username");
+             userNameDisplay.innerText=`Hi, ${name_to_display}`
         }
     })
     
     disappear();
 }
+
+function userNameClick(){
+
+  signOutButton.classList.remove('hidden')
+
+}
+
+function signOutFunction(){
+ 
+  signOutButton.classList.add('hidden');
+  localStorage.removeItem("username");
+  userNameDisplay.innerText="";
+
+}
+
+
 
 loginButton.addEventListener("click", login);
 
@@ -323,4 +361,8 @@ createNewAccountButton.addEventListener("click", createAccount);
 
 otpVerifyButton.addEventListener("click", loginAccount);
 
-backClick.addEventListener("click", backClickFunction)
+backClick.addEventListener("click", backClickFunction);
+
+userNameDisplay.addEventListener("click", userNameClick)
+
+signOutButton.addEventListener("click", signOutFunction)
