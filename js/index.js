@@ -1,3 +1,6 @@
+resetLocalStorage();
+
+
 let theEnd = 0,
   navBar = document.querySelector("#Header_Id");
 
@@ -40,14 +43,14 @@ function CopyFrag() {}
 
 async function fetchData(query="USA") {
   
-const _apiUrl = `https://aerodatabox.p.rapidapi.com/airports/search/term?q=${query}&limit=50`;
+const _apiUrl = `https://mmtbackend-production.up.railway.app/airports`;
 
 const options = {
   method: 'GET',
-  headers: {
-    'X-RapidAPI-Key': '88e3507a35mshab9ed11a3c29c2bp149618jsn8eb901ce4045',
-    'X-RapidAPI-Host': 'aerodatabox.p.rapidapi.com'
-  }
+  // headers: {
+  //   'X-RapidAPI-Key': '88e3507a35mshab9ed11a3c29c2bp149618jsn8eb901ce4045',
+  //   'X-RapidAPI-Host': 'aerodatabox.p.rapidapi.com'
+  // }
 };
 
 
@@ -89,14 +92,14 @@ function CreateSuggestionItem(value){
   Ione.style.fontSize = "22px";
 
   const HeadThree = document.createElement("h3");
-  HeadThree.textContent = `${value.name}`;
+  HeadThree.textContent = `${value.city_name}`;
 
   const ParaElement = document.createElement("p");
-  ParaElement.textContent = `${value.municipalityName}`;
+  ParaElement.textContent = `${value.airport_name}`;
 
   const HeadFive = document.createElement("h5");
   HeadFive.setAttribute("class", "HeadFive_value");
-  HeadFive.textContent = `${value.iata}`;
+  HeadFive.textContent = `${value.IATA_code}`;
 
   div1.append(div2);
   div2.append(div3);
@@ -145,14 +148,14 @@ function CreateSuggestionItem1(value){
   Ione.style.fontSize = "22px";
 
   const HeadThree = document.createElement("h3");
-  HeadThree.textContent = `${value.name}`;
+  HeadThree.textContent = `${value.city_name}`;
 
   const ParaElement = document.createElement("p");
-  ParaElement.textContent = `${value.municipalityName}`;
+  ParaElement.textContent = `${value.airport_name}`;
 
   const HeadFive = document.createElement("h5");
   HeadFive.setAttribute("class", "HeadFive_value");
-  HeadFive.textContent = `${value.iata}`;
+  HeadFive.textContent = `${value.IATA_code}`;
 
   div1.append(div2);
   div2.append(div3);
@@ -192,7 +195,7 @@ FlightFrom.addEventListener("click", async (e) => {
 
   //Pick five data and render (for loop or slice)
 
-  data.items.forEach((airport) => {
+  data.data.airports.forEach((airport) => {
     CreateSuggestionItem(airport)
   })
 
@@ -217,7 +220,7 @@ FlightTo.addEventListener("click", async (e) => {
 
   //Pick five data and render (for loop or slice)
 
-  data.items.forEach((airport) => {
+  data.data.airports.forEach((airport) => {
     CreateSuggestionItem1(airport)
   })
 
@@ -244,8 +247,8 @@ async function Search_Handle(){
 
   let data = await fetchData(Input_Box.value);
 
-  data.items.forEach((value) => {
-    if (value.name.includes(Input_Box.value)) {
+  data.data.airports.forEach((value) => {
+    if (value.city_name.includes(Input_Box.value)) {
     CreateSuggestionItem(value)
     }
   })
@@ -258,10 +261,12 @@ async function Search_Handle1(){
 
   let data = await fetchData(Input_Box1.value);
   console.log(data);
-  console.log("jjjjjjjjjjjjjjj")
 
-  data.items.forEach((value) => {
-    if (value.name.includes(Input_Box1.value)) {
+
+  data.data.airports.forEach((value) => {
+    console.log(value)
+ 
+    if (value.city_name.includes(Input_Box1.value)) {
     CreateSuggestionItem1(value)
     }
   })
@@ -283,9 +288,13 @@ ShowMat.addEventListener('click',(e)=>{
       document.getElementById('Airport-Name').innerText = e.path[i].querySelector('h5').innerText;
       FlightSearchBox.classList.add("hide_element");
 
-      let departCity = document.getElementById('City-Name').innerText;
-      console.log(departCity)
-      localStorage.setItem("departCity", departCity )
+      let departureCity = e.path[i].querySelector('h3').innerText;
+      let departureCityAirport = e.path[i].querySelector('p').innerText;
+      let departureCityCode = e.path[i].querySelector('h5').innerText;
+      localStorage.setItem("cityDeparture", departureCity)
+      localStorage.setItem("airportDeparture", departureCityAirport)
+      localStorage.setItem("airportDepartureCode", departureCityCode)
+    
     }
 
    
@@ -306,9 +315,20 @@ ShowMat1.addEventListener('click',(e)=>{
       document.getElementById('Airport-Code1').innerText = e.path[i].querySelector('p').innerText;
       document.getElementById('Airport-Name1').innerText = e.path[i].querySelector('h5').innerText;
 
-      let arriveCity = document.getElementById('City-Name1').innerText;
+
       FlightSearchBox1.classList.add("hide_element");
-      localStorage.setItem("arriveCity", arriveCity)
+
+      let arrivalCity = e.path[i].querySelector('h3').innerText;
+      let arrivalCityAirport = e.path[i].querySelector('p').innerText;
+      let arrivalCityCode = e.path[i].querySelector('h5').innerText;
+
+      console.log(arrivalCity)
+      console.log(arrivalCityAirport)
+      console.log(arrivalCityCode)
+      localStorage.setItem("cityLand", arrivalCity)
+      localStorage.setItem("airportLand", arrivalCityAirport)
+      localStorage.setItem("codeLand", arrivalCityCode)
+
     }
    
   // console.log(e.path[i].querySelector('h3'))
@@ -581,5 +601,37 @@ function dayNameValue(e){
 
 
 dayName.addEventListener("click", dayNameValue);
+
+
+function resetLocalStorage(){
+  localStorage.removeItem("cityDeparture")
+  localStorage.removeItem("infants")
+  localStorage.removeItem("day")
+  localStorage.removeItem("month")
+  localStorage.removeItem("mobile")
+  localStorage.removeItem("passengerList")
+  localStorage.removeItem("children")
+  localStorage.removeItem("airportDepartureCode")
+  localStorage.removeItem("booking")
+  localStorage.removeItem("promo1")
+  localStorage.removeItem("promo2")
+  localStorage.removeItem("promo3")
+  localStorage.removeItem("promo4")
+  localStorage.removeItem("sum")
+  localStorage.removeItem("name_of_day")
+  localStorage.removeItem("finalTotal")
+  localStorage.removeItem("total_amount")
+  localStorage.removeItem("airportLand")
+  localStorage.removeItem("year")
+  localStorage.removeItem("adults")
+  localStorage.removeItem("cityLand")
+  localStorage.removeItem("airportDeparture")
+  localStorage.removeItem("email")
+  localStorage.removeItem("codeLand")
+  localStorage.removeItem("class")
+  localStorage.removeItem("duration")
+  localStorage.removeItem("tripDepartTime")
+  localStorage.removeItem("tripArriveTime")
+}
 
 // =====================JS FOR CALENDER ENDS HERE=======================

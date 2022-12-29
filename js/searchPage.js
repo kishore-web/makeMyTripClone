@@ -1,30 +1,8 @@
 // import info from '../hope.json' assert {type: 'json'};
-
+// depart_city_name, depart_IATA_code, depart_airport_name, dept_date, arrive_city_name, arrive_IATA_code, arrive_airport_name
+// data.data.flights
 // api url
-const api_url =  "https://taher2552.github.io/flight_data.json/Flight_json";
-// Defining async function
-async function fetchData(url) {
-    // Storing response
-    const response = await fetch(url);
-    // Storing data in form of JSON
-    const data = await response.json();
-    return data;
-    console.log(data);
-    // console.log(data)
-}
-//whenever we need the data from api we are sending request and then using the same data in our functions
-// async function showData(){
-//   let data = await fetchData(api_url);
-//   console.log(data);
-// }
-// showData();
-// fetch('https://jsonplaceholder.typicode.com/todos/1')
-//       .then(response => response.json())
-//       .then(json => console.log(json))
-
-
-
-
+// const api_url =  `/flights?depart_city_name=${departCityValue}&depart_IATA_code=${}&depart_airport_name=${}&dept_date=${}&arrive_city_name=${}&arrive_IATA_code=${}&arrive_airport_name=${}`;
 const flightInfoDisplay = document.querySelector('.flight_info_display');
 const arriveCityContainer = document.querySelector('.arrive_city_container');
 const departCityContainer = document.querySelector('.depart_city_container');
@@ -43,10 +21,100 @@ const passengerClassDisplay = document.querySelector('.passenger_class');
 
 const searchButton = document.querySelector('.search_btn');
 
+
+let dayName = localStorage.getItem("name_of_day");
+let dayNumber = localStorage.getItem("day");
+let departMonth = localStorage.getItem("month");
+let departYear = localStorage.getItem("year");
+
+let departAirport =localStorage.getItem("airportDeparture")
+let departureCity = localStorage.getItem("cityDeparture")
+let departCode = localStorage.getItem("airportDepartureCode")
+
+let arrivalCity = localStorage.getItem("cityLand")
+let arrivalAirport = localStorage.getItem("airportLand")
+let arrivalCode = localStorage.getItem("codeLand");
+
+departCityDisplay.innerText = departureCity;
+arriveCityDisplay.innerText = arrivalCity;
+
+// console.log(departCity)
+// console.log(departAirport)
+// console.log(departCode)
+// console.log(arriveCity)
+// console.log(arriveAirport)
+// console.log(arriveCode)
+
+const api_url =  `https://mmtbackend-production.up.railway.app/flights?depart_city_name=${departureCity}&depart_IATA_code=${departCode}&depart_airport_name=${departAirport}&dept_day_name=${dayName}&dept_day=${dayNumber}&dept_month${departMonth}&dept_year=${departYear}&arrive_city_name=${arrivalCity}&arrive_IATA_code=${arrivalCode}&arrive_airport_name=${arrivalAirport}`;
+
+
+async function fetchData(url) {
+
+
+
+    // Storing response
+    const response = await fetch(url);
+    // Storing data in form of JSON
+    const data = await response.json();
+    console.log(data.data.flights);
+    console.log("hello")
+    return data;
+    // console.log(data)
+}
+
+async function fetchAirportData(query="USA") {
+  
+   const _apiUrl = `https://mmtbackend-production.up.railway.app/airports`;
+   
+   const options = {
+     method: 'GET',
+     // headers: {
+     //   'X-RapidAPI-Key': '88e3507a35mshab9ed11a3c29c2bp149618jsn8eb901ce4045',
+     //   'X-RapidAPI-Host': 'aerodatabox.p.rapidapi.com'
+     // }
+   };
+   
+   
+     // Storing response
+     const response = await fetch(_apiUrl, options);
+     // Storing data in form of JSON
+     const data = await response.json();
+     return data;
+     // console.log(data);
+     // console.log(data)
+   }
+
+   async function airportData(){
+      let data= await fetchAirportData();
+      console.log(data)
+      data.data.airports.map((val)=>{
+         departCity.innerHTML+=`<option class="depart_option">${val.city_name}</option>`
+         arriveCity.innerHTML+=`<option class="arrive_option">${val.city_name}</option>`
+      })
+   }
+
+   airportData()
+   
+
+ fetchData(api_url)
+// //whenever we need the data from api we are sending request and then using the same data in our functions
+// // async function showData(){
+// //   let data = await fetchData(api_url);
+// //   console.log(data);
+// // }
+// // showData();
+// // fetch('https://jsonplaceholder.typicode.com/todos/1')
+// //       .then(response => response.json())
+// //       .then(json => console.log(json))
+
+
+
+
+
+
 let bookingArray=JSON.parse(localStorage.getItem("booking")) ?? [];
 
-departCityDisplay.innerText = localStorage.getItem("departCity")
-arriveCityDisplay.innerText = localStorage.getItem("arriveCity");
+
 
 let totalPassenger = localStorage.getItem("sum");
 let passengerClass = localStorage.getItem("class");
@@ -58,7 +126,10 @@ passengerClassDisplay.innerText = passengerClass;
 let arriveCityValue;
 let departCityValue;
 
-// searchFunction();
+
+
+
+ searchFunction();
 
 const dayToShow = document.querySelector('.day_display');
 const monthToShow = document.querySelector('.month_display');
@@ -80,14 +151,13 @@ dayNameToShow.innerText = selectDayName;
 function cityText(){
    let selectArriveCity = arriveCity.selectedIndex;
    arriveCityValue = document.getElementsByClassName("arrive_option")[selectArriveCity].value;
-   arriveCityDisplay.innerText = arriveCityValue;
- 
+  
 }
 
 function departCityText(){
    let selectDepartCity = departCity.selectedIndex;
    departCityValue = document.getElementsByClassName("depart_option")[selectDepartCity].value;
-   departCityDisplay.innerText = departCityValue;
+  
 
 
 }
@@ -174,12 +244,11 @@ async function searchFunction(){
 
    let data = await fetchData(api_url);
 
-data.data.map((val)=>{
+data.data.flights.map((val)=>{
 
    
-   if(val.depart_city_name==departCityValue && val.arrive_city_name==arriveCityValue){
+ 
       displaySearchResult(val);
-   }
 })
 
    
@@ -232,9 +301,9 @@ window.location.href = "../html/booking.html";
  
 }
 
-function tripTypeOptions(){
-   tripWayOptions.classList.remove('hidden');
-}
+// function tripTypeOptions(){
+//    tripWayOptions.classList.remove('hidden');
+// }
 
 function tripWayOptionClickFuncion(e){
    tripWayDynamic.innerText = e.target.innerText;
@@ -256,7 +325,7 @@ tripArrive.addEventListener('change', disappearArriveSelectMenu);
 
 flightInfoDisplay.addEventListener('click', bookingTicket);
 
-tripTypeWay.addEventListener('click', tripTypeOptions);
+// tripTypeWay.addEventListener('click', tripTypeOptions);
 
 tripWayOptionClick.addEventListener('click', tripWayOptionClickFuncion)
 
@@ -272,17 +341,16 @@ async function searchFunctionFlight(flightName){
 
    let data = await fetchData(api_url);
 
-data.data.map((val)=>{
+data.data.flights.map((val)=>{
 
    if(flightName.length>0){
-   if(val.flight==flightName && val.depart_city_name==departCityValue && val.arrive_city_name==arriveCityValue){
-      
+   if(val.flight==flightName){
       displaySearchResult(val);
    }
 }else{
-   if(val.depart_city_name==departCityValue && val.arrive_city_name==arriveCityValue){
+
       displaySearchResult(val);
-   }
+   
 }
 })
 
@@ -384,6 +452,9 @@ searchFunction();
         
       
 })
+
+
+
 
 
 

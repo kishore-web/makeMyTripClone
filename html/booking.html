@@ -355,6 +355,8 @@
                 <div class="added-status">
                     <!-- <p class="notadded-adults">You have not added any adults to the list</p> -->
                     <div class="display-travellers-div"></div>
+                    <div class="error_msg_display"></div>
+
                     
                     <!-- <button id="addnew-adult">+ADD NEW ADULT</button> -->
                 </div>
@@ -379,12 +381,14 @@
                     </div>
                     <div>
                       <p>Mobile No</p>
-                     <input type="tel" placeholder="Mobile No">
+                     <input type="tel" placeholder="Mobile No" id="mobile_input">
                     </div>
                     <div>
                       <p>Email</p>
-                      <input type="email" placeholder="Email">
+                      <input type="email" placeholder="Email" id="email_input">
                     </div>
+
+                    <div class="error_msg_input"></div>
                   </form>
                 
               </div>
@@ -548,8 +552,7 @@
                       </label>
                       <img src="../images/bookingImg/INSTANT.png" alt="">
                   </div>
-                </div>
-                <button class="promo_btn">Apply</button>
+
               </div>
               
             </div>
