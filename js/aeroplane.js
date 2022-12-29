@@ -201,9 +201,12 @@ document.getElementById('promo_code_1').addEventListener('click', ()=>{
    const passengerNameToShow = document.querySelector('.passenger_name_to_show');
    let passengerDetailArray =JSON.parse(localStorage.getItem("passengerList"));
 
+   console.log(passengerDetailArray);
+   console.log("heellllllo");
+
    passengerDetailArray.map((passenger)=>{
-    passengerNameToShow.innerHTML+=`<p><span>${passenger.firstName}</span> <span>${passenger.lastName}</span></p>`
+    passengerNameToShow.innerHTML+=`<span>${passenger.firstName}</span> <span>${passenger.lastName}</span>&nbsp;&nbsp;&nbsp; &nbsp;`
    })
 
 
-localStorage.removeItem("passengerList")
+// localStorage.removeItem("passengerList")

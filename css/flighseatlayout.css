@@ -581,11 +581,17 @@ h2{
   
 }
 
- 
+ #bgColor{
+  background-color: lightgreen;
+ }
 
 .flight_seat_passenger{
  position: relative;
  left:-25px;
+}
+
+#red{
+  background-color: aquamarine;
 }
 
 

@@ -435,14 +435,19 @@ margin-top: 10px;
 .fare--summary .fee--surcharge{
   padding-bottom: 15px;
   padding-top: 10px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(194, 194, 194);;
   
 }
-.fare--summary .fee--surcharge img{
+.fare--summary .fee--surcharge img, .fare--summary .fee--surcharge1 img {
   width: 16px;
   height: 16px;
   margin-right: 10px;
 }
+
+.fee--surcharge1{
+  margin-top: 10px;
+}
+
 .fare--summary .fare--div{
   padding-left: 25px;
 }

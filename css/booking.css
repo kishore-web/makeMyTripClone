@@ -950,6 +950,25 @@ div.promo-card img{
   justify-content:space-between;
   
 }
+
+.error_msg_display{
+  color:red;
+  margin-top:5px;
+  margin-bottom: 8px;
+  margin-left: 12px;
+  font-size: 20px;
+}
+
+.error_msg_input{
+  color:red;
+  margin-top: 10px;
+  margin-left: 31%;
+  font-size: 20px;
+}
+
+.red_boder_input{
+  border: 1px solid red;
+}
 /* .adults p, .children p, .infants p{
 
 } */

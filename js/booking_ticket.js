@@ -154,8 +154,17 @@ let dynamicImageName ={
   discountAmount2.innerText = discount;
   ticketPrice5.innerText = basePrice + 973-discount;
 
+  if(document.getElementById('promo_code_1').checked){
+    localStorage.setItem("promo1", "true")
+    localStorage.setItem("promo2", "false")
+    localStorage.setItem("promo3", "false")
+    localStorage.setItem("promo4", "false")
+   }
+
   localStorage.setItem("total_amount", ticketPrice5.innerText )
  })
+
+
 
 
  document.getElementById('promo_code_2').addEventListener('click', ()=>{
@@ -170,6 +179,13 @@ let dynamicImageName ={
     discountAmount1.innerText = discount;
   discountAmount2.innerText = discount;
   ticketPrice5.innerText = basePrice + 973-discount;
+
+  if(document.getElementById('promo_code_2').checked){
+    localStorage.setItem("promo1", "false")
+    localStorage.setItem("promo2", "true")
+    localStorage.setItem("promo3", "false")
+    localStorage.setItem("promo4", "false")
+   }
 
   localStorage.setItem("total_amount", ticketPrice5.innerText )
  })
@@ -187,6 +203,13 @@ let dynamicImageName ={
   discountAmount2.innerText = discount;
   ticketPrice5.innerText = basePrice + 973-discount;
 
+  if(document.getElementById('promo_code_3').checked){
+    localStorage.setItem("promo1", "false")
+    localStorage.setItem("promo2", "false")
+    localStorage.setItem("promo3", "true")
+    localStorage.setItem("promo4", "false")
+   }
+
   localStorage.setItem("total_amount", ticketPrice5.innerText )
  })
 
@@ -203,8 +226,23 @@ let dynamicImageName ={
   discountAmount2.innerText = discount;
   ticketPrice5.innerText = basePrice + 973-discount;
 
+  if(document.getElementById('promo_code_4').checked){
+    localStorage.setItem("promo1", "false")
+    localStorage.setItem("promo2", "false")
+    localStorage.setItem("promo3", "false")
+    localStorage.setItem("promo4", "true")
+   }
+
   localStorage.setItem("total_amount", ticketPrice5.innerText )
  })
+
+ 
+
+
+
+
+
+
 
  
 

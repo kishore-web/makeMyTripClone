@@ -15,24 +15,24 @@ function aircraft_seat_row() {
         <thead class="aero_seat">
         <th style="background-color: white;" class="dummy">${i}</th>
         <th style="background-color:#c9baff;"  id=${
-          i + topRowA
-        } class="|| Window || ₹1500" > </th>
+          i + topRowA 
+        } class="green" > </th>
         <th style="background-color: #c9baff;"id=${
           i + topRowB
-        } class="|| Middle || ₹400" ></th>
+        } class="green" ></th>
         <th style="background-color: #c9baff;" id=${
           i + topRowC
-        } class="|| Aisle || ₹1000"></th>
+        } class="green"></th>
         <th  style="background-color: white;" class="dummy"></th>
         <th style="background-color: #c9baff;" id=${
           i + topRowD
-        } class="|| Aisle || ₹1000"></th>
+        } class="green"></th>
         <th style="background-color: #c9baff;" id=${
           i + topRowE
-        } class="|| Middle || ₹400" ></th>
+        } class="green" ></th>
         <th style="background-color: #c9baff;" id=${
           i + topRowF
-        } class="|| Window || ₹1500"  ></th>
+        } class="green"  ></th>
         <th style="background-color: white;" class="dummy">${i}</th>
     </thead>
         `;
@@ -40,13 +40,13 @@ function aircraft_seat_row() {
       main_table.innerHTML += `
     <thead class="aero_seat">
     <th style="background-color: white;" class="dummy">${i}</th>
-    <th id=${i + topRowA} class="|| Window || ₹1000"> </th>
-    <th id=${i + topRowB} class="|| Middle || ₹400"> </th>
-    <th id=${i + topRowC} class="|| Aisle || ₹1000">  </th>
+    <th id=${i + topRowA} class=" "> </th>
+    <th id=${i + topRowB} class="green"> </th>
+    <th id=${i + topRowC} class="green">  </th>
     <th  style="background-color: white;" class="dummy"></th>
-    <th id=${i + topRowD} class="|| Aisle || ₹1000" >  </th>
-    <th id=${i + topRowE} class="|| Middle || ₹400"> </th>
-    <th id=${i + topRowF} class="|| Window || ₹1000">  </th>
+    <th id=${i + topRowD} class="green" >  </th>
+    <th id=${i + topRowE} class="green"> </th>
+    <th id=${i + topRowF} class="green">  </th>
     <th style="background-color: white;" class="dummy">${i}</th>
 </thead>
     `;
@@ -54,13 +54,13 @@ function aircraft_seat_row() {
       main_table.innerHTML += `
     <thead class="aero_seat">
     <th style="background-color: white;" class="dummy">${i}</th>
-    <th id=${i + topRowA} class="|| Window || ₹500"></th>
-    <th id="Free_seat" id=${i + topRowB} class="|| Middle || ₹0">₹ 0</th>
-    <th id=${i + topRowC} class="|| Aisle || ₹1000"></th>
+    <th id=${i + topRowA} class="green"></th>
+    <th id="Free_seat" id=${i + topRowB} class="green">₹ 0</th>
+    <th id=${i + topRowC} class="green"></th>
     <th  style="background-color: white;" class="dummy"></th>
-    <th id=${i + topRowD} class="|| Aisle || ₹1000"></th>
-    <th id="Free_seat" id=${i + topRowE} class="Middle ₹0">₹ 0</th>
-    <th id=${i + topRowF} class="|| Window || ₹1000" ></th>
+    <th id=${i + topRowD} class="green"></th>
+    <th id="Free_seat" id=${i + topRowE} class="green">₹ 0</th>
+    <th id=${i + topRowF} class="green" ></th>
     <th style="background-color: white;" class="dummy">${i}</th>
 </thead> `;
     }
@@ -77,46 +77,91 @@ function showDiv(x, y) {
   InfoDiv.style.top = `${y}px`;
   InfoDiv.style.left = `${x}px`;
   InfoDiv.style.display = "block";
-  // console.log(x,y)
-  // console.log('hi')
 }
 
 main_table.addEventListener("mouseover", displayDiv);
 function displayDiv(e) {
-  // const MainWrapper = document.querySelector('.Aero_image_wrapper')
+  if (
+    !e.target.classList.contains("main_table") &&
+    !e.target.classList.contains("dummy")
+  ) {
 
-  if (!e.target.classList.contains("main_table") &&  !e.target.classList.contains("dummy") ) {
-    // console.log("ji");
-    InfoDiv.innerHTML = `<span>${e.target.id}</span>
-                    <span>${e.target.classList}</span>
-                     
-                     
-`;
-    // console.log(e.target.childNodes[1].firstElementChild)
-    // console.log(e.target.id)
-    // console.log(e.clientX)
+    let price = calculateSeatPrice(e.target.id);
+     
+
+    InfoDiv.innerHTML = `<span>${e.target.id} || ₹</span>
+                    <span>${price}</span>`
 
     let valueX = e.clientX;
     let valueY = e.clientY;
 
-    //   let valueX = window.pageXOffset;
-    //   let valueY = window.pageYOffset;
-
-    // console.log(window.pageYOffset)
-    // console.log(valueY);
-    // console.log(valueX);
-
     showDiv(valueX, valueY);
   } else {
-    // console.log("koko");
     InfoDiv.style.display = "none";
   }
 }
 
 main_table.addEventListener("mouseout", hideBox);
 
+
+
 function hideBox() {
   InfoDiv.style.display = "none";
+   
 }
 
-// TextBoxDynamic.addEventListener('mouseover', textManupulatio)
+arr = ["Window", "Middle", "Aisle"];
+
+function calculateSeatPrice(id) {
+  id = [parseInt(id.slice(0, id.length - 1)), id.slice(id.length - 1)];
+ 
+
+  if (id[0] >= 1 && id[0] <= 6 && (id[1] == "A" || id[1] == "F")) {
+    return 1500;
+  } else if (id[0] >= 7 && id[0] <= 28 && (id[1] == "A" || id[1] == "F")) {
+    return 1000;
+  } else if (id[0] >= 29 && id[0] <= 32 && (id[1] == "A" || id[1] == "F")) {
+    return 500;
+  } else if (id[0] >= 1 && id[0] <= 6 && (id[1] == "B" || id[1] == "E")) {
+    return 1100;
+  } else if (id[0] >= 7 && id[0] <= 28 && (id[1] == "B" || id[1] == "E")) {
+    return 900;
+  } else if (id[0] >= 29 && id[0] <= 32 && (id[1] == "B" || id[1] == "E")) {
+    return 500;
+  } else if (id[0] >= 1 && id[0] <= 6 && (id[1] == "C" || id[1] == "D")) {
+    return 900;
+  } else if (id[0] >= 7 && id[0] <= 28 && (id[1] == "C" || id[1] == "D")) {
+    return 500;
+  } else if (id[0] >= 29 && id[0] <= 32 && (id[1] == "C" || id[1] == "D")) {
+    return 200;
+  }
+}
+
+
+ 
+
+let seatSelected = 4;
+
+emptyArr = []
+
+main_table.addEventListener('click', SelectSeat)
+
+function SelectSeat(e){
+
+    if(e.target.backgroundColor = '#c9baff'){
+      if(emptyArr.length > 2){
+        let gg = emptyArr.shift();
+         console.log(gg);
+
+        gg.style.backgroundColor = "#c9baff";
+      }
+
+
+
+      emptyArr.push(e.target)
+    }
+
+    emptyArr.forEach(el => {
+      el.style.backgroundColor = 'red';
+  });
+}
