@@ -1,4 +1,4 @@
-let finalTotal = localStorage.getItem("finalTotal");
+let finalTotal = localStorage.getItem("total_amount");
 
 
 let passengerList = JSON.parse(localStorage.getItem("passengerList"));
@@ -26,9 +26,26 @@ console.log(passengerList);
 const total = document.querySelector('.total_amount');
 const total1 = document.querySelector('.total_amount1');
 const total2 = document.querySelector('.total_amount2');
+const cityNewDepart = document.querySelector('.city_departure');
+const cityNewArrival = document.querySelector('.city_land');
+const tripTime = document.querySelector('.trip_duration');
+const arriveTripTime = document.querySelector('.trip_arrive_time');
+const departTripTime = document.querySelector('.trip_depart_time');
+const dayNumber = document.querySelector('.number_day');
+const dayName = document.querySelector('.name_day');
+const monthYear = document.querySelector('.month_year');
+const yearToday = document.querySelector('.year_today');
 
 total.innerText = finalTotal
 total1.innerText = finalTotal
 total2.innerText = finalTotal
+cityNewDepart.innerText = localStorage.getItem('cityDeparture')
+cityNewArrival.innerText = localStorage.getItem('cityLand')
+tripTime.innerText = localStorage.getItem('duration')
+arriveTripTime.innerText = localStorage.getItem("tripArriveTime")
+departTripTime.innerText = localStorage.getItem("tripDepartTime")
+dayNumber.innerText = localStorage.getItem("day");
+dayName.innerText = localStorage.getItem("name_of_day");
+monthYear.innerText = localStorage.getItem("month");
+yearToday.innerText = localStorage.getItem("year");
 
-console.log(a)

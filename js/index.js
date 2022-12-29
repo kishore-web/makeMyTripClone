@@ -1,3 +1,6 @@
+resetLocalStorage();
+
+
 let theEnd = 0,
   navBar = document.querySelector("#Header_Id");
 
@@ -40,7 +43,7 @@ function CopyFrag() {}
 
 async function fetchData(query="USA") {
   
-const _apiUrl = `/airports`;
+const _apiUrl = `https://mmtbackend-production.up.railway.app/airports`;
 
 const options = {
   method: 'GET',
@@ -598,5 +601,37 @@ function dayNameValue(e){
 
 
 dayName.addEventListener("click", dayNameValue);
+
+
+function resetLocalStorage(){
+  localStorage.removeItem("cityDeparture")
+  localStorage.removeItem("infants")
+  localStorage.removeItem("day")
+  localStorage.removeItem("month")
+  localStorage.removeItem("mobile")
+  localStorage.removeItem("passengerList")
+  localStorage.removeItem("children")
+  localStorage.removeItem("airportDepartureCode")
+  localStorage.removeItem("booking")
+  localStorage.removeItem("promo1")
+  localStorage.removeItem("promo2")
+  localStorage.removeItem("promo3")
+  localStorage.removeItem("promo4")
+  localStorage.removeItem("sum")
+  localStorage.removeItem("name_of_day")
+  localStorage.removeItem("finalTotal")
+  localStorage.removeItem("total_amount")
+  localStorage.removeItem("airportLand")
+  localStorage.removeItem("year")
+  localStorage.removeItem("adults")
+  localStorage.removeItem("cityLand")
+  localStorage.removeItem("airportDeparture")
+  localStorage.removeItem("email")
+  localStorage.removeItem("codeLand")
+  localStorage.removeItem("class")
+  localStorage.removeItem("duration")
+  localStorage.removeItem("tripDepartTime")
+  localStorage.removeItem("tripArriveTime")
+}
 
 // =====================JS FOR CALENDER ENDS HERE=======================

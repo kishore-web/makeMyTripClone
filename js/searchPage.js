@@ -45,7 +45,7 @@ arriveCityDisplay.innerText = arrivalCity;
 // console.log(arriveAirport)
 // console.log(arriveCode)
 
-const api_url =  `/flights?depart_city_name=${departureCity}&depart_IATA_code=${departCode}&depart_airport_name=${departAirport}&dept_day_name=${dayName}&dept_day=${dayNumber}&dept_month${departMonth}&dept_year=${departYear}&arrive_city_name=${arrivalCity}&arrive_IATA_code=${arrivalCode}&arrive_airport_name=${arrivalAirport}`;
+const api_url =  `https://mmtbackend-production.up.railway.app/flights?depart_city_name=${departureCity}&depart_IATA_code=${departCode}&depart_airport_name=${departAirport}&dept_day_name=${dayName}&dept_day=${dayNumber}&dept_month${departMonth}&dept_year=${departYear}&arrive_city_name=${arrivalCity}&arrive_IATA_code=${arrivalCode}&arrive_airport_name=${arrivalAirport}`;
 
 
 async function fetchData(url) {
@@ -64,7 +64,7 @@ async function fetchData(url) {
 
 async function fetchAirportData(query="USA") {
   
-   const _apiUrl = `/airports`;
+   const _apiUrl = `https://mmtbackend-production.up.railway.app/airports`;
    
    const options = {
      method: 'GET',

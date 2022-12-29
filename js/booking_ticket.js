@@ -92,6 +92,15 @@ departCityCode.innerText = bookingDetails.depart_city_code;
 arriveCityCode.innerText = bookingDetails.arrive_city_code;
 // numberOfPassenger.innerText = totalPassengers;
 
+let tripTime = bookingDetails.flight_duration;
+localStorage.setItem("duration", tripTime);
+
+let tripDepartTime = bookingDetails.departure_time;
+localStorage.setItem("tripDepartTime", tripDepartTime)
+
+let tripArriveTime = bookingDetails.arrival_time;
+localStorage.setItem("tripArriveTime", tripArriveTime)
+
 totalNumberAdults.innerText = totalAdults;
 totalNumberChildren.innerText = totalChildren;
 totalNumberInfants.innerText = totalInfants;
@@ -140,7 +149,7 @@ let dynamicImageName ={
  document.querySelector('.flight-img').src=`../images/ailrlines/airline-${image_number}.jpg`;
  document.querySelector('.flight-img1').src=`../images/ailrlines/airline-${image_number}.jpg`;
  
-
+let radioCheck=false;
  document.getElementById('promo_code_1').addEventListener('click', ()=>{
   discount=550;
   discountSection.classList.remove('displayn');
@@ -160,6 +169,8 @@ let dynamicImageName ={
     localStorage.setItem("promo3", "false")
     localStorage.setItem("promo4", "false")
    }
+
+   radioCheck = true;
 
   localStorage.setItem("total_amount", ticketPrice5.innerText )
  })
@@ -186,7 +197,8 @@ let dynamicImageName ={
     localStorage.setItem("promo3", "false")
     localStorage.setItem("promo4", "false")
    }
-
+   
+   radioCheck = true;
   localStorage.setItem("total_amount", ticketPrice5.innerText )
  })
 
@@ -209,7 +221,7 @@ let dynamicImageName ={
     localStorage.setItem("promo3", "true")
     localStorage.setItem("promo4", "false")
    }
-
+   radioCheck = true;
   localStorage.setItem("total_amount", ticketPrice5.innerText )
  })
 
@@ -232,9 +244,17 @@ let dynamicImageName ={
     localStorage.setItem("promo3", "false")
     localStorage.setItem("promo4", "true")
    }
-
+   radioCheck = true;
   localStorage.setItem("total_amount", ticketPrice5.innerText )
  })
+
+
+ if(radioCheck==false){
+  localStorage.setItem("promo1", "false")
+  localStorage.setItem("promo2", "false")
+  localStorage.setItem("promo3", "false")
+  localStorage.setItem("promo4", "false")
+ }
 
  
 

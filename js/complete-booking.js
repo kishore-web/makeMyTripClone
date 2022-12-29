@@ -27,12 +27,19 @@ const ticketPriceInfantsTotal = document.querySelector('.basefare-price_infants_
 const totalNumberAdults =  document.querySelector('.total_no_adults');
 const totalNumberChildren =  document.querySelector('.total_no_children');
 const totalNumberInfants =  document.querySelector('.total_no_infants');
-
-
 const numberOfPassenger = document.querySelector('.total_passenger');
 
+const dayToLeave = document.querySelector('.day_to_leave'); 
+const dayNumberToLeave = document.querySelector('.day_number_to_leave'); 
+const monthToLeave = document.querySelector('.month_to_leave'); 
+const yearToLeave = document.querySelector('.year_to_leave'); 
+const durationOfFlight = document.querySelector('.duration_of_flight'); 
 
-
+dayToLeave.innerText = localStorage.getItem('name_of_day')
+monthToLeave.innerText = localStorage.getItem('month')
+yearToLeave.innerText = localStorage.getItem('year')
+dayNumberToLeave.innerText = localStorage.getItem('day')
+durationOfFlight.innerText = localStorage.getItem('duration')
 
 console.log(totalNumberAdults.innerText)
 let price = bookingDetails.ticket_price;
