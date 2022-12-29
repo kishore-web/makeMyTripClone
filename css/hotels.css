@@ -1,9 +1,12 @@
 /* ----------------General CSS starts here------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Mukta', 'Lato', sans-serif;
 }
 
 body {
@@ -14,7 +17,7 @@ body {
 
 @media only screen and (max-width: 1200px) and (min-width: 220px) {
     body {
-        background-color: tomato;
+        background-color: whitesmoke;
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -57,7 +60,6 @@ body {
 .font10px {
     font-size: 10px;
 }
-
 
 .lst-styl-non {
     list-style: none;
@@ -131,6 +133,7 @@ body {
 .main-select-box .mid:nth-child(4) {
     border-right: 1px solid gray;
 }
+ 
 
 
 /* -----------------mmt luxe-box selections css----------------------- */
@@ -181,7 +184,6 @@ body {
     margin: 10px auto;
 }
 
-
 /* -----------------mmt luxe-box cards css----------------------- */
 .mmt-lux-box .cards img {
     width: 240px;
@@ -212,8 +214,6 @@ body {
 
 
 
-
-
 /* -------------------Adds Box CSS-------------------------- */
 .adds-box {
     margin: 20px auto;
@@ -222,8 +222,6 @@ body {
 .adds-box img {
     width: 100%;
 }
-
-
 
 
 
@@ -275,9 +273,6 @@ body {
         width: 100%;
     }
 }
-
-
-
 
 
 
@@ -341,7 +336,6 @@ body {
 
 
 
-
 /* -------------------Footer Portion-Top Box CSS---------------------- */
 .footer-top-one-unit .heading {
     font-weight: bold;
@@ -385,7 +379,6 @@ body {
     margin-bottom: 30px;
 }
 
-
 /* -------------------Footer Portion-Bottom Box CSS---------------------- */
 .footer-bottom {
     border: 1px solid black;
@@ -411,6 +404,9 @@ body {
 .footer-bottom-inner-box .icons i:nth-child(1) {
     margin-right: 30px;
 }
+
+
+
 
 /* ---------------------------media query css for RESPOSIVENESS------------------ */
 

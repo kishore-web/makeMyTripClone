@@ -1,9 +1,12 @@
 /* ----------------General CSS starts here------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', 'Lato', sans-serif;
 }
 
 body {
@@ -70,8 +73,10 @@ body {
 
 
 
-/* -----------------Top-Banner Slider HTML----------------------- */
-
+/* -----------------Top-Banner Slider CSS----------------------- */
+.myCarouselClass {
+  margin: 20px auto;
+}
 
 
 /*   -----------------Why makeMyTrip Travel css-----------------------   */
@@ -274,9 +279,6 @@ body {
     width: 100%;
   }
 }
-
-
-
 
 
 

@@ -1,9 +1,12 @@
-/* --------------General CSS--------------- */
-*{
-    padding: 0;
+/* ----------------General CSS starts here------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family:  'Lato', sans-serif;
 }
 
 .flex {
@@ -16,15 +19,14 @@ button {
 }
 
 .container {
-    max-width: 1440px;
-    margin: auto 20px;
+  max-width: 1440px;
+  margin: auto 20px;
 }
 
 .small-container {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    /* border: 2px solid gray; */
 }
 
 .all-ul-li-common-target {
@@ -51,9 +53,8 @@ button {
     height: 40%;
 }
 .banner {
-  margin: auto -20px;
+ margin: auto auto
 }
-
 
 /* --------------Grab your offer box CSS------------------ */
 .grab-ur-offer-section-box {
@@ -72,9 +73,7 @@ button {
 }
 
 .booking-validity-box div h5 span {
-
-    font-weight: 100;
-    
+    font-weight: 100;   
 }
 
 .book-btn{    
@@ -86,7 +85,7 @@ button {
     background-color: blue;
     color: white;
     border: none;
-    background-image: linear-gradient(to right, lightgreen , rgba(0, 4, 255, 0.486));
+    background-image: linear-gradient(to right, rgb(238, 41, 41) , rgba(0, 4, 255, 0.486));
 }
 
 
@@ -147,19 +146,11 @@ button {
 
 
 
-
-
-
-
-
-
-
 /* --------------footers CSS---------=---- */
 .footer {
     align-items: center;
     font-size: 14px;
     color: white;
     background-color: #1a345d ;
-    height: 50px;
-    margin: auto -20px;
+    height: 50px; 
 }
