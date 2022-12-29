@@ -602,6 +602,11 @@ function dayNameValue(e){
 
 dayName.addEventListener("click", dayNameValue);
 
+ 
+// =====================JS FOR CALENDER ENDS HERE=======================
+
+
+ 
 
 function resetLocalStorage(){
   localStorage.removeItem("cityDeparture")
@@ -635,3 +640,4 @@ function resetLocalStorage(){
 }
 
 // =====================JS FOR CALENDER ENDS HERE=======================
+ 
