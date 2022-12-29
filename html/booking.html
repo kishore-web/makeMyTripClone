@@ -6,10 +6,13 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <title>MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp; Holiday</title>
   <link rel="icon" type="image/x-icon" href="//imgak.mmtcdn.com/pwa_v3/pwa_commons_assets/favicon.ico">
+
+  <link rel="stylesheet" href="../css/review-details.css">
   <link rel="stylesheet" href="../css/booking.css">
   <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+ 
 </head>
 <body>
   <div class="traveller-container">
@@ -346,12 +349,14 @@
                 </div>
                 <div class="traveller-age flex-div">
                   <img class="iconS24" src="../images/bookingImg/adultimg.png" alt="adultimg">
-                  <p><b>ADULT(12 yrs+)</b></p>
-                  <p class="traveller-added">0/1 added</p>
+                  <p><b>PASSENGERS</b></p>
+                  <p class="traveller-added"> <span class="total_count">0</span>/<span class="total_count1">1</span>  added</p>
                 </div>
                 <div class="added-status">
                     <!-- <p class="notadded-adults">You have not added any adults to the list</p> -->
                     <div class="display-travellers-div"></div>
+                    <div class="error_msg_display"></div>
+
                     
                     <!-- <button id="addnew-adult">+ADD NEW ADULT</button> -->
                 </div>
@@ -376,12 +381,14 @@
                     </div>
                     <div>
                       <p>Mobile No</p>
-                     <input type="tel" placeholder="Mobile No">
+                     <input type="tel" placeholder="Mobile No" id="mobile_input">
                     </div>
                     <div>
                       <p>Email</p>
-                      <input type="email" placeholder="Email">
+                      <input type="email" placeholder="Email" id="email_input">
                     </div>
+
+                    <div class="error_msg_input"></div>
                   </form>
                 
               </div>
@@ -412,7 +419,9 @@
               <button class="locknow-btn">LOCK NOW</button>
             </section>
 
-            <a href="../html/flighseatlayout.html"><button class="continue-btn">CONTINUE</button></a> 
+
+            <button class="continue-btn">CONTINUE</button>
+
 
 
             <div class="addon-section flex-div">
@@ -543,8 +552,7 @@
                       </label>
                       <img src="../images/bookingImg/INSTANT.png" alt="">
                   </div>
-                </div>
-                <button class="promo_btn">Apply</button>
+
               </div>
               
             </div>
@@ -558,6 +566,33 @@
   <div class="promo_message">
     <h2>Promo Code Successfully Applied</h2>
   </div>
+
+
+  <!--=========== Continue button popup code ============-->
+ 
+  <div class="rd-popup-box">
+    <div class="rd-popup-content">
+        <div class="close-review-box">x</div>
+        <div> 
+            <h2>Review Details</h2>
+            <p class="spell-check-box">Please ensure that the spelling of your name and other details match with your travel document/govt. ID, as these cannot be changed later. Errors might lead to cancellation penalties.</p>
+        </div>
+          
+        <div class="review-content">
+          
+          <div class="review-popup"></div>   
+
+        </div>
+                  
+        <div class="edit-cnf">
+            <button class="edit">EDIT</button>
+            <a href="../html/flighseatlayout.html"><button class="confirm-btn">CONFIRM</button></a>
+        </div>
+    </div>
+</div>
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="../js/swiper.js"></script>
   <script src="../js/booking.js"></script>

@@ -92,6 +92,15 @@ departCityCode.innerText = bookingDetails.depart_city_code;
 arriveCityCode.innerText = bookingDetails.arrive_city_code;
 // numberOfPassenger.innerText = totalPassengers;
 
+let tripTime = bookingDetails.flight_duration;
+localStorage.setItem("duration", tripTime);
+
+let tripDepartTime = bookingDetails.departure_time;
+localStorage.setItem("tripDepartTime", tripDepartTime)
+
+let tripArriveTime = bookingDetails.arrival_time;
+localStorage.setItem("tripArriveTime", tripArriveTime)
+
 totalNumberAdults.innerText = totalAdults;
 totalNumberChildren.innerText = totalChildren;
 totalNumberInfants.innerText = totalInfants;
@@ -140,7 +149,7 @@ let dynamicImageName ={
  document.querySelector('.flight-img').src=`../images/ailrlines/airline-${image_number}.jpg`;
  document.querySelector('.flight-img1').src=`../images/ailrlines/airline-${image_number}.jpg`;
  
-
+let radioCheck=false;
  document.getElementById('promo_code_1').addEventListener('click', ()=>{
   discount=550;
   discountSection.classList.remove('displayn');
@@ -154,8 +163,19 @@ let dynamicImageName ={
   discountAmount2.innerText = discount;
   ticketPrice5.innerText = basePrice + 973-discount;
 
+  if(document.getElementById('promo_code_1').checked){
+    localStorage.setItem("promo1", "true")
+    localStorage.setItem("promo2", "false")
+    localStorage.setItem("promo3", "false")
+    localStorage.setItem("promo4", "false")
+   }
+
+   radioCheck = true;
+
   localStorage.setItem("total_amount", ticketPrice5.innerText )
  })
+
+
 
 
  document.getElementById('promo_code_2').addEventListener('click', ()=>{
@@ -171,6 +191,14 @@ let dynamicImageName ={
   discountAmount2.innerText = discount;
   ticketPrice5.innerText = basePrice + 973-discount;
 
+  if(document.getElementById('promo_code_2').checked){
+    localStorage.setItem("promo1", "false")
+    localStorage.setItem("promo2", "true")
+    localStorage.setItem("promo3", "false")
+    localStorage.setItem("promo4", "false")
+   }
+   
+   radioCheck = true;
   localStorage.setItem("total_amount", ticketPrice5.innerText )
  })
 
@@ -187,6 +215,13 @@ let dynamicImageName ={
   discountAmount2.innerText = discount;
   ticketPrice5.innerText = basePrice + 973-discount;
 
+  if(document.getElementById('promo_code_3').checked){
+    localStorage.setItem("promo1", "false")
+    localStorage.setItem("promo2", "false")
+    localStorage.setItem("promo3", "true")
+    localStorage.setItem("promo4", "false")
+   }
+   radioCheck = true;
   localStorage.setItem("total_amount", ticketPrice5.innerText )
  })
 
@@ -203,48 +238,35 @@ let dynamicImageName ={
   discountAmount2.innerText = discount;
   ticketPrice5.innerText = basePrice + 973-discount;
 
+  if(document.getElementById('promo_code_4').checked){
+    localStorage.setItem("promo1", "false")
+    localStorage.setItem("promo2", "false")
+    localStorage.setItem("promo3", "false")
+    localStorage.setItem("promo4", "true")
+   }
+   radioCheck = true;
   localStorage.setItem("total_amount", ticketPrice5.innerText )
  })
 
+
+ if(radioCheck==false){
+  localStorage.setItem("promo1", "false")
+  localStorage.setItem("promo2", "false")
+  localStorage.setItem("promo3", "false")
+  localStorage.setItem("promo4", "false")
+ }
+
  
-//  function promoCodeApply(){
-//    if(document.getElementById('promo_code_1').checked){
-//      discount=550;
-//      discountSection.classList.remove('displayn');
-   
-//      console.log(discount)
-//    }else if(document.getElementById('promo_code_2').checked){
-//     discount=850;
-//     discountSection.classList.remove('displayn')
-//     console.log(discount)
-//   }else if(document.getElementById('promo_code_3').checked){
-//     discount=1050;
-//     discountSection.classList.remove('displayn')
-//     console.log(discount)
-//   }else if(document.getElementById('promo_code_4').checked){
-//     discount=1250;
-//     discountSection.classList.remove('displayn')
-//     console.log(discount)
-//   }
-
-//   if(discount!==undefined){
-//     promoCodeMessage.style.display="block";
-//     setTimeout(()=>{
-//         promoCodeMessage.style.display="none";
-//     },2000)
-//   }
-
-//   discountAmount1.innerText = discount;
-//   discountAmount2.innerText = discount;
-//   ticketPrice5.innerText = basePrice + 973-discount;
-
-//   localStorage.setItem("total_amount", ticketPrice5.innerText )
-   
-//  }
 
 
 
-//  promoCodeButton.addEventListener('click', promoCodeApply)
+
+
+
+
+ 
+
+
     
  
 
