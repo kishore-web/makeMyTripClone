@@ -583,3 +583,8 @@ function dayNameValue(e){
 dayName.addEventListener("click", dayNameValue);
 
 // =====================JS FOR CALENDER ENDS HERE=======================
+
+
+$('.carousel').carousel({
+  interval: 2000
+})
