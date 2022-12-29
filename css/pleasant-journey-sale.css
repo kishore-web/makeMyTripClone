@@ -1,10 +1,12 @@
-/* --------------General CSS--------------- */
+/* ----------------General CSS starts here------------------- */
 
-*{
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Mukta', 'Lato', sans-serif;
 }
 
 .flex {
@@ -44,7 +46,7 @@ button {
     height: 40%;
 }
 .banner {
-    margin: auto -20px;
+    margin: auto auto;
 }
 
 
@@ -126,9 +128,9 @@ button {
 }
 
 .cards {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.356), 0 6px 20px 0 rgba(0, 0, 0, 0.514)
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.356), 0 6px 20px 0 rgba(0, 0, 0, 0.514)
     /* border: 1px solid gray; */
-    
+   
 }
 
 
@@ -178,7 +180,6 @@ button {
     color: white;
     background-color: #1a345d ;
     height: 50px;
-    margin: auto -20px;
 }
 
 
