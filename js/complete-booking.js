@@ -6,10 +6,6 @@ let totalChildren = localStorage.getItem("children") ?? 0;
 let totalInfants = localStorage.getItem("infants") ?? 0;
 
 
-console.log(totalAdults)
-console.log(totalChildren)
-console.log(totalInfants)
-
 
 
 
@@ -41,7 +37,7 @@ yearToLeave.innerText = localStorage.getItem('year')
 dayNumberToLeave.innerText = localStorage.getItem('day')
 durationOfFlight.innerText = localStorage.getItem('duration')
 
-console.log(totalNumberAdults.innerText)
+
 let price = bookingDetails.ticket_price;
 let price2=Number(price.slice(-4));
 
@@ -97,8 +93,7 @@ document.getElementById('promo_code_1').addEventListener('click', ()=>{
           promoCodeMessage.style.display="none";
       },2000)
     }
-    console.log(discount)
-    console.log("helloooooooo")
+
       discountAmount1.innerText = discount;
     discountAmount2.innerText = discount;
     ticketPrice5.innerText = basePrice + 973-discount;
@@ -188,17 +183,20 @@ passengerArray.map((passenger)=>{
   passengerNameDetails.innerHTML+=`<span>${passenger.firstName}  </span> <span>${passenger.lastName}  </span>`
 })
 
+const seatValue = document.querySelector('.seat_value');
+
+const seatNames = JSON.parse(localStorage.getItem("seats"))
+
+seatNames.map((val)=>{
+  seatValue.innerHTML+=`${val} &nbsp; &nbsp`
+})
 
 let promo1 = localStorage.getItem('promo1')
 let promo2 = localStorage.getItem('promo2')
 let promo3 = localStorage.getItem('promo3')
 let promo4 = localStorage.getItem('promo4')
 
-console.log(promo1)
-console.log(promo2)
-console.log(promo3)
-console.log(promo4)
-console.log("oppppppppp")
+
 
 
 if(promo1 == "true"){

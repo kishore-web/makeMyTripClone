@@ -6,13 +6,6 @@ let totalChildren = localStorage.getItem("children") ?? 0;
 let totalInfants = localStorage.getItem("infants") ?? 0;
 
 
-// console.log(totalAdults)
-// console.log(totalChildren)
-// console.log(totalInfants)
-
-
-
-// console.log(totalPassengers)
 
 let bookingDetails = bookingTicketDetails[bookingTicketDetails.length-1];
 
@@ -65,7 +58,6 @@ bookingYear.innerText = selectedYearForBooking;
 bookingDay.innerText = selectedDayForBooking
 
 
-// console.log(totalNumberAdults.innerText)
 let price = bookingDetails.ticket_price;
 let price2=Number(price.slice(-4));
 
@@ -127,7 +119,7 @@ ticketPrice5.innerText = basePrice + 973;
 
 
 
-// console.log(totalNumberAdults.innerText, totalAdults)
+
 
 
 

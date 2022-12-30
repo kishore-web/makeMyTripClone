@@ -99,13 +99,17 @@ function displayDiv(e, window) {
     !e.target.classList.contains("main_table") &&
     !e.target.classList.contains("dummy")
   ) {
-    let price = calculateSeatPrice(e.target.id);
-    let seatname = seatnamehover(e.target.id);
+    let price = calculateSeatPrice(e.target.id) ?? "";
+    let seatname = seatnamehover(e.target.id) ?? "";
+    let target_id = e.target.id ?? "";
 
-    InfoDiv.innerHTML = `<span> <strong> ${e.target.id} || </strong> </span>
+    if(price=="" || seatname =="" || target_id==""){
+      InfoDiv.style.display="none";
+    }else{
+    InfoDiv.innerHTML = `<span> <strong> ${target_id} || </strong> </span>
                          <span> <strong>${seatname} || </strong> </span>
                          <span> <strong> ₹ ${price} </strong> </span>`;
-
+    }
     let valueX = e.pageX;
     let valueY = e.pageY;
 
@@ -189,7 +193,7 @@ function hoverundo(e, id) {
   if (seprateID <= 6) {
     e.target.style.background = "#c9baff";
 
-    // console.log(e.target.id.slice(0, id.length - 1))
+
   } else if (seprateID >= 7 && seprateID <= 26) {
     e.target.style.background = "#badaff";
   } else if (
@@ -197,14 +201,12 @@ function hoverundo(e, id) {
     seprateID <= 32 &&
     !e.target.classList.contains("free_seat")
   ) {
-    // console.log(e.target.classList.contains('free_seat'))
     e.target.style.background = "#badaff";
   } else if (
     seprateID >= 26 &&
     seprateID <= 32 &&
     e.target.classList.contains("free_seat")
   ) {
-    // console.log(e.target.classList.contains('free_seat'))
     e.target.style.background = "#50e3c2";
   }
 }
@@ -213,32 +215,47 @@ function hoverundo(e, id) {
 //===============Below code is for Display the selected Seat=============
 
 main_table.addEventListener("click", selectingSeat);
-let seatSelected = 1;
-emptyArr = [];
+let seatSelected = localStorage.getItem("sum") ?? 1;
+let emptyArr = [];
+let seatArr = [];
+const seatCounter = document.querySelector('.counter_seat');
+const seatInTotal = document.querySelector('.seat_in_total');
+seatInTotal.innerText = localStorage.getItem("sum") ?? 1;
+let counter=0;
  
 function selectingSeat(e) {
   let expSeat = e.target.classList.contains("singleSeat");
   let freeSeatdata = e.target.classList.contains("free_seat");
+  let seatValue = e.target.id;
+  
+
    
 
   if (expSeat){
-    if (emptyArr.length > seatSelected){
+    if (emptyArr.length >= seatSelected){
       
-      let gg = emptyArr.shift();
-      console.log(gg)
-      console.log(freeSeatdata)
-      gg.innerHTML = "";
+      let seatSelection = emptyArr.shift();
+      seatArr.shift();
+      counter--;
 
-      if(gg.classList.contains('free_seat')){
-        gg.innerHTML = "₹ 0";
+      seatSelection.innerHTML = "";
+
+      if(seatSelection.classList.contains('free_seat')){
+        seatSelection.innerHTML = "₹ 0";
       }
     }
     
     emptyArr.push(e.target);
+    seatArr.push(seatValue);
+    counter++;
+    seatCounter.innerText = counter;
+    localStorage.setItem("seats", JSON.stringify(seatArr));
+    
   }
 
   emptyArr.forEach((el) => {
     el.innerHTML = `<i class="fa fa-check-square-o" style="font-size:20px;color:black"></i>`;
+  
   });
 }
 

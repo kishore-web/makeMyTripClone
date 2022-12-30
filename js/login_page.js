@@ -257,7 +257,7 @@ function userVerify() {
   }
 
  
-console.log("hello")
+
 
   for (let i = 0; i < userArray.length; i++) {
     if (userArray[i].email == verifyInput.value || userArray[i].mobile==verifyInput.value) {
