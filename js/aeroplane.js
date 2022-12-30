@@ -57,15 +57,6 @@ let totalChildren = localStorage.getItem("children") ?? 0;
 let totalInfants = localStorage.getItem("infants") ?? 0;
 
 
-console.log(totalAdults)
-console.log(totalChildren)
-console.log(totalInfants)
-
-
-
-
-
-
 
 const ticketPrice1 = document.querySelector('.basefare-price1');
 const ticketPrice2 = document.querySelector('.basefare-price2');
@@ -78,14 +69,18 @@ const ticketPriceInfantsTotal = document.querySelector('.basefare-price_infants_
 const totalNumberAdults =  document.querySelector('.total_no_adults');
 const totalNumberChildren =  document.querySelector('.total_no_children');
 const totalNumberInfants =  document.querySelector('.total_no_infants');
+const passengerNameToDisplay = document.querySelector('.passenger_name_to_display');
+
+
+let passengerArray = JSON.parse(localStorage.getItem("passengerList"));
+
+passengerArray.map((passenger)=>{
+  passengerNameToDisplay.innerHTML+=`<span>${passenger.firstName}  </span> <span>${passenger.lastName}  </span>`
+})
 
 
 const numberOfPassenger = document.querySelector('.total_passenger');
 
-
-
-
-console.log(totalNumberAdults.innerText)
 let price = bookingDetails.ticket_price;
 let price2=Number(price.slice(-4));
 
@@ -230,24 +225,21 @@ let radioCheck=false;
  })
 
 
- if(radioCheck==false){
-  localStorage.setItem("promo1", "false")
-  localStorage.setItem("promo2", "false")
-  localStorage.setItem("promo3", "false")
-  localStorage.setItem("promo4", "false")
- }
+//  if(radioCheck==false){
+//   localStorage.setItem("promo1", "false")
+//   localStorage.setItem("promo2", "false")
+//   localStorage.setItem("promo3", "false")
+//   localStorage.setItem("promo4", "false")
+//  }
 
 
 
    const passengerNameToShow = document.querySelector('.passenger_name_to_show');
    let passengerDetailArray =JSON.parse(localStorage.getItem("passengerList"));
 
-   console.log(passengerDetailArray);
-   console.log("heellllllo");
-
-   passengerDetailArray.map((passenger)=>{
-    passengerNameToShow.innerHTML+=`<span>${passenger.firstName}</span> <span>${passenger.lastName}</span>&nbsp;&nbsp;&nbsp; &nbsp;`
-   })
+  //  passengerDetailArray.map((passenger)=>{
+  //   passengerNameToShow.innerHTML+=`<span>${passenger.firstName}</span> <span>${passenger.lastName}</span>&nbsp;&nbsp;&nbsp; &nbsp;`
+  //  })
 
 
 // localStorage.removeItem("passengerList")
@@ -258,11 +250,9 @@ let promo2 = localStorage.getItem('promo2')
 let promo3 = localStorage.getItem('promo3')
 let promo4 = localStorage.getItem('promo4')
 
-console.log(promo1)
-console.log(promo2)
-console.log(promo3)
-console.log(promo4)
-console.log("oppppppppp")
+
+
+
 
 
 if(promo1 == "true"){

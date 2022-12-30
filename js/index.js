@@ -1,5 +1,9 @@
 resetLocalStorage();
 
+const travellerNumber = document.querySelector('.travel-number');
+
+const searchButton = document.querySelector('.search_fornt_page');
+
 
 let theEnd = 0,
   navBar = document.querySelector("#Header_Id");
@@ -24,8 +28,7 @@ function CopyFrag() {}
 // AllImages.addEventListener('click', xxp)
 
 // function xxp(e){
-//     // console.log(e)
-//     // console.log(e.target.getAttributeNode('src').value)
+
 
 //     if(e.target.getAttributeNode('src').value == './icons/allnavicon/icons8-airplane-take-off-50.png'){
 //         e.target.setAttribute("src", "./images/homepageallimages/blueImages/icons8-airplane-take-off-50blue.png");
@@ -59,8 +62,7 @@ const options = {
   // Storing data in form of JSON
   const data = await response.json();
   return data;
-  // console.log(data);
-  // console.log(data)
+
 }
 
 
@@ -126,7 +128,7 @@ function CreateSuggestionItem1(value){
 
 
   const div1 = document.createElement("div");
-  div1.setAttribute("class", "flex space_between airline_one");
+  div1.setAttribute("class", "flex space_between airline_one_2");
 
   const div2 = document.createElement("div");
   div2.setAttribute("class", "flex");
@@ -190,7 +192,7 @@ FlightFrom.addEventListener("click", async (e) => {
 
    FlightSearchBox.classList.remove("hide_element");
   let data = await fetchData();
-  console.log(data);
+
    
 
   //Pick five data and render (for loop or slice)
@@ -201,10 +203,7 @@ FlightFrom.addEventListener("click", async (e) => {
 
    
 
-  const FetchingCityName = document.querySelector(".Div_Six");
-  FetchingCityName.addEventListener("click", (e) => {
-    console.log(FetchingCityName.firstElementChild);
-  });
+
 });
 
 
@@ -215,7 +214,7 @@ FlightTo.addEventListener("click", async (e) => {
 
   FlightSearchBox1.classList.remove("hide_element");
   let data = await fetchData();
-  console.log(data);
+
    
 
   //Pick five data and render (for loop or slice)
@@ -226,10 +225,7 @@ FlightTo.addEventListener("click", async (e) => {
 
    
 
-  const FetchingCityName = document.querySelector(".Div_Six");
-  FetchingCityName.addEventListener("click", (e) => {
-    console.log(FetchingCityName.firstElementChild);
-  });
+
 });
 
 
@@ -260,11 +256,12 @@ async function Search_Handle1(){
   ShowMat1.innerHTML = "";
 
   let data = await fetchData(Input_Box1.value);
-  console.log(data);
+
+
 
 
   data.data.airports.forEach((value) => {
-    console.log(value)
+    
  
     if (value.city_name.includes(Input_Box1.value)) {
     CreateSuggestionItem1(value)
@@ -278,19 +275,24 @@ async function Search_Handle1(){
 
 let testingVariable;
 
+
 ShowMat.addEventListener('click',(e)=>{
   // if()
   testingVariable = e;
+  let vartest = e.path
   for(let i=0; i<e.path.length; i++)
-    if(e.path[i].classList.contains('airline_one')){
-      document.getElementById('City-Name').innerText = e.path[i].querySelector('h3').innerText;
-      document.getElementById('Airport-Code').innerText = e.path[i].querySelector('p').innerText;
-      document.getElementById('Airport-Name').innerText = e.path[i].querySelector('h5').innerText;
+    
+
+    if(vartest[i].classList.contains('airline_one')){
+      document.getElementById('City-Name').innerText = vartest[i].querySelector('h3').innerText;
+      document.getElementById('Airport-Code').innerText = vartest[i].querySelector('p').innerText;
+      document.getElementById('Airport-Name').innerText = vartest[i].querySelector('h5').innerText;
+      check1=document.getElementById('City-Name').innerText
       FlightSearchBox.classList.add("hide_element");
 
-      let departureCity = e.path[i].querySelector('h3').innerText;
-      let departureCityAirport = e.path[i].querySelector('p').innerText;
-      let departureCityCode = e.path[i].querySelector('h5').innerText;
+      let departureCity = vartest[i].querySelector('h3').innerText;
+      let departureCityAirport = vartest[i].querySelector('p').innerText;
+      let departureCityCode = vartest[i].querySelector('h5').innerText;
       localStorage.setItem("cityDeparture", departureCity)
       localStorage.setItem("airportDeparture", departureCityAirport)
       localStorage.setItem("airportDepartureCode", departureCityCode)
@@ -307,34 +309,38 @@ ShowMat1.addEventListener('click',(e)=>{
 
  
   testingVariable = e;
+  let vartest1=e.path;
   for(let i=0; i<e.path.length; i++)
-    if(e.path[i].classList.contains('airline_one')){
 
+    if(vartest1[i].classList.contains('airline_one_2')){
+       
       
-      document.getElementById('City-Name1').innerText = e.path[i].querySelector('h3').innerText;
-      document.getElementById('Airport-Code1').innerText = e.path[i].querySelector('p').innerText;
-      document.getElementById('Airport-Name1').innerText = e.path[i].querySelector('h5').innerText;
+      document.getElementById('City-Name1').innerText = vartest1[i].querySelector('h3').innerText;
+      document.getElementById('Airport-Code1').innerText = vartest1[i].querySelector('p').innerText;
+      document.getElementById('Airport-Name1').innerText = vartest1[i].querySelector('h5').innerText;
+
+      check2 = document.getElementById('City-Name1').innerText
 
 
       FlightSearchBox1.classList.add("hide_element");
 
-      let arrivalCity = e.path[i].querySelector('h3').innerText;
-      let arrivalCityAirport = e.path[i].querySelector('p').innerText;
-      let arrivalCityCode = e.path[i].querySelector('h5').innerText;
+      let arrivalCity = vartest1[i].querySelector('h3').innerText;
+      let arrivalCityAirport = vartest1[i].querySelector('p').innerText;
+      let arrivalCityCode = vartest1[i].querySelector('h5').innerText;
 
-      console.log(arrivalCity)
-      console.log(arrivalCityAirport)
-      console.log(arrivalCityCode)
+
       localStorage.setItem("cityLand", arrivalCity)
       localStorage.setItem("airportLand", arrivalCityAirport)
       localStorage.setItem("codeLand", arrivalCityCode)
 
     }
+
+
    
-  // console.log(e.path[i].querySelector('h3'))
+
  
 })
- 
+
 
 // ====================CALENDER VISIBILITY============================
 
@@ -456,26 +462,6 @@ for (let i = 0; i <= days_of_month[month] + first_day.getDay() - 1; i++) {
   }
 };
 
-let dayArray=[];
-
-calendar_days.addEventListener('click', (e)=>{
-  if(e.target.classList.contains('day_number')){
-    day=e.target.innerText;
-    localStorage.setItem("day", day);
-
-
-    monthDay.innerText = day;
-
-    if(dayArray.length>0){
-      let rCol = dayArray.shift();
-      rCol.classList.remove("current-date");
-    }
-    dayArray.push(e.target);
-  }
-  
-    dayArray.forEach((e1)=>e1.classList.add("current-date"));
-    Main_box.style.display="none";
-})
 
 
 
@@ -602,6 +588,62 @@ function dayNameValue(e){
 
 dayName.addEventListener("click", dayNameValue);
 
+
+let dayArray=[];
+
+calendar_days.addEventListener('click', (e)=>{
+  if(e.target.classList.contains('day_number')){
+    day=e.target.innerText;
+    localStorage.setItem("day", day);
+
+
+    monthDay.innerText = day;
+
+    if(dayArray.length>0){
+      let rCol = dayArray.shift();
+      rCol.classList.remove("current-date");
+    }
+    dayArray.push(e.target);
+  }
+  
+    dayArray.forEach((e1)=>e1.classList.add("current-date"));
+
+    if(localStorage.getItem("name_of_day")==null){
+
+      const dateError = document.querySelector('.error_date');
+
+      dateError.innerText = "*select name of day";
+      dateError.style.display = "block";
+      setTimeout(()=>{
+        dateError.style.display = "none";
+      },2000)
+      return;
+    }
+    if(localStorage.getItem("month")==null){
+      const dateError = document.querySelector('.error_date');
+
+      dateError.innerText = "*select month";
+      dateError.style.display = "block";
+      setTimeout(()=>{
+        dateError.style.display = "none";
+      },2000)
+      return;
+    }
+    if(localStorage.getItem("year")==null){
+      const dateError = document.querySelector('.error_date');
+
+      dateError.innerText = "*select year";
+      dateError.style.display = "block";
+      setTimeout(()=>{
+        dateError.style.display = "none";
+      },2000)
+      return;
+    }
+
+
+    Main_box.style.display="none";
+})
+
  
 // =====================JS FOR CALENDER ENDS HERE=======================
 
@@ -638,6 +680,7 @@ function resetLocalStorage(){
   localStorage.removeItem("tripDepartTime")
   localStorage.removeItem("tripArriveTime")
 }
+
 
 // =====================JS FOR CALENDER ENDS HERE=======================
  
