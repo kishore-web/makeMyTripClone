@@ -40,7 +40,11 @@ a {
   justify-content: center;
   align-items: center;
 }
-
+.flexJ {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .space_between {
   justify-content: space-between;
 }
@@ -558,11 +562,6 @@ h2 {
 .flex-div {
   display: flex;
   align-items: center;
-}
-.flexJ {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .seat_info_box {
