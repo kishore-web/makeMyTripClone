@@ -72,8 +72,7 @@ clickCross.addEventListener("click", closeReviewTravellers);
 
 const displayTravellersDiv = document.querySelector(".display-travellers-div");
 
-let numberOfTraveller = localStorage.getItem("sum");
-// console.log(number)
+let numberOfTraveller = localStorage.getItem("sum") ?? 1;
 let number = numberOfTraveller;
 let count = 0;
 let name_num = 1;
@@ -119,7 +118,8 @@ for (let i = 0; i < number; i++) {
 const totalCount = document.querySelector(".total_count");
 const totalCount1 = document.querySelector(".total_count1");
 
-let totalPassenger = localStorage.getItem("sum") ?? 0;
+let totalPassenger = localStorage.getItem("sum") ?? 1;
+
 
 totalCount.innerText = totalPassenger;
 totalCount1.innerText = totalPassenger;
@@ -128,7 +128,11 @@ clickContinue.addEventListener("click", continueButtonFunction);
 
 function continueButtonFunction(e) {
   let k = 1;
-  let iteration = localStorage.getItem("sum");
+  
+  let iteration = localStorage.getItem("sum") ?? 1;
+ 
+
+
   for (let i = 0; i < iteration; i++) {
     firstNameInput = document.querySelector(`#first_name${k}`);
     lastNameInput = document.querySelector(`#last_name${k}`);

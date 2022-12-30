@@ -6,7 +6,7 @@ let mobileOfPassenger = localStorage.getItem("mobile");
 let emailOfPassenger = localStorage.getItem("email");
 const passengerNames = document.querySelector('.passenger_name_list');
 
-console.log(passengerList)
+
 
 
 passengerList.map((val)=>{
@@ -21,7 +21,7 @@ passengerList.map((val)=>{
               </li>`
 })
 
-console.log(passengerList);
+
 
 const total = document.querySelector('.total_amount');
 const total1 = document.querySelector('.total_amount1');

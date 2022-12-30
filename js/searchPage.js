@@ -38,12 +38,7 @@ let arrivalCode = localStorage.getItem("codeLand");
 departCityDisplay.innerText = departureCity;
 arriveCityDisplay.innerText = arrivalCity;
 
-// console.log(departCity)
-// console.log(departAirport)
-// console.log(departCode)
-// console.log(arriveCity)
-// console.log(arriveAirport)
-// console.log(arriveCode)
+
 
 const api_url =  `https://mmtbackend-production.up.railway.app/flights?depart_city_name=${departureCity}&depart_IATA_code=${departCode}&depart_airport_name=${departAirport}&dept_day_name=${dayName}&dept_day=${dayNumber}&dept_month${departMonth}&dept_year=${departYear}&arrive_city_name=${arrivalCity}&arrive_IATA_code=${arrivalCode}&arrive_airport_name=${arrivalAirport}`;
 
@@ -56,10 +51,9 @@ async function fetchData(url) {
     const response = await fetch(url);
     // Storing data in form of JSON
     const data = await response.json();
-    console.log(data.data.flights);
-    console.log("hello")
+
     return data;
-    // console.log(data)
+
 }
 
 async function fetchAirportData(query="USA") {
@@ -80,13 +74,12 @@ async function fetchAirportData(query="USA") {
      // Storing data in form of JSON
      const data = await response.json();
      return data;
-     // console.log(data);
-     // console.log(data)
+
    }
 
    async function airportData(){
       let data= await fetchAirportData();
-      console.log(data)
+
       data.data.airports.map((val)=>{
          departCity.innerHTML+=`<option class="depart_option">${val.city_name}</option>`
          arriveCity.innerHTML+=`<option class="arrive_option">${val.city_name}</option>`
@@ -100,7 +93,7 @@ async function fetchAirportData(query="USA") {
 // //whenever we need the data from api we are sending request and then using the same data in our functions
 // // async function showData(){
 // //   let data = await fetchData(api_url);
-// //   console.log(data);
+
 // // }
 // // showData();
 // // fetch('https://jsonplaceholder.typicode.com/todos/1')
@@ -119,7 +112,12 @@ let bookingArray=JSON.parse(localStorage.getItem("booking")) ?? [];
 let totalPassenger = localStorage.getItem("sum");
 let passengerClass = localStorage.getItem("class");
 
-totalPassengerDisplay.innerText = totalPassenger;
+if(totalPassenger==0 || totalPassenger == undefined){
+   totalPassengerDisplay.innerText = 1;
+}else{
+   totalPassengerDisplay.innerText = totalPassenger;
+}
+
 passengerClassDisplay.innerText = passengerClass;
 
 
@@ -148,19 +146,19 @@ dayNameToShow.innerText = selectDayName;
 
 
 
-function cityText(){
-   let selectArriveCity = arriveCity.selectedIndex;
-   arriveCityValue = document.getElementsByClassName("arrive_option")[selectArriveCity].value;
+// function cityText(){
+//    let selectArriveCity = arriveCity.selectedIndex;
+//    arriveCityValue = document.getElementsByClassName("arrive_option")[selectArriveCity].value;
   
-}
+// }
 
-function departCityText(){
-   let selectDepartCity = departCity.selectedIndex;
-   departCityValue = document.getElementsByClassName("depart_option")[selectDepartCity].value;
+// function departCityText(){
+//    let selectDepartCity = departCity.selectedIndex;
+//    departCityValue = document.getElementsByClassName("depart_option")[selectDepartCity].value;
   
 
 
-}
+// }
 
 
 function displaySearchResult(val){
@@ -237,8 +235,8 @@ function displaySearchResult(val){
 
 async function searchFunction(){
 
-   cityText();
-   departCityText();
+   // cityText();
+   // departCityText();
 
    flightInfoDisplay.innerHTML="";
 
@@ -261,14 +259,14 @@ function arriveCityClick(){
    arriveCity.classList.remove('hidden');
 }
 
-function disappearDepartSelectMenu(){
-   departCityText();
-   departCity.classList.add('hidden');
-}
-function disappearArriveSelectMenu(){
-   cityText();
-   arriveCity.classList.add('hidden');
-}
+// function disappearDepartSelectMenu(){
+//    departCityText();
+//    departCity.classList.add('hidden');
+// }
+// function disappearArriveSelectMenu(){
+//    cityText();
+//    arriveCity.classList.add('hidden');
+// }
 
 function bookingTicket(e){
    if(e.target.classList.contains('info_btn')){
@@ -308,20 +306,9 @@ window.location.href = "../html/booking.html";
 function tripWayOptionClickFuncion(e){
    tripWayDynamic.innerText = e.target.innerText;
    tripWayOptions.classList.add('hidden');
-   console.log(e.target)
+
 
 }
-
-
-searchButton.addEventListener('click', searchFunction);
-
-tripDepart.addEventListener('click', departCityClick);
-
-tripDepart.addEventListener('change', disappearDepartSelectMenu);
-
-tripArrive.addEventListener('click', arriveCityClick);
-
-tripArrive.addEventListener('change', disappearArriveSelectMenu);
 
 flightInfoDisplay.addEventListener('click', bookingTicket);
 
@@ -332,8 +319,8 @@ tripWayOptionClick.addEventListener('click', tripWayOptionClickFuncion)
 // =====================================================
 async function searchFunctionFlight(flightName){
 
-   cityText();
-   departCityText();
+   // cityText();
+   // departCityText();
 
    
 
@@ -452,6 +439,8 @@ searchFunction();
         
       
 })
+
+
 
 
 
