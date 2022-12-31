@@ -245,6 +245,7 @@ function userVerify() {
   }
 
   if(verifyInput.value%1==0 && verifyInput.value.length!==10){
+    console.log(typeof verifyInput.value)
     errorDisplayOnSigninPage.innerText = "*Please enter 10 digit mobile number";
     verifyInput.style.borderColor = "red"
     return;
@@ -353,16 +354,25 @@ myBizPersnolAccount.addEventListener("click", loginFields);
 
 myBizMyBizAccount.addEventListener("click", myBizz);
 
-continueButton.addEventListener("click", userVerify);
+// continueButton.addEventListener("click", userVerify);
 
 signUpButton.addEventListener("click", signUpFields);
 
 createNewAccountButton.addEventListener("click", createAccount);
 
-otpVerifyButton.addEventListener("click", loginAccount);
+// otpVerifyButton.addEventListener("click", loginAccount);
 
 backClick.addEventListener("click", backClickFunction);
 
 userNameDisplay.addEventListener("click", userNameClick)
 
 signOutButton.addEventListener("click", signOutFunction)
+
+
+// =======================FOR OTP VARIFICATION==============================
+
+
+ 
+
+
+// =======================FOR OTP VARIFICATION==============================
