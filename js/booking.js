@@ -31,6 +31,7 @@ const surchargePrice2 = document.querySelector(".surcharge-price2");
 plusicon2.addEventListener("click", (e) => {
   surchargefare.classList.toggle("displayn");
   surchargePrice.classList.toggle("displayn");
+  
 });
 
 plusicon3.addEventListener("click", (e) => {
