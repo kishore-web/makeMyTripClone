@@ -479,57 +479,7 @@ button{
 
 /* =============================OTP CSS======================================== */
 
-
-.containerqw{
-    width: 302px;
-    height: 175px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    border: 1px solid red;
-    border-radius: 5px;
-    text-align: center;
-}
-
-#number, #verificationcode{
-    width: calc(100% - 24px);
-    padding: 10px;
-    font-size: 20px;
-    margin-bottom: 5px;
-    outline: none;
-}
-
-#recaptcha-container{
-    margin-bottom: 5px;
-}
-
-#send, #verify{
-    width: 100%;
-    height: 40px;
-    outline: none;
-}
-
-.p-conf, .n-conf{
-    width: calc(100% -22px);
-    border: 2px solid green;
-    border-radius: 4px;
-    padding: 8px 10px;
-    margin: 4px 0px;
-    background-color: lightgreen;
-    display: none;
-}
-
-
-.n-conf{
-    border-color: red;
-    background-color: red;
-
-}
-
-/* ========================================================================= */
+ 
 
 
 
