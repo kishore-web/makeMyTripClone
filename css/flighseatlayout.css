@@ -61,7 +61,7 @@ a {
 /* =======================Header CSS Starts here =================== */
 
 #Header_Id {
-  width: 100%;
+  width: 110%;
   height: 70px;
 
   padding: 5px 100px;
@@ -70,7 +70,10 @@ a {
   background-color: white;
   transform: 0.5s all;
 }
-
+.nav_wrapper{
+  position: relative;
+  right: 70px;
+}
 .allicon li {
   list-style: none;
   display: inline-block;
@@ -254,8 +257,8 @@ nav .allicon img {
 
 .seating_structure {
   position: absolute;
-  top: 750px;
-  left: 230px;
+  top: 710px;
+  left: 220px;
 
   width: 150px;
   height: 180px;
@@ -270,7 +273,7 @@ nav .allicon img {
 }
 
 table {
-  width: 43.8%;
+  width: 348px;
 
   border-spacing: 5px;
   border-collapse: separate;
