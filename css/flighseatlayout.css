@@ -75,7 +75,7 @@ a {
   position: relative;
   right: 70px;
 }
- 
+
 .allicon li {
   list-style: none;
   display: inline-block;
@@ -259,8 +259,9 @@ nav .allicon img {
 
 .seating_structure {
   position: absolute;
-  top: 700px;
-  left: 200px;
+
+  top: 710px;
+  left: 220px;
 
   width: 130px;
   height: 160px;
