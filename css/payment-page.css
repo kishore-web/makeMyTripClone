@@ -20,6 +20,9 @@ body {
         margin-right: 20px;
     }
 }
+.logo-img>img{
+    width: 120px;
+}
 
 .max-container-size {
     max-width: 1200px;
